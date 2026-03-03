@@ -6,16 +6,68 @@
     padding: 0;
     box-sizing: border-box;
 }
+li {
+    display: inline-block; 
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    width: auto;    
+}
+
+nav  {
+    text-align: center;
+}
 
 body {
+    text-align: center;
     font-family: Arial, sans-serif;
     background-color: #ffffff;
     color: #333;
 }
+ .container {
+    border: 1px solid black;    
+}
 
-/* Container central */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: left; 
+    text-indent: 10px;    
+}
+
+.sjm {
+    text-align: center;
+
+}
+
+p {
+    text-align: justify;
+    text-indent: 20px;
+}    
+ /*Class nomeada para posição entral e itens lado a lado*/
+.rodape { 
+    vertical-align: top; /*Manter itens no top da section*/
+    display: inline-block; /*Manter itens lado a lado*/
+    text-align: center; 
+    width: auto;    
+
+}
+
+.rod {
+    text-align: center;
+}
+
+.drive {
+    width: 100vw;
+    height: 56.25vw;
+    max-height: 100vh;
+    max-width: 177.78vh;   
+    margin: auto;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+
 }
