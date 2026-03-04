@@ -5,45 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avivamento e Restauração</title>
     <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header >
         <nav>
             <ul>
-                <li><a href="index.html" target="_self">Início</a></li>
-                <li><a href="sobrenos.html" target="_self">Sobre Nós</a></li>
-                <li><a href="nosencontre.html">Nos Encontre</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="colabore.html">Colabore</a></li>
+                <li class="navlista"><a href="/" target="_self" >Início</a></li>
+                <li class="navlista"><a href="sobrenos.html" target="_self">Sobre Nós</a></li>
+                <li class="navlista"><a href="nosencontre.html">Nos Encontre</a></li>
+                <li class="navlista"><a href="eventos.html">Eventos</a></li>
+                <li class="navlista"><a href="colabore.html">Colabore</a></li>
+                <li class="navlista"><a href="Doutrina.html">Doutrina</a></li>
             </ul>
         </nav>
 
         <img src="Imagens/Screenshot 2026-02-28 235610.png" alt="">
             <h1>Avivamento & Restauração</h1>
-            <h2>SJM</h2>
+            <h2 class="sjm">SJM</h2>
 
     </header>
 
     <main>
        
-        <section> <h2>Apoio Espiritual</h2>
-            <p>Como igreja estamos disponiveis para todo tipo de apoio espiritual. Temos uma equipe preparada para somar e ajudar nossos pastortes a prestar quaisquer tipo de ajuda, oração, visitas e aconselhamentos.
-            <br>Não exite nos contate. 
-            <!--Caxia de solicitação de apoio Espiritual-->
-            <br>Nome completo:<input type="text" name="Nome completo" id="nome1" size="50"> Email:<input type="email" name="email" id="email1">
-            <br> Endereço<input type="text" name="Endereço" id="endereco1"> Contato <input type="tel" name="contato" id="contato1">
-            <br>Escreva sua mesagem<input type="text" name="mesagem1" id="mesagem1" size="70" >
-            <button type="submit">Enviar</button>
-            </p>
+        <section> 
+            <h2>Apoio Espiritual:</h2>
+                <p>Como igreja estamos disponiveis para todo tipo de apoio espiritual. Temos uma equipe preparada para somar e ajudar nossos pastortes a prestar quaisquer tipo de ajuda, oração, visitas e aconselhamentos.
+                <br>Não exite nos contate!
+                <!--Caxia de solicitação de apoio Espiritual-->
+                <br>Nome completo:<input type="text" name="Nome completo" id="nome1" size="50"> Email:<input type="email" name="email" id="email1">
+                <br> Endereço<input type="text" name="Endereço" id="endereco1"> Contato <input type="tel" name="contato" id="contato1">
+                <br>Escreva sua mesagem<input type="text" name="mesagem1" id="mesagem1" size="70" >
+                <button type="submit">Enviar</button>
+                </p>
         </section>
         <section>
-            <h2>Apoio Social</h2>
-            <p>Como igreja nossa missão também zelar por nossos irmãos que necessitam de qualsquer tipo de ajuda</p>
-            <!--Caxia de solicitação de apoio Social-->
-            <br>Nome completo:<input type="text" name="Nome completo" id="nome1" size="50"> Email:<input type="email" name="email" id="email1">
-            <br> Endereço<input type="text" name="Endereço" id="endereco1"> Contato <input type="tel" name="contato" id="contato1">
-            <br>Escreva sua mesagem<input type="text" name="mesagem1" id="mesagem1" size="70" >
-            <button type="submit">Enviar</button>
+            <h2>Apoio Social:</h2>
+                <p>Como igreja nossa missão também zelar por nossos irmãos que necessitam de qualsquer tipo de ajuda
+                <!--Caxia de solicitação de apoio Social-->
+                <br>Nome completo:<input type="text" name="Nome completo" id="nome1" size="50"> Email:<input type="email" name="email" id="email1">
+                <br> Endereço<input type="text" name="Endereço" id="endereco1"> Contato <input type="tel" name="contato" id="contato1">
+                <br>Escreva sua mesagem<input type="text" name="mesagem1" id="mesagem1" size="70" >
+                <button type="submit">Enviar</button>
+            </p>
         </section>
 
         <section>
@@ -60,35 +64,38 @@
 
 
     <footer><!--RODAPÉ--> 
-        <section class="endereco">
-            <h2>Estamos a tua espera</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12062.557520403541!2d-8.50003223315222!3d40.90172476036006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2381657f28ac0b%3A0xbe4db8615e603273!2sAvivamento%20e%20Restaura%C3%A7%C3%A3o%20Igreja%20-%20SJM!5e0!3m2!1spt-PT!2spt!4v1772409333633!5m2!1spt-PT!2spt" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <section class="rodape"> <!--Class nomeada para posição entral e itens lado--> 
+            <h2 class="rod">Estamos a tua espera</h2>
+            <a href="nosencontre.html" target="_self">
+                <p class="sjm"><img src="Imagens/maps.png" alt=""></p>
+            </a>
+            
+
+                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12062.557520403541!2d-8.50003223315222!3d40.90172476036006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2381657f28ac0b%3A0xbe4db8615e603273!2sAvivamento%20e%20Restaura%C3%A7%C3%A3o%20Igreja%20-%20SJM!5e0!3m2!1spt-PT!2spt!4v1772409333633!5m2!1spt-PT!2spt" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
         </section> 
     
-        <section class="contato">
-          <h2>Contato</h2>
+        <section class="rodape"> <!--Class nomeada para posição entral e itens lado a lado--> 
+          <h2 class="rod">Contato</h2>
             <a href="https://wa.me/qr/5M42WVFNYI4WC1" class="whatsapp-float" target="_blank"> <!--ccodigo para contato por wa.me-->
-                <img src="Imagens/Whats.png" alt="WhatsApp">
+                <img src="Imagens/Whats.png" alt="WhatsApp" height="50">
             </a>
-            <br>
             <!--Link com gerador mailto para enviar email-->
             <a href="mailto:seu-email@gmail.com" class="email-float" target="_blank">
-                <img src="Imagens/gmail.png" alt="gmail">
+                <img src="Imagens/gmail.png" alt="gmail" height="50">
             </a>
          </section>
 
-        <section class="perfis"><h2>Nossos Perfis:</h2>
-            <a href="https://www.youtube.com/@AvivamentoeRestaura%C3%A7%C3%A3o-SJM" target="_blank">
-                <img src="Imagens/Logo_YouTube_(en_PNG).png" alt=""></a>
-            <br>
-            <a href="https://www.instagram.com/avivaerestaura_sjm/" target="_blank">
-                <img src="Imagens/Instagram-Icon.png" alt="">
+        <section class="rodape"> <!--Class nomeada para posição entral e itens lado a lado--> 
+            <h2 class="rod">Nossos Perfis:</h2>
+                <a href="https://www.youtube.com/@AvivamentoeRestaura%C3%A7%C3%A3o-SJM" target="_blank"> 
+                    <img src="Imagens/Logo_YouTube_(en_PNG).png" alt="logo_Youtube" height="50"></a>
+                <a href="https://www.instagram.com/avivaerestaura_sjm/" target="_blank">
+                    <img src="Imagens/Instagram-Icon.png" alt="logo_instagram" height="50">
             </a>
-            <br>
-            <a href="https://www.facebook.com/profile.php?id=100067635055262" target="_blank"><img src="Imagens/Facebook.webp" alt="">
+                <a href="https://www.facebook.com/profile.php?id=100067635055262" target="_blank" >
+                    <img src="Imagens/Facebook.webp" alt="logo_facebook" height="50">
             </a>
         </section>
-
     </footer>
 </body>
 </html>

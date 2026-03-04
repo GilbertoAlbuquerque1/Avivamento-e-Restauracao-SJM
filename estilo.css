@@ -6,16 +6,23 @@
     padding: 0;
     box-sizing: border-box;
 }
-li {
+.navlista {
     display: inline-block; 
-    font-size: large;
+    font-size: larger;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     width: auto;    
+    padding: 5px 30px;
 }
+/* Configuração lista sobre nós */
+li  {
+    text-align: left;
+}
+/* fim */
 
-nav  {
-    text-align: center;
+nav  {/* Configuração Nav*/
+    gap: 40px;
+    padding: 10px 5px;
 }
 
 body {
@@ -25,8 +32,21 @@ body {
     color: #333;
 }
  .container {
-    border: 1px solid black;    
+
 }
+
+/* Configuração Main Respirando*/
+main { 
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px, 20px;
+    line-height: 1.6;
+}
+main h2 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+/*Termina aqui*/
 
 h1 {
     text-align: center;
@@ -49,16 +69,36 @@ p {
  /*Class nomeada para posição entral e itens lado a lado*/
 .rodape { 
     vertical-align: top; /*Manter itens no top da section*/
-    display: inline-block; /*Manter itens lado a lado*/
+    /*display: inline-block; /*Manter itens lado a lado*/
     text-align: center; 
     width: auto;    
 
 }
 
-.rod {
-    text-align: center;
+/* footer {  ANTERUIR A PESQUISA
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+}*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px 100px;
+    
+}
+/* footer para telas menores*/
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
+
+/* Falta configurar e elaborar melhor a pagina*/
 .drive {
     width: 100vw;
     height: 56.25vw;
@@ -71,3 +111,5 @@ p {
     right: 0;
 
 }
+/* fim*/
+
