@@ -12,182 +12,191 @@ section {
 }
 
 
+/**//**//**//**//**//**//**//**//**//**//* Configuração Nav *//**//**//**//**//**//**//**//**/
+/**/header {
+/**/    background-color: rgb(0, 0, 0);
+/**/    padding: 0px;
+/**/    display: flex;
+/**/    justify-content: center;
+/**/    align-items: center;
+/**/    padding: 0px 0px;
+/**/    gap: 0px;
+/**/}
+/**//**//**//**//**//**//**//**//**//*Fim da Configuração Nav*//**//**//**//**//**//**//**//**/
 
-.navlista { 
-    line-height: 73px;
-    border-style: unset;
-    border-radius: 60%;
-    font-size: larger;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-    width: auto;    
-    padding: 0px 10px;
+/**//**//**//**//**//**//**//**//**//**//* Configuração NavLista*//**//**//**//**//**//**//**//**//**//**//**/
+/**/.navlista {                                                                                                    
+/**/    font-size: 20px;
+/**/    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+/**/    text-align: center;
+/**/    width: auto;    
+/**/    padding: 0px 0px;
+/**/    background-color: rgba(62, 62, 63, 0);
+/**/    text-decoration: color(rgb(255, 255, 255));
+/**/    list-style: none;
+/**/}
+/**/.navlista:hover{
+/**/    transform: scale(1.1);
+/**/}
+/**/
+/**/nav ul {
+/**/    display: flex;
+/**/    gap: 100px;
+/**/    padding: 0px, 10px;
+/**/}
+/**/
+/**/.nava {
+/**/    text-decoration: none;
+/**/    color: #ffffff;
+/**/    
+/**/}
+/**//**//**//**//**//**//**//**//**//**//**//* fim da Configuração NavLista*//**//**//**//**//**//**//**//**//**//**//**/
 
-}.navlista:hover{
-    transform: scale(1.1);
-}
+/**//**//**//**//**//**//**//**//**//**//**//**//* Configuração sobre nós *//**//**//**//**//**//**/
+/**/ol li  {
+/**/    text-align: left;
+/**/}
+/**/.sobrenos { 
+/**/    max-width: 900px;
+/**/    margin: 0 auto;
+/**/    padding: 40px, 20px;
+/**/    line-height: 1.6;
+/**/}
+/**/main h2 {
+/**/    margin-top: 50px;
+/**/    margin-bottom: 20px;
+/**/}
+/**/main section {
+/**/    flex: 1;
+/**/}
+/**//**//**//**//**//**//**//* fim da Configuração lista sobre nós *//**//**//**//**//**//**//**//**//**/
 
-nav ul {
-    background-color: rgb(218, 218, 230);
-    display: flex;
-    text-decoration: color(w rgb(255, 255, 255));
-    list-style: none;
-    justify-content: center;
-    text-align: center;
-    gap: 100px;
-    padding: 0px, 10px;
-}
+/**//**//**//**//**//**//**//**//**//**//**//* Configuração Body Geral*//**//**//**//**//**//**//**//**//**//**//**//**/
+/**/body {
+/**/    text-align: center;
+/**/    font-family: Arial, sans-serif;
+/**/    background-color: #fdfcfc;
+/**/    color: #333;
+/**/
+/**/}
+/**/.a {
+/**/    text-decoration: none;
+/**/}
+/**//**//**//**//**//**//**//**//**//**//**//* fim da Configuração Main Geral*//**//**//**//**//**//**//**//**//**//**//**/
 
-.nava {
-    text-decoration: none;
-    color: #424249;
-    
-}
-/* Configuração lista sobre nós */
-ol li  {
-    text-align: left;
-}
-/* fim */
+/**//**//**//**//**//**//**//**//* Configuração Mensagem page Precisa de Ajuda*//**//**//**//**//**//**//**//**/
+/**/.mensagem {
+/**/    height: 100;
+/**/}
+/**//**//**//**//**//**//* fim da Configuração Mensagem page Precisa de Ajuda*//**//**//**//**//**//**//**//**//**//**/
 
-nav  {/* Configuração Nav*/
-    gap: 40px;
-    padding: 10px 5px;
-}
+/**//**//**//**//**//**//**//**//**//* Configuração Container Main*//**//**//**//**//**//**//**//**/
+/**/.container {
+/**/    justify-content: center;
+/**/    display: block;
+/**/    padding: 30px;
+/**/    display: contents;
+/**/    gap: 40px;
+/**/
+/**/}
+/**/
+/**/@media (max-width: 768px) {
+/**/    .container {
+/**/        flex-direction: column;
+/**/    }
+/**/}
+/**/
+/**/main section {
+/**/    flex: 1;
+/**/}
+/**/
+/**/
+/**//**//**//**//**//**//**///* fim da Configuração Container Main*//**//**//**//**//**//**//**//**//**/
 
-body {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    background-color: #fdfcfc;
-    color: #333;
+/**//**//**//**//**//**//**//**//* Configuração Main Respirando*//**//**//**//**//**//**//**//**//**//**/
+/**/main { 
+/**/    max-width: 900px;
+/**/    margin: 0 auto;
+/**/    padding: 40px, 20px;
+/**/    line-height: 1.6;
+/**/}
+/**/main h2 {
+/**/    margin-top: 50px;
+/**/    margin-bottom: 20px;
+/**/}
+/**//**//**//**//**//**//**//**//**//**//**//**//**//*Termina aqui*//**//**//**//**//**//**//**//**//**//**/
 
-}
-.a {
-    text-decoration: none;
-}
+/**//**//**//**//**//**//**//**//**//**//**//**//**//*Configurações de textos padrão*//**//**//**//**//**//**//**//**//**//**/
+/**/h1 {
+/**/    text-align: center;
+/**/}
+/**/
+/**/h2  {
+/**/    text-align: left; 
+/**/    text-indent: 40px;    
+/**/}
+/**/
+/**/p {
+/**/    text-align: justify;
+/**/    text-indent: 20px;
+/**/}    
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//*Termina aqui*//**//**//**//**//**//**//**//**//**//**//**//**//**/
 
-/* Configuração Mensagem page Precisa de Ajuda*/
-.mensagem {
-    height: 100;
-}
+/**//**//**//**//**//**//**//**//**//*Class nomeada para posição entral e itens lado a lado*//**//**//**//**//**/
+/**/.rodape { 
+/**/    vertical-align: top; /*Manter itens no top da section*/
+/**/    /*display: inline-block; /*Manter itens lado a lado*/
+/**/    text-align: center; 
+/**/    width: auto;    
+/**/
+/**/}
+/**/
+/**/footer {
+/**/    display: flex;
+/**/    justify-content: space-between;
+/**/    gap: 40px;
+/**/    padding: 40px 100px;
+/**/    
+/**/}
+/**//**//**//**//**//**//**//**//**//**//* footer para telas menores*//**//**//**//**//**//**//**//**//**//**//**//**/
+/**/@media (max-width: 768px) {
+/**/    footer {
+/**/        flex-direction: column;
+/**/        align-items: center;
+/**/    }
+/**/}
+/**//**//**//**//**//**//**//**//**//**//* Fim da Configuração de rodapé*//**//**//**//**//**//**//**//**//**//**//**//**/
 
-
-/* Configuração Main Home page*/
-.container {
-    justify-content: center;
-    display: block;
-    padding: 30px;
-    display: contents;
-    gap: 40px;
-
-}
-
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-}
-/* Configuração Main Home page*/
-
-
-main section {
-    flex: 1;
-}
-
-/* Configuração Main Respirando*/
-main { 
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px, 20px;
-    line-height: 1.6;
-}
-main h2 {
-    margin-top: 50px;
-    margin-bottom: 20px;
-}
-/*Termina aqui*/
-
-h1 {
-    text-align: center;
-}
-
-h2  {
-    text-align: left; 
-    text-indent: 10px;    
-}
-
-.sjm {
-    background: #ffffff;
-    text-decoration: none;
-    text-align: center;
-
-}
-
-p {
-    text-align: justify;
-    text-indent: 20px;
-}    
- /*Class nomeada para posição entral e itens lado a lado*/
-.rodape { 
-    vertical-align: top; /*Manter itens no top da section*/
-    /*display: inline-block; /*Manter itens lado a lado*/
-    text-align: center; 
-    width: auto;    
-
-}
-
-/* footer {  ANTERUIR A PESQUISA
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: row;
-    justify-content: space-around;
-}*/
-footer {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    padding: 40px 100px;
-    
-}
-/* footer para telas menores*/
-@media (max-width: 768px) {
-    footer {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-
-/* Falta configurar e elaborar melhor a pagina*/
-.drive {
-    width: 100vw;
-    height: 56.25vw;
-    max-height: 100vh;
-    max-width: 177.78vh;   
-    margin: auto;
-    position: absolute;
-    top: 120px;
-    left: 0;
-    right: 0;
-}
-/* fim*/
+/**//**//**//**//**//**//**//* Configuração do Drive Pagina Doutrina*//**//**//**//**//**//**//**//**//**//**//**//**//**/
+/**/.drive {/* Falta configurar e elaborar melhor a pagina*/
+/**/    width: 100vw;
+/**/    height: 56.25vw;
+/**/    max-height: 100vh;
+/**/    max-width: 177.78vh;   
+/**/    margin: auto;
+/**/    position: absolute;
+/**/    top: 120px;
+/**/    left: 0;
+/**/    right: 0;
+/**/}
+/**//**//**//**//**//**//**//**//**//**//**//* fim da configuração do Drive*//**//**//**//**//**//**//**//**//**//**//**//**/
 
 
+/**//**//**//**//**//**//**//**//**//**//**//* Configuração do Hero Home page*//**//**//**//**//**//**//**//**//**//**//**/
+/**/.himg {
+/**/  background-image: url('Imagens/hero01.png');
+/**/  background-size: cover;      /* Faz a imagem preencher tudo sem sobrar espaço */
+/**/  background-position: center; /* Centraliza a imagem */
+/**/  width: 100%;
+/**/  height: 60vh;                /* Ocupa 80% da altura da tela */
+/**/  display: flex;
+/**/  align-items: center;
+/**/  justify-content: center;
+/**/  font-size: 2em;
+/**/  text-size-adjust: 100%;
+/**/  color: white;
+/**/}
+/**//**//**//**//**//**//**//**//**//**//**//* fim da configuração do Hero Home page*//**//**//**//**//**//**//**//**//**//**/
 
-.logoprincipal {
-  
-}
 
-.himg {
-  background-image: url('Imagens/hero01.png');
-  background-size: cover;      /* Faz a imagem preencher tudo sem sobrar espaço */
-  background-position: center; /* Centraliza a imagem */
-  width: 100%;
-  height: 130vh;                /* Ocupa 80% da altura da tela */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2em;
-  text-size-adjust: 100%;
-  color: white;
-}
+/**//**/
