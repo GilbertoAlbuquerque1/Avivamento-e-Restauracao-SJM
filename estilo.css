@@ -26,7 +26,7 @@ section {
 
 /**//**//**//**//**//**//**//**//**//**//* Configuração NavLista*//**//**//**//**//**//**//**//**//**//**//**/
 /**/.navlista {                                                                                                    
-/**/    font-size: 20px;
+/**/    font-size: 15px;
 /**/    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 /**/    text-align: center;
 /**/    width: auto;    
@@ -144,20 +144,56 @@ section {
 
 /**//**//**//**//**//**//**//**//**//*Class nomeada para posição entral e itens lado a lado*//**//**//**//**//**/
 /**/.rodape { 
-/**/    vertical-align: top; /*Manter itens no top da section*/
-/**/    /*display: inline-block; /*Manter itens lado a lado*/
-/**/    text-align: center; 
-/**/    width: auto;    
-/**/
+/**/    vertical-align: center; /*Manter itens no top da section*/
+/**/    display: flex;
+/**/    justify-content: center; /*Centralizar itens dentro da section*/
+/**/    flex-direction: row;
+        align-items: center;
+/**/    text-align: center; /*Centralizar itens dentro da section*/   
+/**/    padding: 0px 0px;
+/**/    display: inline;
 /**/}
 /**/
 /**/footer {
+/**/    background-color: #1b1a1afc;
 /**/    display: flex;
+/**/    align-items: center;   
+/**/    text-align: center; /*Centralizar itens dentro da section*/
 /**/    justify-content: space-between;
-/**/    gap: 40px;
-/**/    padding: 40px 100px;
+/**/    gap: 10px;
+/**/    padding: 0px 90px;
+/**/    height: 15vh;
+/**/    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se necessário */   
+/**/    gap: 20px;
 /**/    
 /**/}
+
+        footer a {
+            text-decoration: none;
+            color: #ffffff;
+            align-items: top: 20px;
+/**/        text-align: top;
+        }
+
+
+        footer section h2{
+            color: #ffffff;
+            padding: 10px 10px;   
+            margin: 0px;       
+            text-align: center;
+            align-items: center;
+/**/        text-align: center;
+        }
+/**/ .txtrodape {
+/**/    color: #ffffff;   
+/**/    font-size: 8px;
+/**/    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+/**/    width: auto;
+/**/    padding: 0px 0px;
+/**/    text-decoration: none;
+/**/    text-align: center;
+/**/}
+/**/
 /**//**//**//**//**//**//**//**//**//**//* footer para telas menores*//**//**//**//**//**//**//**//**//**//**//**//**/
 /**/@media (max-width: 768px) {
 /**/    footer {
@@ -165,6 +201,8 @@ section {
 /**/        align-items: center;
 /**/    }
 /**/}
+/**/.txtrodape {
+/**/    text-decoration: none;}
 /**//**//**//**//**//**//**//**//**//**//* Fim da Configuração de rodapé*//**//**//**//**//**//**//**//**//**//**//**//**/
 
 /**//**//**//**//**//**//**//* Configuração do Drive Pagina Doutrina*//**//**//**//**//**//**//**//**//**//**//**//**//**/
@@ -194,7 +232,7 @@ section {
 /**/  justify-content: center;
 /**/  font-size: 2em;
 /**/  text-size-adjust: 100%;
-/**/  color: white;
+/**/  color: white; 
 /**/}
 /**//**//**//**//**//**//**//**//**//**//**//* fim da configuração do Hero Home page*//**//**//**//**//**//**//**//**//**//**/
 
