@@ -7,119 +7,215 @@
     box-sizing: border-box;
 }
 
-/**//**//**//**//**//**//**//**//**//**//**//* Configuração Body Geral*//**//**//**//**//**//**//**//**//**//**//**//**/
-/**/body {
-/**/    text-align: center;
-/**/    font-family: Arial, sans-serif;
-/**/    background-color: #fdfcfc;
-/**/    color: #333;
-/**/
-/**/}
-/**//**//**//**//**//**//**//**//**//**//**//* fim da Configuração Main Geral*//**//**//**//**//**//**//**//**//**//**//**/
+/**//**//**//**//**//**//**//**//**//**//* Configuração Body Geral*//**//**//**//**//**//**//**//**//**//**//**//**/
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #fdfcfc;
+    color: #333;
 
-main section {
-padding:40px;
 }
+/**//**//**//**//**//**//**//**//**//**//* fim da Configuração Main Geral*//**//**//**//**//**//**//**//**//**//**//**/
 
-/**//**//**//**//**//**//**//**//**//**//* Configuração Nav *//**//**//**//**//**//**//**//**/
-/**/header {
-/**/    background-color: #0d0d0dfa;
-/**/    padding: 0px;
-/**/    display: flex;
-/**/    justify-content: center;
-/**/    align-items: center;
-/**/    padding: 0px 0px;
-/**/    gap: 0px;
-/**/}
-/**//**//**//**//**//**//**//**//**//*Fim da Configuração Nav*//**//**//**//**//**//**//**//**/
+/**//**//**//**//**//**//**//**//**//* Configuração Nav *//**//**//**//**//**//**//**//**/
+header {
+    background-color: #0d0d0dfa;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px;
+    gap: 0px;
+}
+@media (max-width: 768px) {
+    header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    header ul {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/**//**//**//**//**//**//**//**//*Fim da Configuração Nav*//**//**//**//**//**//**//**//**/
 
-/**//**//**//**//**//**//**//**//**//**//* Configuração NavLista*//**//**//**//**//**//**//**//**//**//**//**/
-/**/.navlista {                                                                                                    
-/**/    font-size: 18px;
-/**/    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-/**/    text-align: center;
-/**/    width: auto;    
-/**/    padding: 0px 0px;
-/**/    background-color: rgba(62, 62, 63, 0);
-/**/    list-style: none;
-        transition: 0.3s;
+/**//**//**//**//**//**//**//**//**//* Configuração NavLista*//**//**//**//**//**//**//**//**//**//**//**/
+.navlista {                                                                                                    
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    width: auto;    
+    padding: 0px 0px;
+    background-color: rgba(62, 62, 63, 0);
+    list-style: none;
+    transition: 0.3s;
+    display: flex;
 }
 
 .navlista:hover {
 transform: scale(1.05);
 background-color: rgba(255,255,255,0.08);
 }
-/**/
-/**/nav ul {
-/**/    display: flex;
-/**/    gap: 100px;
-/**/    padding: 0px 10px;
-/**/}
-/**/
-/**/.nava {
-/**/    text-decoration: none;
-/**/    color: #ffffff;
-/**/    
-/**/}
-/**//**//**//**//**//**//**//**//**//**//**//* fim da Configuração NavLista*//**//**//**//**//**//**//**//**//**//**//**/
 
-/**//**//**//**//**//**//**//**//**//**//**//* Configuração do Hero Home page*//**//**//**//**//**//**//**//**//**//**//**/
-/**/.himg {
-/**/  background-image: url('Imagens/hero01.png');
-/**/  background-size: cover;      /* Faz a imagem preencher tudo sem sobrar espaço */
-/**/  background-position: center; /* Centraliza a imagem */
-/**/  width: 100%;
-/**/  height: 60vh;                /* Ocupa 80% da altura da tela */
-/**/  display: flex;
-/**/  align-items: center;
-/**/  justify-content: center;
-/**/  font-size: 2em;
-/**/  text-size-adjust: 100%;
-/**/  color: white; 
-/**/}
-/**//**//**//**//**//**//**//**//**//**//**//* fim da configuração do Hero Home page*//**//**//**//**//**//**//**//**//**//**/
+nav ul {
+    display: flex;
+    gap: 100px;
+    padding: 0px 10px;
+    
+}
+
+.nava {
+    text-decoration: none;
+    color: #ffffff;
+    
+}
+
+/**//**//**//**//**//**//**//**//**//**//* fim da Configuração NavLista*//**//**//**//**//**//**//**//**//**//**//**/
+
+/**//**//**//**//**//**//**//**//**//**//* Configuração do Hero Home page*//**//**//**//**//**//**//**//**//**//**//**/
+.himg {
+  background-image: url('Imagens/hero01.png');
+  background-size: cover;      /* Faz a imagem preencher tudo sem sobrar espaço */
+  background-position: center; /* Centraliza a imagem */
+  width: 100%;
+  height: 60vh;                /* Ocupa 80% da altura da tela */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  text-size-adjust: 100%;
+  color: white; 
+}
+/**//**//**//**//**//**//**//**//**//**//* fim da configuração do Hero Home page*//**//**//**//**//**//**//**//**//**//**/
 
 /**//**//**//**//**//**//**//**//* Configuração Main Respirando*//**//**//**//**//**//**//**//**//**//**/
-/**/main { 
-/**/    max-width: 900px;
-/**/    margin: 10px;
-/**/    padding: 40px 20px;
-/**/    line-height: 1.6;
-/**/}
-/**/main h2 {
-/**/    margin-top: 50px;
-/**/    margin-bottom: 20px;
-/**/}
-/**/main section a {
-/**/    text-decoration: none;
-/**/    color: #333;
+main { 
+    max-width: 1900px;
+    margin: 10px;
+    padding: 10px 20px;
+    line-height: 1.0;
+}
+main h2 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
 
-/**/}
-/**//**//**//**//**//**//**//**//**//**//**//**//**//*Termina aqui*//**//**//**//**//**//**//**//**//**//**/
+main section {
+padding:50px;
+}
 
-/**//**//**//**//**//**//**//**//**//* Configuração Container Main*//**//**//**//**//**//**//**//**/
-.container{
+main section a {
+    text-decoration: none;
+   color: #333;
+
+}
+/**//**//**//**//**//**//**//**//**//**//**//**//*Termina aqui*//**//**//**//**//**//**//**//**//**//**/
+
+
+/**//**//**//**//**//**//**//**//**//* Configuração Container Main*//**//**//**//**//**//**//**//**//**//**/
+.container1{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.container1 section{
+flex:1;
+min-width:250px;
+max-width:900px;
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0, 0, 0, 0.255);
+text-align:center;
+}
+
+.container2 section a{
+    padding: 4px;
+}
+
+.container2 section {
+
+padding:15px;
+display: flex;
+gap:10px;
+justify-content: center;
+}
+
+.visitenos {
+padding:15px;
+display: inline-grid;
+gap:10px;
+justify-content: space-around;
+}
+
+.container2 {
+margin-top: 20px;
+margin-bottom: 20px;
+display: grid;
+min-width:250px;
+width:100%;
+background:white;
 padding:20px;
+justify-content: space-around;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0, 0, 0, 0.255);
+text-align:center;
+gap:20px;
+flex-wrap:wrap;
 }
-.acompanhe {
-display: inline;
-padding: 0px;
-}
-/**/
-/**/@media (max-width: 768px) {
-/**/    .container {
-/**/        flex-direction: column;
-/**/    }
-/**/}
-/**/
-/**/main section {
-/**/    flex: 1;
-/**/}
-/**/
-/**/
-/**//**//**//**//**//**//**///* fim da Configuração Container Main*//**//**//**//**//**//**//**//**//**/
 
-/**//**//**//**//**//**//**//**//**//* Configuração de textos secundários Pagina Contribua*//**//**//**//**//**//**//**//**/
+.container2 section a img {
+background-size: cover;      /* Faz a imagem preencher tudo sem sobrar espaço */
+background:white;
+border-radius:30px;
+box-shadow:0px 10px 15px rgba(0, 0, 0, 0.255);
+}
+
+.container1 section:hover{
+transform:translateY(-5px);
+transition:0.3s;
+}
+
+.container1 section a img{
+border-radius:10px;
+}
+
+.ministracao {
+display: grid;
+padding:10px;
+align-items:flex-end;
+}
+
+.culto{
+width:100%;
+}
+
+.acompanhe img:hover{
+transform:translateY(-5px);
+transition:0.3s;
+}
+
+@media (max-width: 768px) {
+    .container1 {
+        flex-direction: column;
+    }
+    .container2 {
+        flex-direction: column;
+    }
+    .ministracao {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+/**//**//**//**//**//**///* fim da Configuração Container Main*//**//**//**//**//**//**//**//**//**/
+
+
+/**//**//**//**//**//**//**//**//**//* Configuração de textos secundários Pagina Contribua*//**//**/
 main section h3 {/* Configuração de textos secundários home page*/
     font-size: 30px;
     color: #000000;
@@ -135,111 +231,138 @@ main section h3 {/* Configuração de textos secundários home page*/
     color: #333;
     text-align: center;
 }
+/**//**//**//**//**//**//**//**//**//**//**//* Configuração sobre nós *//**//**//**//**//**//**/
+ol li  {
+    text-align: left;
+}
+.sobrenos { 
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    line-height: 1.6;
+}
+main section {
+    flex: 1;
+}
+/**//**//**//**//**//**//* fim da Configuração lista sobre nós *//**//**//**//**//**//**//**//**//**//**//**/
 
+/**//**//**//**//**//**//**//* Configuração Mensagem page Precisa de Ajuda*//**//**//**//**//**//**//**//**/
+.mensagem {
+    height: 100vh;
+}
+/**//**//**//**//**//* fim da Configuração Mensagem page Precisa de Ajuda*//**//**//**//**//**//**//**//**//**/
 
-/**//**//**//**//**//**//**//**//**//**//**//**//* Configuração sobre nós *//**//**//**//**//**//**/
-/**/ol li  {
-/**/    text-align: left;
-/**/}
-/**/.sobrenos { 
-/**/    max-width: 900px;
-/**/    margin: 0 auto;
-/**/    padding: 40px 20px;
-/**/    line-height: 1.6;
-/**/}
-/**/main section {
-/**/    flex: 1;
-/**/}
-/**//**//**//**//**//**//**//* fim da Configuração lista sobre nós *//**//**//**//**//**//**//**//**//**/
+/**//**//**//**//**//**//* Configuração do Drive Pagina Doutrina*//**//**//**//**//**//**//**//**//**//**//**/
+.drive {/* Falta configurar e elaborar melhor a pagina*/
+    width: 100vw;
+    height: 56.25vw;
+    max-height: 100vh;
+    max-width: 177.78vh;   
+    margin: auto;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+}
+/**//**//**//**//**//**//**//**//**//**//* fim da configuração do Drive*//**//**//**//**//**//**//**//**//**/
 
-/**//**//**//**//**//**//**//**//* Configuração Mensagem page Precisa de Ajuda*//**//**//**//**//**//**//**//**/
-/**/.mensagem {
-/**/    height: 100vh;
-/**/}
-/**//**//**//**//**//**//* fim da Configuração Mensagem page Precisa de Ajuda*//**//**//**//**//**//**//**//**//**//**/
+/**//**//**//**//**//**//**//**//**//**//**//**//*Configurações de textos padrão*//**//**//**//**//**//**//**/
+h1 {
+    text-align: center;
+}
 
-/**//**//**//**//**//**//**//* Configuração do Drive Pagina Doutrina*//**//**//**//**//**//**//**//**//**//**//**//**//**/
-/**/.drive {/* Falta configurar e elaborar melhor a pagina*/
-/**/    width: 100vw;
-/**/    height: 56.25vw;
-/**/    max-height: 100vh;
-/**/    max-width: 177.78vh;   
-/**/    margin: auto;
-/**/    position: absolute;
-/**/    top: 120px;
-/**/    left: 0;
-/**/    right: 0;
-/**/}
-/**//**//**//**//**//**//**//**//**//**//**//* fim da configuração do Drive*//**//**//**//**//**//**//**//**//**//**//**//**/
+h2  {
+    text-align: left; 
+    text-indent: 20px;    
+}
 
+p {
+    text-align: justify;
+    text-indent: 20px;
+}
+/**//**//**//**//**//**//**//**//**//**//**//**//*termina aqui*//**//**//**//**//**//**//**/
 
+/**//**//**//**//**//**//**//**//**//**//**//**//*Configurações de textos personalizados*//**//**//**//**//**//**//**/
+.frasehome {
+text-align: center;
+padding: 35px 0px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: xx-large;
+color: #333;
+font-style: italic;
+}
 
-/**//**//**//**//**//**//**//**//**//**//**//**//**//*Configurações de textos padrão*//**//**//**//**//**//**//**//**//**//**/
-/**/h1 {
-/**/    text-align: center;
-/**/}
-/**/
-/**/h2  {
-/**/    text-align: left; 
-/**/    text-indent: 40px;    
-/**/}
-/**/
-/**/p {
-/**/    text-align: justify;
-/**/    text-indent: 20px;
-/**/}    
+.container1 h2 {
+color:  #333;
+text-align: center;
+padding: 0px 0px;
+display: flex;
+margin-top: 15px;
+margin-bottom: 20px;
+}
+
+.container2 h2 {
+color:  #333;
+text-align: center;
+padding: 0px 0px;
+margin-top: 15px;
+margin-bottom: 20px;
+}
 /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//*Termina aqui*//**//**//**//**//**//**//**//**//**//**//**//**//**/
 
-/**//**//**//**//**//**//**//**//**//*Class nomeada para posição entral e itens lado a lado*//**//**//**//**//**/
-/**/.rodape { 
-/**/    display: flex;
-/**/    justify-content: space-between; /*Espaçar os itens para as extremidades*/
-/**/    flex-direction: row;
-        align-items: center;
-/**/    text-align: center; /*Centralizar itens dentro da section*/   
-/**/    padding: 0px 0px;
+/**//**//**//**//**//**//**//**//*Class nomeada para posição entral e itens lado a lado*//**//**//**//**//**/
+.rodape { 
+    display: flex;
+    justify-content: space-between; /*Espaçar os itens para as extremidades*/
+    flex-direction: row;
+    align-items: center;
+    text-align: center; /*Centralizar itens dentro da section*/   
+    padding: 20px 0px;
 
-/**/}
-/**/
-/**/footer {
-/**/    background-color: #1b1a1afc;
-/**/    display: flex;
-/**/    align-items: center;   
-/**/    text-align: center; /*Centralizar itens dentro da section*/
-/**/    justify-content: space-between; /*Espaçar os itens para as extremidades*/   
-/**/    gap: 40px;
-/**/    padding: 20px 40px;
-/**/    height: 15vh;
-/**/    gap: 20px;
-        transition: 2.3s;
+}
 
-/**/    
-/**/}
-        footer a {
+footer {
+    background-color: #1b1a1afc;
+    display: flex;
+    align-items: center;   
+    text-align: center; /*Centralizar itens dentro da section*/
+    justify-content: space-between; /*Espaçar os itens para as extremidades*/   
+    gap: 40px;
+    padding: 20px 40px;
+    width: 100%;
+    height: 100%;
+    gap: 40px;
+    transition: 2.3s;  
+}
+
+footer a {
             font-size: 15px;
             text-decoration: none;
             color: #ffffff;   
-        }
+}
+.rodape a img:hover {
+transform: scale(1.05);}
+/**//**//**//**//**//**//**//**//* footer para telas menores*//**//**//**//**//**//**//**//**//**//**//**//**/
+@media (max-width: 768px) {
+    footer {
+    align-items: center;
+    flex-direction: column;
+    
+}
+.rodape {
+    flex-direction: column;
+    align-items: center;
+}
+.container1 {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.container2 {
+    flex-direction: column;
+    align-items: flex-start;
+}
 
-        .rodape a img:hover {
-    transform: scale(1.05);}
-/**//**//**//**//**//**//**//**//**//**//* footer para telas menores*//**//**//**//**//**//**//**//**//**//**//**//**/
-/**/@media (max-width: 768px) {
-/**/    footer {
-            align-items: center;
-/**/        flex-direction: column;
-/**/        
-/**/    }
-/**/    .rodape {
-/**/        flex-direction: column;
-/**/        align-items: center;
-/**/    }
-        .container {
-/**/        flex-direction: column;
-/**/        align-items: center;
-/**/    }
-
-        }
+}
 /**//**//**//**//**//**//**//**//**//**//* Fim da Configuração de rodapé*//**//**//**//**//**//**//**//**//**//**//**//**/
 
 
