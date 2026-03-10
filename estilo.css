@@ -14,7 +14,7 @@ section {
 
 /**//**//**//**//**//**//**//**//**//**//* Configuração Nav *//**//**//**//**//**//**//**//**/
 /**/header {
-/**/    background-color: rgb(0, 0, 0);
+/**/    background-color: #0d0d0dfa;
 /**/    padding: 0px;
 /**/    display: flex;
 /**/    justify-content: center;
@@ -26,7 +26,7 @@ section {
 
 /**//**//**//**//**//**//**//**//**//**//* Configuração NavLista*//**//**//**//**//**//**//**//**//**//**//**/
 /**/.navlista {                                                                                                    
-/**/    font-size: 15px;
+/**/    font-size: 18px;
 /**/    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 /**/    text-align: center;
 /**/    width: auto;    
@@ -34,10 +34,12 @@ section {
 /**/    background-color: rgba(62, 62, 63, 0);
 /**/    text-decoration: color(rgb(255, 255, 255));
 /**/    list-style: none;
-/**/}
-/**/.navlista:hover{
-/**/    transform: scale(1.1);
-/**/}
+        transition: 0.3s;
+}
+
+.navlista:hover {
+    transform: scale(1.05);
+}
 /**/
 /**/nav ul {
 /**/    display: flex;
@@ -124,6 +126,11 @@ section {
 /**/    margin-top: 50px;
 /**/    margin-bottom: 20px;
 /**/}
+/**/main section a {
+/**/    text-decoration: none;
+/**/    color: #333;
+
+/**/}
 /**//**//**//**//**//**//**//**//**//**//**//**//**//*Termina aqui*//**//**//**//**//**//**//**//**//**//**/
 
 /**//**//**//**//**//**//**//**//**//**//**//**//**//*Configurações de textos padrão*//**//**//**//**//**//**//**//**//**//**/
@@ -146,7 +153,7 @@ section {
 /**/.rodape { 
 /**/    vertical-align: center; /*Manter itens no top da section*/
 /**/    display: flex;
-/**/    justify-content: center; /*Centralizar itens dentro da section*/
+/**/    justify-content: space-between; /*Espaçar os itens para as extremidades*/
 /**/    flex-direction: row;
         align-items: center;
 /**/    text-align: center; /*Centralizar itens dentro da section*/   
@@ -159,50 +166,40 @@ section {
 /**/    display: flex;
 /**/    align-items: center;   
 /**/    text-align: center; /*Centralizar itens dentro da section*/
-/**/    justify-content: space-between;
-/**/    gap: 10px;
-/**/    padding: 0px 90px;
+/**/    justify-content: space-between; /*Espaçar os itens para as extremidades*/   
+/**/    gap: 40px;
+/**/    padding: 0px 300px;
 /**/    height: 15vh;
-/**/    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se necessário */   
 /**/    gap: 20px;
+        transition: 2.3s;
+
 /**/    
 /**/}
-
         footer a {
+            font-size: 15px;
             text-decoration: none;
-            color: #ffffff;
-            align-items: top: 20px;
-/**/        text-align: top;
+            color: #ffffff;   
         }
 
-
-        footer section h2{
-            color: #ffffff;
-            padding: 10px 10px;   
-            margin: 0px;       
-            text-align: center;
-            align-items: center;
-/**/        text-align: center;
-        }
-/**/ .txtrodape {
-/**/    color: #ffffff;   
-/**/    font-size: 8px;
-/**/    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-/**/    width: auto;
-/**/    padding: 0px 0px;
-/**/    text-decoration: none;
-/**/    text-align: center;
-/**/}
-/**/
+        .rodape a img:hover {
+    transform: scale(1.05);}
 /**//**//**//**//**//**//**//**//**//**//* footer para telas menores*//**//**//**//**//**//**//**//**//**//**//**//**/
 /**/@media (max-width: 768px) {
-/**/    footer {
+/**/    .footer {
+            align-items: center;
+/**/        flex-direction: column;
+/**/        
+/**/    }
+/**/    .rodape {
 /**/        flex-direction: column;
 /**/        align-items: center;
 /**/    }
-/**/}
-/**/.txtrodape {
-/**/    text-decoration: none;}
+        .container {
+/**/        flex-direction: column;
+/**/        align-items: center;
+/**/    }
+
+        }
 /**//**//**//**//**//**//**//**//**//**//* Fim da Configuração de rodapé*//**//**//**//**//**//**//**//**//**//**//**//**/
 
 /**//**//**//**//**//**//**//* Configuração do Drive Pagina Doutrina*//**//**//**//**//**//**//**//**//**//**//**//**//**/
@@ -238,3 +235,18 @@ section {
 
 
 /**//**/
+main section h3 {/* Configuração de textos secundários home page*/
+    font-size: 30px;
+    color: #000000;
+}
+
+.contribua h3 {
+    font-size: 25px;
+    color: #000000;
+}
+
+.contribua h2 {
+    font-size: 35px;
+    color: #333;
+    text-align: center;
+}
