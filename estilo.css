@@ -1,4 +1,4 @@
-@charset "UTF-8"
+@charset "UTF-8";
 
 /* Configuração global */
 * {
@@ -7,10 +7,19 @@
     box-sizing: border-box;
 }
 
-section {
-    padding: 40px;
-}
+/**//**//**//**//**//**//**//**//**//**//**//* Configuração Body Geral*//**//**//**//**//**//**//**//**//**//**//**//**/
+/**/body {
+/**/    text-align: center;
+/**/    font-family: Arial, sans-serif;
+/**/    background-color: #fdfcfc;
+/**/    color: #333;
+/**/
+/**/}
+/**//**//**//**//**//**//**//**//**//**//**//* fim da Configuração Main Geral*//**//**//**//**//**//**//**//**//**//**//**/
 
+main section {
+padding:40px;
+}
 
 /**//**//**//**//**//**//**//**//**//**//* Configuração Nav *//**//**//**//**//**//**//**//**/
 /**/header {
@@ -32,19 +41,19 @@ section {
 /**/    width: auto;    
 /**/    padding: 0px 0px;
 /**/    background-color: rgba(62, 62, 63, 0);
-/**/    text-decoration: color(rgb(255, 255, 255));
 /**/    list-style: none;
         transition: 0.3s;
 }
 
 .navlista:hover {
-    transform: scale(1.05);
+transform: scale(1.05);
+background-color: rgba(255,255,255,0.08);
 }
 /**/
 /**/nav ul {
 /**/    display: flex;
 /**/    gap: 100px;
-/**/    padding: 0px, 10px;
+/**/    padding: 0px 10px;
 /**/}
 /**/
 /**/.nava {
@@ -54,53 +63,48 @@ section {
 /**/}
 /**//**//**//**//**//**//**//**//**//**//**//* fim da Configuração NavLista*//**//**//**//**//**//**//**//**//**//**//**/
 
-/**//**//**//**//**//**//**//**//**//**//**//**//* Configuração sobre nós *//**//**//**//**//**//**/
-/**/ol li  {
-/**/    text-align: left;
+/**//**//**//**//**//**//**//**//**//**//**//* Configuração do Hero Home page*//**//**//**//**//**//**//**//**//**//**//**/
+/**/.himg {
+/**/  background-image: url('Imagens/hero01.png');
+/**/  background-size: cover;      /* Faz a imagem preencher tudo sem sobrar espaço */
+/**/  background-position: center; /* Centraliza a imagem */
+/**/  width: 100%;
+/**/  height: 60vh;                /* Ocupa 80% da altura da tela */
+/**/  display: flex;
+/**/  align-items: center;
+/**/  justify-content: center;
+/**/  font-size: 2em;
+/**/  text-size-adjust: 100%;
+/**/  color: white; 
 /**/}
-/**/.sobrenos { 
+/**//**//**//**//**//**//**//**//**//**//**//* fim da configuração do Hero Home page*//**//**//**//**//**//**//**//**//**//**/
+
+/**//**//**//**//**//**//**//**//* Configuração Main Respirando*//**//**//**//**//**//**//**//**//**//**/
+/**/main { 
 /**/    max-width: 900px;
-/**/    margin: 0 auto;
-/**/    padding: 40px, 20px;
+/**/    margin: 10px;
+/**/    padding: 40px 20px;
 /**/    line-height: 1.6;
 /**/}
 /**/main h2 {
 /**/    margin-top: 50px;
 /**/    margin-bottom: 20px;
 /**/}
-/**/main section {
-/**/    flex: 1;
-/**/}
-/**//**//**//**//**//**//**//* fim da Configuração lista sobre nós *//**//**//**//**//**//**//**//**//**/
-
-/**//**//**//**//**//**//**//**//**//**//**//* Configuração Body Geral*//**//**//**//**//**//**//**//**//**//**//**//**/
-/**/body {
-/**/    text-align: center;
-/**/    font-family: Arial, sans-serif;
-/**/    background-color: #fdfcfc;
-/**/    color: #333;
-/**/
-/**/}
-/**/.a {
+/**/main section a {
 /**/    text-decoration: none;
-/**/}
-/**//**//**//**//**//**//**//**//**//**//**//* fim da Configuração Main Geral*//**//**//**//**//**//**//**//**//**//**//**/
+/**/    color: #333;
 
-/**//**//**//**//**//**//**//**//* Configuração Mensagem page Precisa de Ajuda*//**//**//**//**//**//**//**//**/
-/**/.mensagem {
-/**/    height: 100;
 /**/}
-/**//**//**//**//**//**//* fim da Configuração Mensagem page Precisa de Ajuda*//**//**//**//**//**//**//**//**//**//**/
+/**//**//**//**//**//**//**//**//**//**//**//**//**//*Termina aqui*//**//**//**//**//**//**//**//**//**//**/
 
 /**//**//**//**//**//**//**//**//**//* Configuração Container Main*//**//**//**//**//**//**//**//**/
-/**/.container {
-/**/    justify-content: center;
-/**/    display: block;
-/**/    padding: 30px;
-/**/    display: contents;
-/**/    gap: 40px;
-/**/
-/**/}
+.container{
+padding:20px;
+}
+.acompanhe {
+display: inline;
+padding: 0px;
+}
 /**/
 /**/@media (max-width: 768px) {
 /**/    .container {
@@ -115,23 +119,60 @@ section {
 /**/
 /**//**//**//**//**//**//**///* fim da Configuração Container Main*//**//**//**//**//**//**//**//**//**/
 
-/**//**//**//**//**//**//**//**//* Configuração Main Respirando*//**//**//**//**//**//**//**//**//**//**/
-/**/main { 
+/**//**//**//**//**//**//**//**//**//* Configuração de textos secundários Pagina Contribua*//**//**//**//**//**//**//**//**/
+main section h3 {/* Configuração de textos secundários home page*/
+    font-size: 30px;
+    color: #000000;
+}
+
+.contribua h3 {
+    font-size: 25px;
+    color: #000000;
+}
+
+.contribua h2 {
+    font-size: 35px;
+    color: #333;
+    text-align: center;
+}
+
+
+/**//**//**//**//**//**//**//**//**//**//**//**//* Configuração sobre nós *//**//**//**//**//**//**/
+/**/ol li  {
+/**/    text-align: left;
+/**/}
+/**/.sobrenos { 
 /**/    max-width: 900px;
 /**/    margin: 0 auto;
-/**/    padding: 40px, 20px;
+/**/    padding: 40px 20px;
 /**/    line-height: 1.6;
 /**/}
-/**/main h2 {
-/**/    margin-top: 50px;
-/**/    margin-bottom: 20px;
+/**/main section {
+/**/    flex: 1;
 /**/}
-/**/main section a {
-/**/    text-decoration: none;
-/**/    color: #333;
+/**//**//**//**//**//**//**//* fim da Configuração lista sobre nós *//**//**//**//**//**//**//**//**//**/
 
+/**//**//**//**//**//**//**//**//* Configuração Mensagem page Precisa de Ajuda*//**//**//**//**//**//**//**//**/
+/**/.mensagem {
+/**/    height: 100vh;
 /**/}
-/**//**//**//**//**//**//**//**//**//**//**//**//**//*Termina aqui*//**//**//**//**//**//**//**//**//**//**/
+/**//**//**//**//**//**//* fim da Configuração Mensagem page Precisa de Ajuda*//**//**//**//**//**//**//**//**//**//**/
+
+/**//**//**//**//**//**//**//* Configuração do Drive Pagina Doutrina*//**//**//**//**//**//**//**//**//**//**//**//**//**/
+/**/.drive {/* Falta configurar e elaborar melhor a pagina*/
+/**/    width: 100vw;
+/**/    height: 56.25vw;
+/**/    max-height: 100vh;
+/**/    max-width: 177.78vh;   
+/**/    margin: auto;
+/**/    position: absolute;
+/**/    top: 120px;
+/**/    left: 0;
+/**/    right: 0;
+/**/}
+/**//**//**//**//**//**//**//**//**//**//**//* fim da configuração do Drive*//**//**//**//**//**//**//**//**//**//**//**//**/
+
+
 
 /**//**//**//**//**//**//**//**//**//**//**//**//**//*Configurações de textos padrão*//**//**//**//**//**//**//**//**//**//**/
 /**/h1 {
@@ -151,14 +192,13 @@ section {
 
 /**//**//**//**//**//**//**//**//**//*Class nomeada para posição entral e itens lado a lado*//**//**//**//**//**/
 /**/.rodape { 
-/**/    vertical-align: center; /*Manter itens no top da section*/
 /**/    display: flex;
 /**/    justify-content: space-between; /*Espaçar os itens para as extremidades*/
 /**/    flex-direction: row;
         align-items: center;
 /**/    text-align: center; /*Centralizar itens dentro da section*/   
 /**/    padding: 0px 0px;
-/**/    display: inline;
+
 /**/}
 /**/
 /**/footer {
@@ -168,7 +208,7 @@ section {
 /**/    text-align: center; /*Centralizar itens dentro da section*/
 /**/    justify-content: space-between; /*Espaçar os itens para as extremidades*/   
 /**/    gap: 40px;
-/**/    padding: 0px 300px;
+/**/    padding: 20px 40px;
 /**/    height: 15vh;
 /**/    gap: 20px;
         transition: 2.3s;
@@ -185,7 +225,7 @@ section {
     transform: scale(1.05);}
 /**//**//**//**//**//**//**//**//**//**//* footer para telas menores*//**//**//**//**//**//**//**//**//**//**//**//**/
 /**/@media (max-width: 768px) {
-/**/    .footer {
+/**/    footer {
             align-items: center;
 /**/        flex-direction: column;
 /**/        
@@ -202,51 +242,8 @@ section {
         }
 /**//**//**//**//**//**//**//**//**//**//* Fim da Configuração de rodapé*//**//**//**//**//**//**//**//**//**//**//**//**/
 
-/**//**//**//**//**//**//**//* Configuração do Drive Pagina Doutrina*//**//**//**//**//**//**//**//**//**//**//**//**//**/
-/**/.drive {/* Falta configurar e elaborar melhor a pagina*/
-/**/    width: 100vw;
-/**/    height: 56.25vw;
-/**/    max-height: 100vh;
-/**/    max-width: 177.78vh;   
-/**/    margin: auto;
-/**/    position: absolute;
-/**/    top: 120px;
-/**/    left: 0;
-/**/    right: 0;
-/**/}
-/**//**//**//**//**//**//**//**//**//**//**//* fim da configuração do Drive*//**//**//**//**//**//**//**//**//**//**//**//**/
 
 
-/**//**//**//**//**//**//**//**//**//**//**//* Configuração do Hero Home page*//**//**//**//**//**//**//**//**//**//**//**/
-/**/.himg {
-/**/  background-image: url('Imagens/hero01.png');
-/**/  background-size: cover;      /* Faz a imagem preencher tudo sem sobrar espaço */
-/**/  background-position: center; /* Centraliza a imagem */
-/**/  width: 100%;
-/**/  height: 60vh;                /* Ocupa 80% da altura da tela */
-/**/  display: flex;
-/**/  align-items: center;
-/**/  justify-content: center;
-/**/  font-size: 2em;
-/**/  text-size-adjust: 100%;
-/**/  color: white; 
-/**/}
-/**//**//**//**//**//**//**//**//**//**//**//* fim da configuração do Hero Home page*//**//**//**//**//**//**//**//**//**//**/
 
 
-/**//**/
-main section h3 {/* Configuração de textos secundários home page*/
-    font-size: 30px;
-    color: #000000;
-}
 
-.contribua h3 {
-    font-size: 25px;
-    color: #000000;
-}
-
-.contribua h2 {
-    font-size: 35px;
-    color: #333;
-    text-align: center;
-}
