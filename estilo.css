@@ -182,16 +182,8 @@ width: 70%;
 max-width:100% /*permite que o elemento seja menor, mas impede que ele ultrapasse a largura do pai, evitando distorções em imagens ou elementos grandes.*/
 }
 
-.container1 {
-display: flex;
-}
-
 .logosobrenos {
-width: 75%;
-}
-
-.logosobrenos {
-width: 75%;
+width: 70%;
 }
 
 /**//**//**//**//*Container2*//**//**//**//**/
@@ -240,21 +232,21 @@ box-shadow:0 7px 7px var(--cor6);
     color: var(--cor5);
     font-family: 'Montserrat', 'Inter', 'Roboto Condensed', sans-serif;
     text-align: center;
-    font-size: xx-large;
+    font-size: x-large;
 }
 
 .nosencontre h3 {
     color: var(--cor5);
     font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
-    font-size: x-large;
+    font-size: large;
 }
 
 .nosencontre p {
     color: var(--cor6);
     font-family: 'Inter', sans-serif;
     text-align: center;
-    font-size: x-large;
+    font-size: large;
 }
 
 .agenda {
@@ -324,10 +316,8 @@ max-width: 95%;
     }
 
 
-
     .container4 {
         flex-direction: column;
-        align-items: flex-start;
         grid-template-columns: 1fr;
     }
 
