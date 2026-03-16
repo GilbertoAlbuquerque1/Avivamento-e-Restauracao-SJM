@@ -112,7 +112,7 @@ nav ul {
 
 .txth3hero {    
 font-family: 'Roboto Condensed', sans-serif;
-background-color: var(--cor4);
+background-color: var(--cor3);
 color: var(--cor1);
 text-shadow: 1px 1px 4px var(--cor6);
 border-radius: 20px;
@@ -584,7 +584,6 @@ footer {
 }
 
 .rodape { 
-    display: flex;
     gap: 20px;
     align-items: center;
     padding: 0px 0px;
@@ -610,13 +609,22 @@ padding: 15px;
 @media (max-width: 768px) {
     footer {
         align-items: center;
+        grid-template-columns: 1fr;
     }
     .rodape {
+        display: grid;
+        grid-template-columns: 1fr;
         align-items: center;
         padding: 0;
     }
     footer section {
+        display: grid;
+        grid-template-columns: 1fr;
         align-items: center;
+        padding: 15px;
+    }
+    .logoyou {
+        margin-right: 20px;
     }
 }
 /**//**//**//**//**//**//**//**//**//**//* Fim da Configuração de rodapé*//**//**//**//**//**//**//**//**//**//**//**//**/
