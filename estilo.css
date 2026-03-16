@@ -573,10 +573,9 @@ text-align: center;
 
 /**//**//**//**//**//**//**//**//*Class nomeada para posição entral e itens lado a lado*//**//**//**//**//**/
 footer {
-    background-color: var(--cor6);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;   
+     grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--cor6);
     text-align: center; /*Centralizar itens dentro da section*/
     gap: 40px;
     padding: 20px 40px;
@@ -585,9 +584,10 @@ footer {
 }
 
 .rodape { 
-    gap: 20px;
-    align-items: center;
-    padding: 0px 0px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    padding: 0px 10px;
     margin: auto;
 }
 
@@ -602,6 +602,7 @@ transform: scale(1.05);
 }
 
 .txtfooter {
+background-color: var(--cor6);
 text-align: center;
 color: var(--cor1);
 padding: 15px;
@@ -609,24 +610,19 @@ padding: 15px;
 /**//**//**//**//**//**//**//**//* footer para telas menores*//**//**//**//**//**//**//**//**//**//**//**//**/
 @media (max-width: 768px) {
     footer {
-        align-items: center;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 5px;
     
     }
     .rodape {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
         gap: 5px;
         align-items: center;
         padding: 0px;
         margin: 0;
     }
     footer section {
-        display: grid;
-        grid-template-columns: 1fr;
         align-items: center;
-        padding: 15px;
+        padding: 5px;
         padding: 0px;
         margin: 0;
     }
