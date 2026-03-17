@@ -67,6 +67,7 @@ header {
 
     .menu-toggle {
         display: block;
+        border: none;
     }
 
     .menu {
