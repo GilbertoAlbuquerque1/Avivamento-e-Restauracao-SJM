@@ -28,7 +28,7 @@ body {
     text-align: center;
     font-family:'Montserrat', 'Inter', 'Roboto Condensed', sans-serif;
     background-color: var(--cor6);
-    color: color: var(--cor5);
+    color: color; var:--cor5);
 }
 /**//**//**//**//**//**//**//**//**//**//* fim da Configuração Main Geral*//**//**//**//**//**//**//**//**//**//**//**/
 
@@ -42,6 +42,15 @@ header {
     padding: 0px;
     gap: 50px;
 }
+
+.menu-toggle {
+    display: none;    
+    font-size: 25px;
+    background: var(--cor6);
+    color: var(--cor1);
+    margin-left: 20px;
+}
+
 @media (max-width: 768px) {
     header {
         align-items: flex-start;
@@ -52,6 +61,21 @@ header {
         flex-direction: column;
         align-items: center;
     }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu.ativo {
+        display: block;
+    }
+    
+
+
 }
 /**//**//**//**//**//**//**//**//* Fim da Configuração Nav *//**//**//**//**//**//**//**//**//**//**//**//**/
 
@@ -73,10 +97,34 @@ header {
 .navlista:hover {
     transform: scale(1.05);
     background-color: var(--cor1);
-       
 }
+
 .nava:hover {
     color: var(--cor6);
+}
+
+.active{/*Comando para item ativo no menu*/
+    font-size: 18px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    width: auto;    
+    border-radius: 20px; 
+    padding: 10px;
+    background-color: var(--cor1);
+    list-style: none;
+    transition: 0.3s;
+    display: flex;
+    gap: 40px;
+}
+
+.activea{
+color: var(--cor6);
+text-decoration: none;
+}
+ 
+.naveaactive:active {
+text-decoration: none;
+
 }
 
 nav ul {
@@ -378,7 +426,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 }
 /**//**//**//**//*Fim*//**//**//**//**/
 
-/**//**//**//**//**//**///* fim da Configuração Container Main*//**//**//**//**//**//**//**//**//**/
+/**//**//**//**//**//**//* fim da Configuração Container Main*//**//**//**//**//**//**//**//**//**/
 
 /**//**//**//**//**//**//**//**//**//* Configuração de textos secundários Pagina Contribua*//**//**/
 main section h3 {/* Configuração de textos secundários home page*/
@@ -568,16 +616,17 @@ footer {
     background-color: var(--cor6);
     text-align: center; /*Centralizar itens dentro da section*/
     gap: 40px;
-    padding: 20px 40px;
+    padding: 5px 30px;
     width: 100%;
     transition: 2.3s;  
 }
+
 
 .rodape { 
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5px;
-    padding: 0px 10px;
+    padding: 0px 30px;
     margin: auto;
 }
 
