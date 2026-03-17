@@ -45,10 +45,10 @@ header {
 
 .menu-toggle {
     display: none;    
-    font-size: 50px;
+    font-size: 45px;
     background: var(--cor6);
     color: var(--cor1);
-    margin-left: 20px;
+    margin-left: 17px;
     border: none;
     margin-top: -15px;
 }
@@ -162,17 +162,24 @@ nav ul {
   position: relative;
 }
 
+.txthero {
+   font-family: 'Montserrat', 'Inter', 'Roboto Condensed','Roboto Condensed';
+   font-size: 200%;
+}
+
 .txth3hero {    
 font-family: 'Roboto Condensed', sans-serif;
-background-color: var(--cor3);
+font-size: xx-large;
+background: var(--cor3);
 color: var(--cor1);
 text-shadow: 1px 1px 4px var(--cor6);
 border-radius: 20px;
+border-style: solid;
 text-decoration: none;
 position: absolute;
-box-shadow: 0 10px 5px var(--cor6);
-bottom: 15px;
-left: 15px;
+box-shadow: 0 7px 7px var(--cor6);
+bottom: 7px;
+left: 7px;
 padding: 5px;
 margin: 10px;
 }
@@ -180,6 +187,23 @@ margin: 10px;
 .txth3hero:hover {
 transform:translateY(-5px);
 transition:0.3s;
+}
+
+@media (max-width: 768px) {
+    .heroimg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 25vh;
+    }
+
+    .txthero {
+        font-size: 90%;
+        
+    }
+    .txth3hero {
+        font-size: medium;
+    }
+
 }
 /**//**//**//**//**//**//**//**//**//**//* fim da configuração do Hero Home page*//**//**//**//**//**//**//**//**//**//**/
 
@@ -512,7 +536,6 @@ main section {
 
 /**//**//**//**//**//**//**//**//**//**//**//**//*Configurações de textos padrão*//**//**//**//**//**//**//**/
 h1 {
-
     text-align: center;
 }
 
