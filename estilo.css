@@ -45,18 +45,19 @@ header {
 
 .menu-toggle {
     display: none;    
-    font-size: 45px;
+    font-size: 40px;
     background: var(--cor6);
     color: var(--cor1);
-    margin-left: 17px;
+    margin-left: 0px;
     border: none;
-    margin-top: -15px;
 }
 
 
 @media (max-width: 768px) {
     header {
-        align-items: flex-start;
+        display: grid; 
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
         flex-direction: column;
     }
     header ul {
@@ -66,18 +67,25 @@ header {
     }
 
     .menu-toggle {
+        margin-left: -95px;
         display: block;
         border: none;
+        
     }
 
     .menu {
         display: none;
+        width: 200px;
     }
 
     .menu.ativo {
         display: block;
     }
     
+    .logoprincipal {
+       margin-left: -280px;
+       height: 100px;
+    }
 
 
 }
@@ -198,7 +206,6 @@ transition:0.3s;
 
     .txthero {
         font-size: 90%;
-        
     }
     .txth3hero {
         font-size: medium;
@@ -668,6 +675,7 @@ transform: scale(1.05);
 }
 
 .txtfooter {
+    font-size: small;
 background-color: var(--cor6);
 text-align: center;
 color: var(--cor1);
@@ -692,6 +700,7 @@ padding: 15px;
         padding: 0px;
         margin: 0;
     }
+
 
 }
 /**//**//**//**//**//**//**//**//**//**//* Fim da Configuração de rodapé*//**//**//**//**//**//**//**//**//**//**//**//**/
