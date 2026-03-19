@@ -42,7 +42,7 @@ header {
     gap: 30px;
     position: relative;
 }
-
+ 
 .menu ul {
     display: flex;
     list-style: none;
@@ -326,6 +326,11 @@ max-width:100%; /*permite que o elemento seja menor, mas impede que ele ultrapas
 height: auto;
 }
 
+.sobrenos1 {
+    font-size: 55px;
+    margin-top: 30px;
+}
+
 
 .logosobrenos {
 width: 70%;
@@ -473,6 +478,14 @@ max-width: 95%;
     .container4 {
         flex-direction: column;
         grid-template-columns: 1fr;
+    }
+
+    .sobrenos1 h2 {
+        font-size: 25px;
+    }
+
+    .eventosimg {
+        width: 80%;
     }
 
 }
