@@ -352,6 +352,38 @@ main section h3 {/* Configuração de textos secundários home page*/
     margin-bottom: 10px;
 }
 
+/*Pagina Sobre nos*/
+.container5 {
+    text-align: justify;
+    padding: 20px 50px;
+    font-family: 'Inter','sans-serif';
+    display: grid;
+
+}
+
+.container5 h2 {
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Montserrat','sans-serif';
+    }
+
+.container5 h3 {
+    text-align: center;
+    font-family: 'Roboto Condensed','sans-serif';
+    font-size: x-large;
+}
+
+.container5 ol {
+justify-content: 1fr 1fr;
+}
+
+.container5 li {
+    text-align: left;
+    width: 50%;
+}
+
+
+
 /*Pagina Nos encontre*/
 .nosencontre h2 {
     color: var(--cor5);
