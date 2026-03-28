@@ -458,8 +458,9 @@ main section h3 {/* Configuração de textos secundários home page*/
 
 
 .container5 ol {
-justify-content: 1fr;
-margin: 20px;
+    justify-content: 1fr;
+    margin: 20px;
+
 }
 
 .container5 li {
@@ -569,6 +570,100 @@ main div section h2 {
     transform: translateY(-5px);
     transition: 0.3;
 }
+
+/*Pagina ajuda*/
+
+.container6 {
+    display: grid;
+    gap: 50px;
+    margin: 50px;
+}
+
+.container6 section button:hover {
+    transform: translateY(-5px);
+    transition: 0.3;
+}
+
+.apoio {
+    display: grid;
+    justify-items: auto;
+    padding: 10px;
+    justify-self: auto;
+}
+
+.apoio_espiritual-toggle {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: x-large;
+    color: var(--cor1);
+    border-radius: 10px;
+    background: var(--cor4);
+    width: 300px;
+    height: 50px;
+    margin: auto;
+}
+
+.apoio_social-toggle {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: x-large;
+    color: var(--cor1);
+    border-radius: 10px;
+    background: var(--cor4);
+    width: 300px;
+    height: 50px;
+    margin: auto;
+}
+
+.espiritual {
+    font-family: 'Montserrat', 'Roboto Condensed';
+    display: none;
+    min-width:250px;
+    background:var(--cor2);
+    padding: 10px;
+    padding-bottom: 50px;
+    margin: 15px;
+    border-radius:10px;
+    box-shadow: 0 5px 10px var(--cor6);
+}
+
+.espiritual p {
+    font-family:'Inter','Roboto Condensed', sans-serif;
+}
+
+.espiritual input {
+    margin: 10px;
+}
+
+.espiritual.ativo {
+    display: block;
+    
+}
+
+.social {
+    font-family: 'Montserrat', 'Roboto Condensed';
+    display: none;
+    min-width:250px;
+    background:var(--cor2);
+    padding: 10px;
+    padding-bottom: 50px;
+    margin: 15px;
+    border-radius:10px;
+    box-shadow: 0 5px 10px var(--cor6);
+}
+
+.social p {
+    font-family:'Inter','Roboto Condensed', sans-serif;
+}
+
+.social.ativo {
+    display: block;
+}
+
+.social input {
+    margin: 10px;
+    width: auto;
+}
+
+
 
 /*Pagina Contribua*/
 .colabore {
@@ -890,10 +985,6 @@ footer a {
         justify-items: center; 
     }
 
-    .imgpastores {
-        height: 90%;
-    }
-
     .txtpastores {
         grid-row: 1; /* Força o texto a ser a primeira linha */
         width: 100%;
@@ -901,14 +992,33 @@ footer a {
     }
 
     .imgpastores {
-    grid-row: 2; /* Força a imagem a ser a segunda linha */
-    width: auto;
-    height: auto;
-    justify-items: center;
-}
+        grid-row: 2; /* Força a imagem a ser a segunda linha */
+        justify-items: center;
+        width: 70%;
+    }
 
+    .nossospresidentes {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
 
+    .txtpresidentes {
+        width: 95%;
+    }
 
+    .imgpresidentes {
+        width: 70%;
+    }
+
+    .listaigrejas {
+        justify-items: center;
+    }
+
+    .listaigrejas ol li{
+        width: 95%;
+        justify-content: center;
+        text-align: center;
+    }
 
     .nosencontre section {
         flex-direction: column;
