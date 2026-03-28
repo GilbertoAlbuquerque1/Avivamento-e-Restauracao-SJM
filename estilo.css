@@ -575,8 +575,9 @@ main div section h2 {
 
 .container6 {
     display: grid;
-    gap: 50px;
-    margin: 50px;
+    gap: 100px;
+    margin: 100px 5px;
+    justify-content: center;
 }
 
 .container6 section button:hover {
@@ -603,6 +604,17 @@ main div section h2 {
 }
 
 .apoio_social-toggle {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: x-large;
+    color: var(--cor1);
+    border-radius: 10px;
+    background: var(--cor4);
+    width: 300px;
+    height: 50px;
+    margin: auto;
+}
+
+.outros_assuntos-toggle {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: x-large;
     color: var(--cor1);
@@ -663,6 +675,26 @@ main div section h2 {
     width: auto;
 }
 
+.outros {
+    font-family: 'Montserrat', 'Roboto Condensed';
+    display: none;
+    min-width:250px;
+    background:var(--cor2);
+    padding: 10px;
+    padding-bottom: 50px;
+    margin: 15px;
+    border-radius:10px;
+    box-shadow: 0 5px 10px var(--cor6);
+}
+
+.outros.ativo {
+    display: block;
+}
+
+.outros input {
+    margin: 10px;
+    width: auto;
+}
 
 
 /*Pagina Contribua*/

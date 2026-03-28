@@ -9,6 +9,8 @@ let botaoespiritual = document.querySelector('.apoio_espiritual-toggle')
 let apoioespiritual = document.querySelector('.espiritual')
 let botaosocial = document.querySelector('.apoio_social-toggle')
 let apoiosocial = document.querySelector('.social')
+let botaooutros = document.querySelector('.outros_assuntos-toggle')
+let apoiooutros = document.querySelector('.outros')
 
 botaoespiritual.addEventListener('click', () => {
     apoioespiritual.classList.toggle('ativo')
@@ -16,4 +18,8 @@ botaoespiritual.addEventListener('click', () => {
 
 botaosocial.addEventListener('click', () => {
     apoiosocial.classList.toggle('ativo')
+})
+
+botaooutros.addEventListener('click', () => {
+    apoiooutros.classList.toggle('ativo')
 })
