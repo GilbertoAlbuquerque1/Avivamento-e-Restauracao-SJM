@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* Configuração e Reset global */
+/* Reset global */
 
 * {
     margin: 0;
@@ -8,6 +8,7 @@
     box-sizing: border-box;
 }
 
+/* Variáveis CSS */
 :root {
     --cor1: #e6e3e3;   /* fundo principal */
     --cor2: #F1F5F9;   /* fundo secundário */
@@ -21,6 +22,8 @@
     --txt3: 'Inter', sans-serif; /* fonte de apoio */
 }
 
+/* Configuração global */
+
 body {
     text-align: center;
     font-family: var(--txt1);
@@ -29,6 +32,7 @@ body {
 }
 
 /* Configurações de textos padrão */
+
 h1 {
     text-align: center;
 }
@@ -43,7 +47,30 @@ p {
     text-indent: 20px;
 }
 
-/* Header */
+main {
+    max-width: 1900px;
+    margin: 10px;
+    padding: 10px 20px;
+    line-height: 1.5;
+}
+
+main h2 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+main section {
+    padding: 0px;
+}
+
+main section a {
+    text-decoration: none;
+    color: var(--cor2);
+}
+
+
+/* Header e Navegação */
+
 header {
     background-color: var(--cor6);
     display: grid;
@@ -120,7 +147,7 @@ nav ul {
     justify-self: start;
 }
 
-/* Configuração do Hero Home page */
+/* Configuração Home page */
 .heroimg {
     background-image: url('Imagens/hero01.png');
     background-size: cover;
@@ -166,28 +193,6 @@ nav ul {
     transition: 0.3s;
 }
 
-/* Configuração Main Respirando */
-main {
-    max-width: 1900px;
-    margin: 10px;
-    padding: 10px 20px;
-    line-height: 1.5;
-}
-
-main h2 {
-    margin-top: 0px;
-    margin-bottom: 20px;
-}
-
-main section {
-    padding: 0px;
-}
-
-main section a {
-    text-decoration: none;
-    color: var(--cor2);
-}
-
 /* Home page */
 .container1 {
     display: grid;
@@ -195,10 +200,9 @@ main section a {
 }
 
 .container1 section {
-    gap: 30px;
+    gap: 0px;
     min-width: 250px;
     background: var(--cor2);
-    padding: 10px;
     margin: 15px;
     border-radius: 10px;
     box-shadow: 0 5px 10px var(--cor6);
@@ -220,6 +224,19 @@ main section a {
     margin-top: 30px;
 }
 
+.cultos a, 
+.cultos h2,
+.sobrenos1 a,
+.sobrenos1 h2,
+.ministracao h2 {
+    font-family: var(--txt3);
+    font-size: 45px;
+    text-align: center;
+    color: var(--cor5);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
 .article_domingo {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -236,17 +253,17 @@ main section a {
     padding-top: 15px;
     padding-left: 0px;
     white-space: nowrap;
+    margin-right: 30px;
 }
 
 .domingo {
     font-family: var(--txt1);
     text-align: right;
-    font-size: larger;
+    font-size: 30px;
     color: var(--cor6);
     font-weight: bold;
     text-shadow: 0 2px 7px var(--cor6);
     padding-right: 0;
-    margin: 0;
 }
 
 .avivamento {
@@ -270,7 +287,7 @@ main section a {
     font-family: var(--txt1);
     text-align: center;
     color: var(--cor6);
-    font-size: larger;
+    font-size: 30px;
     font-weight: bold;
     text-shadow: 0 2px 7px var(--cor6);
 }
@@ -283,27 +300,13 @@ main section a {
     grid-column: 1 / 3;
 }
 
-.container1 h2:hover {
-    transform: translateY(-5px);
-    transition: 0.3s;
-}
-
-.ministracao h2 {
-    font-family: var(--txt2);
-    font-size: x-large;
-    color: var(--cor5);
-    text-align: center;
-    padding: 0px 0px;
-    margin-bottom: 20px;
-}
-
+.container1 h2:hover,
 .container2 h2:hover {
     transform: translateY(-5px);
     transition: 0.3s;
 }
 
 .sobrenos1 {
-    font-size: 50px;
     margin-top: 30px;
 }
 
@@ -329,11 +332,6 @@ main section a {
     font-weight: bold;
     color: var(--cor6);
     margin: 10px;
-}
-
-main section h3 {
-    font-size: 30px;
-    color: var(--cor5);
 }
 
 .container2 {
@@ -372,17 +370,34 @@ main section h3 {
     margin-bottom: 10px;
 }
 
+/*
+.imgministracao {
+    width: 25%;
+    height: auto;
+}
+*/
+
 /* Pagina Sobre nos */
 .container5 {
-    padding: 0 10px;
+    padding: 20px 10px;
     display: grid;
-    gap: 100px;
-    margin-top: 50px;
+    gap: 20px;
+    margin: 30px 10px;
 }
 
-.nossaigreja {
+.nossaigreja,
+.nossospresidentes {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.sobrepastores {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 20px;
 }
 
 .container5 h2 {
@@ -393,41 +408,6 @@ main section h3 {
     margin: 20px;
 }
 
-.imgigreja {
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.txtigreja {
-    font-family: var(--txt3);
-    font-size: 20px;
-    text-align: left;
-    width: auto;
-    padding: 5px 20px;
-}
-
-.sborepastores {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-}
-
-.sborepastores h2 {
-    margin: 0;
-}
-
-.txtpastores {
-    font-family: var(--txt3);
-    font-size: 20px;
-    text-align: left;
-    width: auto;
-    padding: 5px 20px;
-}
-
-.imgpastores {
-    border-radius: 20px;
-    padding: 10px;
-}
-
 .container5 h3 {
     text-align: center;
     font-family: var(--txt2);
@@ -435,22 +415,21 @@ main section h3 {
     margin: 20px;
 }
 
-.nossospresidentes {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 30px;
-}
-
+.txtigreja ,
+.txtpastores ,
 .txtpresidentes {
     font-family: var(--txt3);
     font-size: 20px;
-    width: auto;
-    padding: 5px 20px;
+    padding: 5px 10px;
 }
 
+.imgigreja,
+.imgpastores,
 .imgpresidentes {
     border-radius: 10px;
-    padding: 10px;
+    padding: 0 10px;
+    margin: 5px;
+    width: 100% ;   
 }
 
 .container5 ol {
@@ -512,19 +491,15 @@ main section h3 {
     font-family: var(--txt2);
     font-size: 20px;
     text-shadow: 0 1px 1px var(--cor4);
+    margin-top: 20px;
 }
 
-main section h3:hover {
-    transform: translateY(-5px);
-    transition: 0.3s;
+.txtendereco:hover {
+    text-decoration: underline;
 }
 
 .container3 section h3 {
     line-height: 2;
-}
-
-main div section h2 {
-    text-align: center;
 }
 
 .container4 {
@@ -537,14 +512,6 @@ main div section h2 {
     margin: 15px;
     border-radius: 10px;
     box-shadow: 0 5px 10px var(--cor6);
-}
-
-.img {
-    background: var(--cor1);
-    width: auto;
-    border-radius: 30px;
-    box-shadow: 0 5px 15px var(--cor6);
-    max-width: 100%;
 }
 
 .container3 section iframe {
@@ -564,6 +531,49 @@ main div section h2 {
     transform: translateY(-5px);
     transition: 0.3s;
 }
+
+.visitenos {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+
+}
+
+.article_domingo1,
+.article_quinta1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 10px 50px;
+}
+
+.avivamento1,
+.restauracao1 {
+    font-family: var(--txt3);
+    text-align: center;
+    font-size: 23px;
+    background: var(--cor3);
+    grid-column: 1 / 3;
+    padding: 0px 0px;
+    text-indent: 6px;
+}
+
+.domingo1,
+.quinta1 {
+    color: var(--cor6);
+    font-weight: bold;
+    text-shadow: 0 1px 7px var(--cor6);
+}
+
+.agendacultos {
+    font-family: var(--txt1);
+    color: var(--cor6);
+    text-align: center;
+    grid-column: 1 / 3;
+}
+
+/* Pagina Eventos */
+
 
 /* Pagina ajuda */
 .container6 {
@@ -630,7 +640,7 @@ main div section h2 {
     display: block;
 }
 
-/* Pagina Contribua */
+/* Pagina Colabore */
 .colabore {
     background: var(--cor2);
     border-radius: 20px;
@@ -651,11 +661,6 @@ main div section h2 {
 .imgcontribua:hover {
     transform: translateY(-5px);
     transition: 0.3s;
-}
-
-.imgministracao {
-    width: 25%;
-    height: auto;
 }
 
 .contribua {
@@ -695,13 +700,6 @@ main div section h2 {
 
 .colabore h3 {
     text-align: center;
-}
-
-main div section a {
-    font-family: var(--txt1);
-    font-size: xx-large;
-    color: var(--cor5);
-    gap: 20px;
 }
 
 /* Footer */
@@ -864,6 +862,10 @@ footer a {
         font-size: 24px;
     }
 
+    .container2 h2 {
+        font-size: 4vh;
+    }
+
     .horariodoculto {
         font-size: 15px;
     }
@@ -901,6 +903,7 @@ footer a {
     }
 
     /* paginas */
+ 
     .nossaigreja {
         grid-template-columns: 1fr;
         align-items: center;
@@ -934,28 +937,20 @@ footer a {
         width: 100%;
     }
 
-    .txtigreja {
-        width: 100%;
+    .txtigreja,
+    .txtpresidentes {
         grid-column: 1 / 3;
     }
 
-    .txtigreja p {
-        text-align: center;
-    }
 
-    .sborepastores {
+    .sobrepastores {
         grid-template-columns: 1fr;
         justify-items: center;
     }
 
     .txtpastores {
         grid-row: 1;
-        width: 100%;
         grid-column: 1 / 3;
-    }
-
-    .txtpastores p {
-        text-align: center;
     }
 
     .imgpastores {
@@ -964,20 +959,29 @@ footer a {
         width: 70%;
     }
 
+    .nossaigreja,
+    .sobrepastores,
     .nossospresidentes {
         grid-template-columns: 1fr;
         justify-items: center;
+        gap: 0;
+        gap: 10px;
     }
 
+    .txtigreja,
+    .txtpastores,
     .txtpresidentes {
         width: 95%;
     }
 
+    .txtigreja p,
+    .txtpastores p,
     .txtpresidentes p {
         text-align: center;
     }
 
-    .imgpresidentes {
+    .imgpresidentes, 
+    .imgpastores {
         width: 70%;
     }
 
@@ -1012,7 +1016,47 @@ footer a {
     }
 
     .container4 {
+        display: grid;
         grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        padding-bottom: 25px;
+        gap: 0;
+    }
+
+    .agenda a p{
+        font-size: 15px;
+    }
+
+    .agendacultos {
+        grid-column: 1 / 1;
+        margin-top: 15px;
+    }
+
+    .article_domingo1,
+    .article_quinta1 {
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        padding: 10px;
+    }
+
+    .domingo1,
+    .quinta1 {
+        text-align: right;
+        margin: 0;
+        padding: 0;
+    }
+
+    .horariodoculto1 {
+        text-align: left;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .avivamento1,
+    .restauracao1 {
+        padding: 0px 15px;
+        text-indent: 0px;
     }
 
     .sobrenos1 h2 {
