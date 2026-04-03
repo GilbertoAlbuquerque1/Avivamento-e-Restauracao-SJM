@@ -308,13 +308,15 @@ nav ul {
 
 .sobrenos1 {
     margin-top: 30px;
+    padding: 0 10px;
+    padding-bottom: 10px;
 }
 
 .txtsobrenos {
     font-family: var(--txt3);
     background-color: var(--cor2);
     font-size: 20px;
-    padding: 20px 10px;
+    padding: 10px 10px;
     text-align: inherit;
     text-indent: 20px;
     font-weight: bold;
