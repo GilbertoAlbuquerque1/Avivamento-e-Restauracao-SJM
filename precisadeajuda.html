@@ -40,48 +40,138 @@ Acolhedora: Poppins (Títulos) + Lora (Corpo).
         </nav>
     </header> 
 
-<main class="container6">
-        <section class="apoio"> 
-            <button class="apoio_espiritual-toggle">Preciso de ajuda Espiritual</button>
+    <main class="container6">
+        <section class="apoioespiritual"> 
+            <h2>Apoio Espiritual</h2>
+            <p>Estamos aqui para caminhar com você e te ajudar a se aproximar de Deus em qualquer momento da sua vida.</p>
+            <button class="apoio_espiritual-toggle">Seja discipulado</button>
+            <button class="pedido_oracao-toggle">Pedir Oração</button>
+            <button class="encontro-toggle">Visita/Encontro</button> 
             <div class="espiritual">
-                <h2>Apoio Espiritual</h2>
-                    <p>Como igreja estamos disponiveis para todo tipo de apoio espiritual. Temos uma equipe preparada para somar e ajudar nossos pastortes a prestar quaisquer tipo de ajuda, oração, visitas e aconselhamentos.</p>
-                    <h4>Não exite nos contate!</h4>
-                    <!--Caxia de solicitação de apoio Espiritual-->
-                    Nome completo:<input type="text" name="Nome completo" id="nome1" size="50"> Email:<input type="email" name="email" id="email1">
-                    Endereço<input type="text" name="Endereço" id="endereco1"> Contato <input type="tel" name="contato" id="contato1">
-                    Escreva sua mesagem
-                    <input type="text" name="mesagem1" id="mesagem1" size="70">
+                <form action="">           
+                    <label for="nomeespiritual">
+                        Nome e Sobrenome:<input type="text" name="Nome completo" id="nomeespiritual" size="50">
+                    </label>
+                    <label for="emaile">
+                        Email:<input type="email" name="email" id="emaile">
+                    </label>
+                    <label for="contatoespiritual">
+                        Contato:<input type="tel" name="contato" id="contatoespiritual">
+                    </label>
+                    <label for="mensagemespiritual"> Escreva sua Mensagem:</label>
+                        <textarea 
+                            id="mensagemespiritual" 
+                            name="mensagemespiritual" 
+                            rows="5" 
+                            cols="30" 
+                            placeholder="Digite sua mensagem aqui..." 
+                            required>
+                        </textarea>
                     <button type="submit">Enviar</button>
+                </form>
+            </div>
+
+            <div class="oracao">            
+                <form action="pediroração">           
+                        <label for="nomeoração">
+                            Nome e Sobrenome:<input type="text" name="Nome completo" id="nomeoração" size="50">
+                        </label>
+                        <label for="emailoração">
+                            Email:<input type="email" name="email" id="emailoração">
+                        </label>
+                        <label for="contatooração">
+                            Contato:<input type="tel" name="contato" id="contatooração">
+                        </label>
+                        <label for="mensagemoração"> Escreva sua Mensagem:</label>
+                            <textarea 
+                                id="mensagemoração" 
+                                name="mensagemoração" 
+                                rows="5" 
+                                cols="30" 
+                                placeholder="Digite sua mensagem aqui..." 
+                                required>
+                            </textarea>
+                        <button type="submit">Enviar</button>
+                </form>
+            </div>
+
+            <div class="encontro">            
+                <form action="visitaencontro">           
+                        <label for="nomeencontro">
+                            Nome e Sobrenome:<input type="text" name="Nome completo" id="nomeencontro" size="50">
+                        </label>
+                        <label for="contatoencontro">
+                            Contato:<input type="tel" name="contato" id="contatoencontro">
+                        </label>
+                        <label for="mensagemencontro"> Escreva sua Mensagem:</label>
+                            <textarea 
+                                id="mensagemencontro" 
+                                name="mensagemencontro" 
+                                rows="5" 
+                                cols="30" 
+                                placeholder="Digite sua mensagem aqui..." 
+                                required>
+                            </textarea>
+                        <button type="submit">Enviar</button>
+                </form>
             </div>
         </section>
-        <section class="apoio">
-            <button class="apoio_social-toggle">Preciso de ajuda Social</button>
+
+        <section class="apoiosocial">
+            <h2>Apoio Social</h2>
+            <p>Você não está sozinho. Queremos caminhar com você e cuidar das suas necessidades com amor.</p>
+            <button class="apoio_social-toggle">Alimentação</button>
+            <button class="apoio_espiritual-toggle">Financeiro</button>
+            <button class="pedido_oracao-toggle">Informações</button>
+
+    
             <div class="social">
-                <h2>Apoio Social</h2>
-                    <p>Como igreja nossa missão também zelar por nossos irmãos que necessitam de qualsquer tipo de ajuda.</p>
-                    <h4>Não exite nos contate!</h4>
-                    <!--Caxia de solicitação de apoio Social-->
-                    Nome completo:<input type="text" name="Nome completo" id="nome1" size="70"> Email:<input type="email" name="email" id="email1">
-                    Endereço<input type="text" name="Endereço" id="endereco1"> Contato <input type="tel" name="contato" id="contato1">
-                    Escreva sua mesagem
-                    <input class="mensagem2" type="text" name="mesagem1" id="mesagem2" size="70">
+                <form action=""> 
+                    <label for="nomesocial">Nome completo:<input type="text" name="Nome completo" id="nomesocial" size="70"></label>
+
+                    <label for="emailsocial">Email:<input type="email" name="email" id="emailsocial"></label>
+                    
+                    <label for="enderecosocial">Endereço:<input type="text" name="Endereço" id="enderecosocial"></label>
+                    
+                    <label for="contatosocial">Contato:<input type="tel" name="contato" id="contatosocial"></label>
+                    
+                    
+                    <label for="mensagemsocial">Escreva sua mensagem</label>
+                        <textarea 
+                            id="mensagemsocial" 
+                            name="mensagemsocial" 
+                            rows="5" 
+                            cols="30" 
+                            placeholder="Digite sua mensagem aqui..." 
+                            required>
+                        </textarea>
+                    
                     <button type="submit">Enviar</button>
-                </p>
+                </form>
             </div>
         </section>
 
         <section class="outros_assuntos">
-            <button class="outros_assuntos-toggle">Outros Assuntos</button>
+            <h2>Outros Assuntos</h2>
+            <p>Para dúvidas, informações ou qualquer outro assunto, entre em contato com nossa equipe.</p>
+            <button class="outros_assuntos-toggle">Entrar em contato</button>
+        
             <div class="outros">
-                <h2>Preciso de Ajuda com Outros assuntos</h2>
+                <p>Escolha um dos canais abaixo</p>
+                
                 <a href="https://wa.me/qr/5M42WVFNYI4WC1" class="whatsapp-float" target="_blank">
-                <img src="Imagens/Whats100.webp" alt="" width="70px"></a>
-                <a href=""><img src="Imagens/gmail100.png" alt="" height="70px"></a>
-                <a href="https://ig.me/m/avivaerestaura_sjm/" target="_blank"><img src="Imagens/logo_instagram_200.png" alt="" width="70"></a>
-
+                    <img src="Imagens/Whats100.webp" alt="" width="70px">
+                </a>
+            
+                <a href="">
+                    <img src="Imagens/gmail100.png" alt="" height="70px">
+                </a>
+            
+                <a href="https://ig.me/m/avivaerestaura_sjm/" target="_blank">
+                    <img src="Imagens/logo_instagram_200.png" alt="" width="70">
+                </a>
             </div>
-        </section>  
+        </section>
     </main>
 
     <footer><!--RODAPÉ--> 

@@ -383,7 +383,7 @@ nav ul {
 .container5 {
     padding: 20px 10px;
     display: grid;
-    gap: 20px;
+    gap: 40px;
     margin: 30px 10px;
 }
 
@@ -440,7 +440,6 @@ nav ul {
 
 .container5 li {
     text-align: left;
-    width: 50%;
 }
 
 .listaigrejas {
@@ -590,33 +589,40 @@ nav ul {
     transition: 0.3s;
 }
 
-.apoio {
-    display: grid;
-    justify-items: auto;
+.apoioespiritual,
+.apoiosocial,
+.outros_assuntos {
+    text-align: center;
+    justify-items: center;
     padding: 10px;
-    justify-self: auto;
+    justify-self: center;
+    gap: 10px;
 }
 
 .apoio_espiritual-toggle,
+.encontro-toggle,
+.pedido_oracao-toggle,
 .apoio_social-toggle,
 .outros_assuntos-toggle {
     font-family: var(--txt2);
-    font-size: x-large;
+    font-size: large;
     color: var(--cor1);
     border-radius: 10px;
     background: var(--cor4);
-    width: 300px;
-    height: 50px;
+    padding: 5px 20px;
     margin: auto;
 }
 
 .espiritual,
+.encontro,
+.oracao,
 .social,
 .outros {
     font-family: var(--txt1);
     display: none;
     min-width: 250px;
     background: var(--cor2);
+    width: 50%;
     padding: 10px;
     padding-bottom: 50px;
     margin: 15px;
@@ -624,21 +630,28 @@ nav ul {
     box-shadow: 0 5px 10px var(--cor6);
 }
 
+.apoioespiritual p,
+.apoiosocial p,
+.outros_assuntos p,
 .espiritual p,
 .social p {
     font-family: var(--txt3);
+    margin: 20px;
 }
 
 .espiritual input,
 .social input,
-.outros input {
+.outros input,
+.oracao input {
     margin: 10px;
     width: auto;
 }
 
 .espiritual.ativo,
+.encontro.ativo,
 .social.ativo,
-.outros.ativo {
+.outros.ativo,
+.oracao.ativo {
     display: block;
 }
 
