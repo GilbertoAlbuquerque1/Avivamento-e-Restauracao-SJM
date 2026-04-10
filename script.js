@@ -9,12 +9,6 @@ botaomenu.addEventListener('click', () => {
 let botaoespiritual = document.querySelector('.apoio_espiritual-toggle') 
 let apoioespiritual = document.querySelector('.espiritual')
 
-let botaooracao = document.querySelector('.pedido_oracao-toggle')
-let pedidooracao = document.querySelector('.oracao')
-
-let botaoencontro = document.querySelector('.encontro-toggle') 
-let apoioencontro = document.querySelector('.encontro')
-
 /* Social */
 let botaosocial = document.querySelector('.apoio_social-toggle')
 let apoiosocial = document.querySelector('.social')
@@ -24,14 +18,6 @@ let apoiooutros = document.querySelector('.outros')
 
 botaoespiritual.addEventListener('click', () => {
     apoioespiritual.classList.toggle('ativo')
-})
-
-botaoencontro.addEventListener('click', () => {
-    apoioencontro.classList.toggle('ativo')
-})
-
-botaooracao.addEventListener('click', () => {
-    pedidooracao.classList.toggle('ativo')
 })
 
 botaosocial.addEventListener('click', () => {
