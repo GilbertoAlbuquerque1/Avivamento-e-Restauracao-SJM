@@ -48,24 +48,34 @@ Acolhedora: Poppins (Títulos) + Lora (Corpo).
             <div class="espiritual">
                 <form action="">
                     <p class="txtapresentacao">Compartilhe conosco como podemos te ajudar, queremos orar e caminhar com você.</p>           
-                    <label for="nomeespiritual">Nome e Sobrenome:<input type="text" name="Nome completo" id="nomeespiritual"></label>
-                    <br>
-                    <label for="escrevasumensagem">
-                        Contato:<input type="tel" name="contato" id="contatoespiritual">
-                    </label>
-                    <label for="escrevasumensagem"> 
-                        Escreva sua Mensagem:</label>
-                        <textarea 
-                            class="mensagem"
-                            id="escrevasumensagem" 
-                            name="escrevasumensagem" 
-                            rows="5" 
-                            cols="70" 
-                            placeholder="Digite sua mensagem aqui..
+                    <div class="campo">
+                        <label for="nomeespiritual">
+                            Nome e Sobrenome:
+                        </label>
+                        <input type="text" name="Nome" id="nomeespiritual">
+                    </div>
+                    <div class="campo">
+                        <label for="contatoespiritual">
+                            Numero para Contato:
+                        </label>
+                        <input type="tel" name="contato" id="contatoespiritual">
+                    </div>
+                    <div class="campo">
+                        <label for="escrevasumensagem">
+                            Escreva sua Mensagem:</label>
+                            <textarea
+                                class="mensagem"
+                                id="mensagemespiritual"
+                                name="mensagem-espiritual"
+                                rows="5"
+                                cols="50"
+
+                                placeholder="Digite sua mensagem aqui... 
+
 Ex: Preciso de oração, preciso ser mentoriado, quero me batizar, etc."
-                            required>
-                        </textarea>
-                    <button type="submit">Enviar</button>
+                                required></textarea>
+                    </div>
+                    <div><button type="submit">Enviar</button></div>
                 </form>
             </div>
         </section>
@@ -77,21 +87,34 @@ Ex: Preciso de oração, preciso ser mentoriado, quero me batizar, etc."
             <div class="social">
                 <p>Descreva em que área você precisa de ajuda, e conte nos um pouco sobre sua situação.</p>
                 <form action=""> 
-                    <label for="nomesocial">Nome e Sobrenome:<input type="text" name="Nome completo" id="nomesocial"></label>
+                    <div class="campo">
+                        <label for="nomesocial">Nome e Sobrenome *</label>
+                        <input type="text" name="Nome completo" id="nomesocial" required>
+                    </div>
+                    <div class="campo">
+                        <label for="contatosocial">
+                            Numero para Contato *
+                        </label>
+                        <input type="text" name="Contato" id="contatosocial" required>
+                    </div>
+                    <div class="campo">
+                        <label for="emailsocial">Email: (opcional)</label>
+                        <input type="email" name="Email" id="emailsocial">
+                    </div>
+                    <div class="campo">
+                        <label for="escrevasumensagem">Escreva sua Mensagem:</label>
+                            <textarea class="mensagem"
+                                id="mensagemsocial"
+                                name="mensagem-social"
+                                rows="5"
+                                cols="50"
+                                placeholder="Digite sua mensagem aqui...
 
-                    <label for="contatosocial">Contato:<input type="text" name="Contato" id="contatosocial"></label>
-                                    
-                    <label for="escrevasumensagem">Escreva sua Mensagem:</label>
-                        <textarea class="mensagem"
-                            id="escrevasumensagem" 
-                            name="escrevasumensagem" 
-                            rows="5" 
-                            cols="70" 
-                            placeholder="Digite sua mensagem aqui...
-Ex: Preciso de ajuda com minhas documentações, preciso de ajuda financeira, preciso conseguir um emprego, etc." 
-                            required>
-                        </textarea>
-                    <button type="submit">Enviar</button>
+    Ex: Preciso de ajuda com minhas documentações, preciso de ajuda financeira, preciso conseguir um emprego, etc."
+                                required></textarea>
+                    </div>
+                    <div><button type="submit">Enviar</button></div>
+                    
                 </form>
             </div>
         </section>

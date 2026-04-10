@@ -611,6 +611,12 @@ nav ul {
     margin: auto;
 }
 
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
 .espiritual,
 .social,
 .outros {
@@ -618,13 +624,31 @@ nav ul {
     display: none;
     min-width: 250px;
     background: var(--cor2);
-    width: 700px;
+    width: 400px;
     padding: 20px;
     margin: 15px;
     border-radius: 10px;
     box-shadow: 0 5px 10px var(--cor6);
 }
 
+input[type="text"], 
+input[type="tel"], 
+textarea {
+    padding: 10px 15px;
+    border: 1px solid var(--cor3);
+    border-radius: 5px;
+    width: auto;
+}
+
+.mensagem {
+    font-family: var(--txt3);
+}
+
+input[type="email"] {
+    padding: 10px 55px;   
+    border: 1px solid var(--cor3);
+    border-radius: 5px;
+}
 
 .apoioespiritual p,
 .apoiosocial p,
@@ -1095,6 +1119,16 @@ footer a {
         width: 100%;
     }
 
+    input[type="text"], 
+    input[type="tel"], 
+    textarea {
+        width: 80%;
+    }
+
+input[type="email"] {
+        width: 80%;
+}
+
     .escrevasumensagem {
         grid-column: 1 / 2;
         font-size: 18px;
@@ -1102,9 +1136,10 @@ footer a {
     }
 
     .mensagem {
-
+        padding: 10px 15px;
         font-size: 18px;
         width: 100%;
+        height: 150px;
     }
 
 
