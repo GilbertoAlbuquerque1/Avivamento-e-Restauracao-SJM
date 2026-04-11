@@ -575,6 +575,63 @@ nav ul {
 
 /* Pagina Eventos */
 
+.eventos {
+    display: grid;
+    gap: 30px;
+    padding: 20px;
+    margin: 15px;
+}
+
+.descricao {
+    font-family: var(--txt3);
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 10px;
+    margin: 15px 10px;
+}
+
+.eventos section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    justify-content: center;
+}
+
+.interacao-evento {
+    display: grid;
+    padding: 10px 20px;
+    min-width: 250px;
+    margin: 15px;
+}
+
+.interacao-evento article {
+    margin: 0px 0;
+}
+
+.imgeventos {
+    grid-template-columns: 3 / 3;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px var(--cor6);
+
+}
+
+.btn-inscricao {
+    font-family: var(--txt2);
+    font-size: large;
+    color: var(--cor1);
+    border-radius: 10px;
+    background: var(--cor4);
+    padding: 5px 20px;
+    margin: auto;
+}
+
+.btn-inscricao:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+
 
 /* Pagina ajuda */
 .container6 {
@@ -642,6 +699,7 @@ textarea {
 
 .mensagem {
     font-family: var(--txt3);
+    height: 125px;
 }
 
 input[type="email"] {
@@ -1109,8 +1167,26 @@ footer a {
         font-size: 25px;
     }
 
-    .eventosimg {
-        width: 80%;
+    .eventos section {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .descricao {
+        font-size: 20px;
+        padding: 10px 0;
+        width: 100%;
+        margin: 10px0;
+    }
+    
+    .interacao-evento {
+        width: 100%;
+        padding: 10px 0;
+    }
+    .imgeventos {
+        width: 100%;
     }
 
     .espiritual,
@@ -1122,12 +1198,18 @@ footer a {
     input[type="text"], 
     input[type="tel"], 
     textarea {
+        width: 90%;
+    }
+
+    input[type="email"] {
         width: 80%;
     }
 
-input[type="email"] {
-        width: 80%;
-}
+    .apresentacao-espiritual,
+    .apresentacao-social,
+    .apresentacao-outros {
+        font-size: 20px;
+    }
 
     .escrevasumensagem {
         grid-column: 1 / 2;
@@ -1139,7 +1221,7 @@ input[type="email"] {
         padding: 10px 15px;
         font-size: 18px;
         width: 100%;
-        height: 150px;
+        height: 155px;
     }
 
 
