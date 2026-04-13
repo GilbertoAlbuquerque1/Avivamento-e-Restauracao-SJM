@@ -28,6 +28,17 @@ botaooutros.addEventListener('click', () => {
     apoiooutros.classList.toggle('ativo')
 })
 
+let botaoformulario = document.querySelector('.btn-inscricao-toggle')
+let formularioencontro = document.querySelector('.formulario-container')
+
+botaoformulario.addEventListener('click', () => {
+    formularioencontro.classList.toggle('ativo')
+})
+
+
+
+
+
 // Função para enviar mensagem de apoio espiritual
 function enviarMensagemEspiritual() {
     const mensagem = document.querySelector('.espiritual textarea').value;
@@ -61,3 +72,25 @@ function enviarMensagemSocial() {
 // Event listeners para botões de envio
 document.querySelector('.espiritual .enviar-btn')?.addEventListener('click', enviarMensagemEspiritual);
 document.querySelector('.social .enviar-btn')?.addEventListener('click', enviarMensagemSocial);
+
+// Função para enviar mensagem de encontro via WhatsApp
+
+function enviarMensagemEncontro() {
+    const form = document.getElementById('formulario-encontro');
+    const nome = form.querySelector('input[name="nome"]')?.value;
+    const email = form.querySelector('input[name="email"]')?.value;
+    const telefone = form.querySelector('input[name="telefone"]')?.value;
+    const assunto = form.querySelector('input[name="assunto"]')?.value;
+    const mensagem = form.querySelector('textarea[name="mensagem"]')?.value;
+    
+    if (nome && email && telefone && assunto && mensagem) {
+        const texto = `Nome: ${nome}\nEmail: ${email}\nTelefone: ${telefone}\nAssunto: ${assunto}\nMensagem: ${mensagem}`;
+        const urlWhatsApp = `https://wa.me/351969879724?text=${encodeURIComponent(texto)}`;
+        window.open(urlWhatsApp, '_blank');
+        form.reset();
+    } else {
+        alert('Por favor, preencha todos os campos.');
+    }
+}
+
+document.querySelector('#formulario-encontro .enviar-btn')?.addEventListener('click', enviarMensagemEncontro);
