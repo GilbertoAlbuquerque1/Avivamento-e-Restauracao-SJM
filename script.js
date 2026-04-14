@@ -85,7 +85,7 @@ if (pedidoapoioespiritual) {
         e.preventDefault();
         const nome = this.querySelector('input[name="nome"]')?.value || '';
         const numerocontato = this.querySelector('input[name="contato"]')?.value || '';
-        const mensagemespiritual = this.querySelector('textarea[name="mensagem"]')?.value || '';
+        const mensagemespiritual = this.querySelector('textarea[name="mensagem-spiritual"]')?.value || '';
 
         if (nome && numerocontato && mensagemespiritual) {
             const texto = `*Pedido de Apoio Espiritual*\n*Nome:* ${nome}\n*Contato:* ${numerocontato}\n*Mensagem:* ${mensagemespiritual}`;
@@ -119,7 +119,7 @@ if (pedidoapoiosocial) {
         const email = this.querySelector('input[name="email"]')?.value || '';
         const mensagemsocial = this.querySelector('textarea[name="mensagem-social"]')?.value || '';
 
-        if (nome && numerocontato && email && mensagemsocial) {
+        if (nome && numerocontato && mensagemsocial) {
             const texto = `*Pedido de Apoio Social*\n*Nome:* ${nome}\n*Contato:* ${numerocontato}\n*Email:* ${email}\n*Mensagem:* ${mensagemsocial}`;
             const urlWhatsApp = `https://wa.me/351969879724?text=${encodeURIComponent(texto)}`;
 
