@@ -117,7 +117,7 @@ if (pedidoapoiosocial) {
         const nome = this.querySelector('input[name="nome"]')?.value || '';
         const numerocontato = this.querySelector('input[name="contato"]')?.value || '';
         const email = this.querySelector('input[name="email"]')?.value || '';
-        const mensagemsocial = this.querySelector('textarea[name="mensagem"]')?.value || '';
+        const mensagemsocial = this.querySelector('textarea[name="mensagem-social"]')?.value || '';
 
         if (nome && numerocontato && email && mensagemsocial) {
             const texto = `*Pedido de Apoio Social*\n*Nome:* ${nome}\n*Contato:* ${numerocontato}\n*Email:* ${email}\n*Mensagem:* ${mensagemsocial}`;

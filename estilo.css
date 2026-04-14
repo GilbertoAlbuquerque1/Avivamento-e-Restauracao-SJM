@@ -621,6 +621,11 @@ nav ul {
 
 }
 
+.btn-formulariodiv {   
+display: flex;
+flex-direction: row;
+}
+
 .btn-inscricao-toggle,
 .btn-participe-toggle {
     font-family: var(--txt2);
@@ -691,12 +696,23 @@ nav ul {
     
 }
 
+
+
 .form-group1 {
     display: grid;
     gap: 10px;
 }
 
+.formulario-container input,
+.formulario-container [type="text"],
+.formulario-container input[type="email"],
+.formulario-container input[type="tel"],
+.formulario-container input[type="date"],
+.formulario-participe input,
 input[type="date"] {
+        width: 100%;
+    margin-bottom: 15px;       
+    padding: 10px;          
     padding: 10px 15px;
     border: 1px solid var(--cor3);
     border-radius: 5px;
@@ -705,7 +721,6 @@ input[type="date"] {
     color: var(--cor6);
     outline: none;
     transition: all 0.3s ease;
-    width: 100%;
     -webkit-appearance: none;
     appearance: none;
 }
@@ -726,6 +741,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     transform: scale(1.2);
     filter: invert(0.2); 
 }
+
 
 .btn-enviar,
 .btn-fechar {
@@ -751,16 +767,14 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     text-align: center;
     padding: 20px;
     border-radius: 10px;
-
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
     gap: 10px;
-    inline-size: none;
     }
 
-    
+.mensagem-sucesso h2 {
+    font-size: x-large;
+    text-align: center;
+    inline-size: none;
+}   
 
 .eventos h2 {
     font-size: x-large;
@@ -1351,60 +1365,71 @@ footer a {
         width: 100%;
     }
 
-.h2form-encontro,
-.h2form-participe {
-    text-align: center;
-    text-indent: 0;
-    width: 100%;
-    margin: 0 auto 15px auto;
-}
+    .h2form-encontro,
+    .h2form-participe {
+        text-align: center;
+        text-indent: 0;
+        width: 100%;
+        margin: 0 auto 15px auto;
+    }
 
 
-.formulario-container {
-    width: 100%;
-    display: grid;
-    justify-items: center;
-}
+    .formulario-container {
+        width: 100%;
+        display: grid;
+        justify-items: center;
+    }
 
-.formulario-encontro.ativo,
-.formulario-participe.ativo {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 100%;
-    max-width: 500px;
-    padding: 10px 20px;
-    font-size: 15px;
-    margin: 0 auto;
-    justify-items: center;
-    gap: 0;
-}
+    .formulario-encontro.ativo,
+    .formulario-participe.ativo {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 500px;
+        padding: 10px 20px;
+        font-size: 15px;
+        margin: 0 auto;
+        justify-items: center;
+        gap: 0;
+    }
 
-.formulario-encontro.ativo h2,
-.formulario-participe.ativo h2 {
-    font-family: var(--txt2);
-    width: 100%;
-    text-align: center;
-    text-indent: 0;
-}
+    .formulario-encontro.ativo h2,
+    .formulario-participe.ativo h2 {
+        font-family: var(--txt2);
+        width: 100%;
+        text-align: center;
+        text-indent: 0;
+    }
 
-.form-group,
-.form-group1 {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
+    .form-group,
+    .form-group1 {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
 
-.form-group input,
-.form-group1 input,
-.form-group textarea,
-.form-group1 textarea {
-    width: 100%;
-}
+
+    .form-group input,
+    .form-group1 input,
+    .form-group textarea,
+    .form-group1 textarea {
+        width: 100%;
+        padding: 5px;
+        margin-right: -3px;
+    }
 
     .btn-enviar,
     .btn-fechar {
         margin: 10px auto;
         font-size: 12px;
+    }
+
+    .btn-formulariodiv {
+        gap: 20px;
+    }
+
+    .btn-formulariodiv button {
+        margin: 15px;
     }
 
     .mensagem-sucesso {
@@ -1517,3 +1542,4 @@ footer a {
         font-size: 10px;
     }
 }
+
