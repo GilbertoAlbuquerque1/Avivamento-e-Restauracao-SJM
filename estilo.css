@@ -29,6 +29,7 @@ body {
     font-family: var(--txt1);
     background-color: var(--cor1);
     color: var(--cor5);
+    scroll-behavior: smooth;
 }
 
 /* Configurações de textos padrão */
@@ -620,7 +621,8 @@ nav ul {
 
 }
 
-.btn-inscricao-toggle {
+.btn-inscricao-toggle,
+.btn-participe-toggle {
     font-family: var(--txt2);
     font-size: large;
     color: var(--cor1);
@@ -630,19 +632,38 @@ nav ul {
     margin: auto;
 }
 
-.btn-inscricao:hover {
+.btn-voltar {
+    font-family: var(--txt2);
+    font-size: large;
+    color: var(--cor1);
+    border-radius: 10px;
+    background: var(--cor4);
+    padding: 5px 20px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+
+
+
+.btn-inscricao:hover,
+.btn-voltar:hover {
     transform: translateY(-5px);
     transition: 0.3s;
 }
 
 .formulario-container {
+    width: 50%;
+}
+
+.formulario-encontro,
+.formulario-participe {
     display: none;
-    justify-items: center;
-    width: 100%;
 }
 
 
-.formulario-encontro {
+.formulario-encontro.ativo,
+.formulario-participe.ativo {
     display: grid;
     gap: 20px;
     padding: 20px;
@@ -653,24 +674,21 @@ nav ul {
     width: 100%;
     box-shadow: 0 5px 10px var(--cor6);
     text-align: left;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 
-.formulario-container.ativo {
-    display: block;
-}
-
-.h2form-encontro {
+.h2form-encontro,
+.h2form-participe {
     font-family: var(--txt1);
     color: var(--cor5);
     text-align: center;
-    grid-column: 1 / 3;
+   
 }
 
 .form-group {
     display: grid;
     gap: 10px;
-    grid-column: 1 / 3;
+    
 }
 
 .form-group1 {
@@ -726,9 +744,42 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     transition: 0.3s;
 }
 
+.mensagem-sucesso {
+    display: grid;
+    font-family: var(--txt3);
+    color: var(--cor5);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
 
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+    inline-size: none;
+    }
 
+    
 
+.eventos h2 {
+    font-size: x-large;
+    text-align: center;
+}
+
+.mensagem-sucesso a {
+    color: var(--cor5);
+    text-decoration: none;
+    font-family: var(--txt3);
+    font-size: 13px;
+    padding: 5px 10px;
+    margin-top: 15px;
+}
+
+.eventos .formulario-encontro a:hover,
+.eventos .formulario-participe a:hover  {
+    text-decoration: underline;
+}
 
 /* Pagina ajuda */
 .container6 {
@@ -785,6 +836,17 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     box-shadow: 0 5px 10px var(--cor6);
 }
 
+.btn-enviar-espiritual,
+.btn-enviar-social {
+    font-family: var(--txt2);
+    font-size: large;
+    color: var(--cor1);
+    border-radius: 10px;
+    background: var(--cor4);
+    padding: 5px 20px;
+    margin: auto;
+}
+
 input[type="text"], 
 input[type="tel"], 
 textarea {
@@ -794,10 +856,7 @@ textarea {
     width: auto;
 }
 
-.mensagem {
-    font-family: var(--txt3);
-    height: 125px;
-}
+
 
 input[type="email"] {
     padding: 10px 55px;   
@@ -840,6 +899,12 @@ input[type="email"] {
 }
 
 
+.mensagem-sucesso p,
+.mensagem-sucesso h2 {
+    font-family: var(--txt3);
+    margin: 5px 4px;
+    padding: 5px;
+}
 
 /* Pagina Colabore */
 .colabore {
@@ -1286,31 +1351,83 @@ footer a {
         width: 100%;
     }
 
-    .formulario-encontro {
-        grid-template-columns: 1fr;
-        width: 100%;
-        padding: 10px 15px;
-        font-size: 15px;
-        gap: 5px;
-    }
+.h2form-encontro,
+.h2form-participe {
+    text-align: center;
+    text-indent: 0;
+    width: 100%;
+    margin: 0 auto 15px auto;
+}
 
-    .h2form-encontro {
-        font-family: var(--txt2);
-        font-size: 23px;
-        width: 100%;
-    }
 
-    .form-group,
-    .form-group1,
-    .formulario-encontro div input {
-        width: 100%;
-    }
+.formulario-container {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+}
+
+.formulario-encontro.ativo,
+.formulario-participe.ativo {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px 20px;
+    font-size: 15px;
+    margin: 0 auto;
+    justify-items: center;
+    gap: 0;
+}
+
+.formulario-encontro.ativo h2,
+.formulario-participe.ativo h2 {
+    font-family: var(--txt2);
+    width: 100%;
+    text-align: center;
+    text-indent: 0;
+}
+
+.form-group,
+.form-group1 {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.form-group input,
+.form-group1 input,
+.form-group textarea,
+.form-group1 textarea {
+    width: 100%;
+}
 
     .btn-enviar,
     .btn-fechar {
         margin: 10px auto;
         font-size: 12px;
     }
+
+    .mensagem-sucesso {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        inline-size: none;
+        }
+
+    .mensagem-sucesso h2 {
+        text-align: center;
+        font-family: var(--txt2);
+        font-size: 20px;
+    }
+
+    .mensagem-sucesso p,
+    .mensagem-sucesso button {
+   
+        
+        font-size: 15px;
+    }
+    
+
 
     .espiritual,
     .social,

@@ -6,91 +6,195 @@ botaomenu.addEventListener('click', () => {
     menu.classList.toggle('ativo')
 })
 
-/* Espiritual */
-let botaoespiritual = document.querySelector('.apoio_espiritual-toggle') 
+let botaoespiritual = document.querySelector('.apoio_espiritual-toggle')
 let apoioespiritual = document.querySelector('.espiritual')
 
-/* Social */
-let botaosocial = document.querySelector('.apoio_social-toggle')
-let apoiosocial = document.querySelector('.social')
-/* Outros */
-let botaooutros = document.querySelector('.outros_assuntos-toggle')
+if (botaoespiritual && apoioespiritual) {
+    botaoespiritual.addEventListener('click', () => {
+        apoioespiritual.classList.toggle('ativo')
+        apoioessocial.classList.remove('ativo')
+        apoiooutros.classList.remove('ativo')
+    })
+}
+
+let botaoessocial = document.querySelector('.apoio_social-toggle')
+let apoioessocial = document.querySelector('.social')
+
+if (botaoessocial && apoioessocial) {
+    botaoessocial.addEventListener('click', () => {
+        apoioessocial.classList.toggle('ativo')
+        apoioespiritual.classList.remove('ativo')
+        apoiooutros.classList.remove('ativo')
+    })
+}
+
+let botaooutros = document.querySelector('.outros_assuntos-toggle') 
 let apoiooutros = document.querySelector('.outros')
 
-botaoespiritual.addEventListener('click', () => {
-    apoioespiritual.classList.toggle('ativo')
-})
-
-botaosocial.addEventListener('click', () => {
-})
-
-botaooutros.addEventListener('click', () => {
-    apoiooutros.classList.toggle('ativo')
-})
-
-let botaoformulario = document.querySelector('.btn-inscricao-toggle')
-let formularioencontro = document.querySelector('.formulario-container')
-
-botaoformulario.addEventListener('click', () => {
-    formularioencontro.classList.toggle('ativo')
-})
-
-
-
-
-
-// Função para enviar mensagem de apoio espiritual
-function enviarMensagemEspiritual() {
-    const mensagem = document.querySelector('.espiritual textarea').value;
-    const nome = document.querySelector('.espiritual input[type="text"]').value;
-    const email = document.querySelector('.espiritual input[type="email"]').value;
-    
-    if (mensagem && nome && email) {
-        console.log('Mensagem Espiritual:', { nome, email, mensagem });
-        alert('Obrigado! Sua mensagem foi enviada.');
-        document.querySelector('.espiritual form').reset();
-    } else {
-        alert('Por favor, preencha todos os campos.');
-    }
+if (botaooutros && apoiooutros) {
+    botaooutros.addEventListener('click', () => {
+        apoiooutros.classList.toggle('ativo')
+        apoioespiritual.classList.remove('ativo')
+        apoioessocial.classList.remove('ativo')
+    })
 }
 
-// Função para enviar mensagem de apoio social
-function enviarMensagemSocial() {
-    const mensagem = document.querySelector('.social textarea').value;
-    const nome = document.querySelector('.social input[type="text"]').value;
-    const email = document.querySelector('.social input[type="email"]').value;
-    
-    if (mensagem && nome && email) {
-        console.log('Mensagem Social:', { nome, email, mensagem });
-        alert('Obrigado! Sua mensagem foi enviada.');
-        document.querySelector('.social form').reset();
-    } else {
-        alert('Por favor, preencha todos os campos.');
-    }
+let formularioencontro = document.querySelector('.formulario-encontro')
+let formularioparticipe = document.querySelector('.formulario-participe')
+
+let botaoformularioi = document.querySelector ('.btn-inscricao-toggle')
+
+if (botaoformularioi && formularioencontro) {
+    botaoformularioi.addEventListener('click', () => {
+        formularioencontro.classList.toggle('ativo')
+        formularioparticipe.classList.remove('ativo')
+
+        if (formularioencontro.classList.contains('ativo')) {
+            setTimeout(() => {
+                formularioencontro.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 300);
+        }
+    });
 }
 
-// Event listeners para botões de envio
-document.querySelector('.espiritual .enviar-btn')?.addEventListener('click', enviarMensagemEspiritual);
-document.querySelector('.social .enviar-btn')?.addEventListener('click', enviarMensagemSocial);
+let botaoformulario2 = document.querySelector('.btn-participe-toggle')
 
-// Função para enviar mensagem de encontro via WhatsApp
+if (botaoformulario2 && formularioparticipe) {
+    botaoformulario2.addEventListener('click', () => {
+        formularioparticipe.classList.toggle('ativo')
+        formularioencontro.classList.remove('ativo')
 
-function enviarMensagemEncontro() {
-    const form = document.getElementById('formulario-encontro');
-    const nome = form.querySelector('input[name="nome"]')?.value;
-    const email = form.querySelector('input[name="email"]')?.value;
-    const telefone = form.querySelector('input[name="telefone"]')?.value;
-    const assunto = form.querySelector('input[name="assunto"]')?.value;
-    const mensagem = form.querySelector('textarea[name="mensagem"]')?.value;
-    
-    if (nome && email && telefone && assunto && mensagem) {
-        const texto = `Nome: ${nome}\nEmail: ${email}\nTelefone: ${telefone}\nAssunto: ${assunto}\nMensagem: ${mensagem}`;
-        const urlWhatsApp = `https://wa.me/351969879724?text=${encodeURIComponent(texto)}`;
-        window.open(urlWhatsApp, '_blank');
-        form.reset();
-    } else {
-        alert('Por favor, preencha todos os campos.');
-    }
+        if (formularioparticipe.classList.contains('ativo')) {
+            setTimeout(() => {
+                formularioparticipe.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 300);
+        }
+    });
 }
 
-document.querySelector('#formulario-encontro .enviar-btn')?.addEventListener('click', enviarMensagemEncontro);
+const pedidoapoioespiritual = document.getElementById('apoio-es')
+
+if (pedidoapoioespiritual) {
+    pedidoapoioespiritual.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const nome = this.querySelector('input[name="nome"]')?.value || '';
+        const numerocontato = this.querySelector('input[name="contato"]')?.value || '';
+        const mensagemespiritual = this.querySelector('textarea[name="mensagem"]')?.value || '';
+
+        if (nome && numerocontato && mensagemespiritual) {
+            const texto = `*Pedido de Apoio Espiritual*\n*Nome:* ${nome}\n*Contato:* ${numerocontato}\n*Mensagem:* ${mensagemespiritual}`;
+            const urlWhatsApp = `https://wa.me/351969879724?text=${encodeURIComponent(texto)}`;
+
+            window.open(urlWhatsApp, '_blank');         
+            this.innerHTML = `
+                <div class="mensagem-sucesso">
+                    <h2>Pedido de Apoio Iniciado!</h2>
+                    <p>Estamos muito felizes em saber que você tem interesse em receber apoio espiritual. O WhatsApp foi aberto para você receber nosso apoio o mais rápido possível.</p>
+                    <button type="button" onclick="location.reload()" class="btn-voltar">
+                        Voltar
+                    </button>
+                </div>
+            `;
+
+        } else {
+            alert('Por favor, preencha todos os campos.');
+        }
+    });
+}
+
+const pedidoapoiosocial = document.getElementById('apoio-sc')
+
+if (pedidoapoiosocial) {
+    pedidoapoiosocial.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const nome = this.querySelector('input[name="nome"]')?.value || '';
+        const numerocontato = this.querySelector('input[name="contato"]')?.value || '';
+        const email = this.querySelector('input[name="email"]')?.value || '';
+        const mensagemsocial = this.querySelector('textarea[name="mensagem"]')?.value || '';
+
+        if (nome && numerocontato && email && mensagemsocial) {
+            const texto = `*Pedido de Apoio Social*\n*Nome:* ${nome}\n*Contato:* ${numerocontato}\n*Email:* ${email}\n*Mensagem:* ${mensagemsocial}`;
+            const urlWhatsApp = `https://wa.me/351969879724?text=${encodeURIComponent(texto)}`;
+
+            window.open(urlWhatsApp, '_blank');         
+            this.innerHTML = `
+                <div class="mensagem-sucesso">
+                    <h2>Pedido de Apoio Iniciado!</h2>
+                    <p>Estamos para te apoiar, faremos o possível para te ajudar no que você precisar. O WhatsApp foi aberto para você receber nosso apoio o mais rápido possível.</p>
+                    <button type="button" onclick="location.reload()" class="btn-voltar">
+                        Voltar
+                    </button>
+                </div>
+            `;
+
+        } else {
+            alert('Por favor, preencha todos os campos.');
+        }
+    });
+}
+
+if (formularioencontro) {
+    formularioencontro.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const nome = this.querySelector('input[name="nome"]')?.value || '';
+        const email = this.querySelector('input[name="email"]')?.value || '';
+        const telefone = this.querySelector('input[name="telefone"]')?.value || '';
+        const endereco = this.querySelector('input[name="endereco"]')?.value || '';
+        const cidade = this.querySelector('input[name="cidade"]')?.value || '';
+
+        if (nome && email && telefone && endereco && cidade) {
+            const texto = `*Inscrição - Encontro com Deus*\n*Nome:* ${nome}\n*Email:* ${email}\n*Telefone:* ${telefone}\n*Endereço:* ${endereco}\n*Cidade:* ${cidade}`;
+            const urlWhatsApp = `https://wa.me/351969879724?text=${encodeURIComponent(texto)}`;
+            
+            window.open(urlWhatsApp, '_blank');
+            this.innerHTML = `
+                <div class="mensagem-sucesso">
+                    <h2>Inscrição iniciada com sucesso!</h2>
+                    <p>Estamos muito felizes em saber que você tem interesse em participar deste evento extraordinário. O WhatsApp foi aberto para você concluir o processo de inscrição com um de nossos colaboradores, por favor siga as instruções, e esteja atento às condições que lhe serão apresentadas.</p>
+                    <button type="button" onclick="location.reload()" class="btn-voltar">Voltar</button>
+                    <a href="precisadeajuda.html" target="_self">Se precisa de ajuda, clique aqui</a>
+                </div>
+            `;
+
+        } else {
+            alert('Por favor, preencha todos os campos obrigatórios.');
+        }
+    });
+}
+
+if (formularioparticipe) {
+    formularioparticipe.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const nome = this.querySelector('input[name="nome"]')?.value || '';
+        const telefone = this.querySelector('input[name="telefone"]')?.value || '';
+        const endereco = this.querySelector('input[name="endereco"]')?.value || '';
+        const cidade = this.querySelector('input[name="cidade"]')?.value || '';
+
+        if (nome && email && telefone && endereco && cidade) {
+            const texto = `*Inscrição - Participar de uma Célula*\n*Nome:* ${nome}\n*Email:* ${email}\n*Telefone:* ${telefone}\n*Endereço:* ${endereco}\n*Cidade:* ${cidade}`;
+            const urlWhatsApp = `https://wa.me/351969879724?text=${encodeURIComponent(texto)}`;
+            
+            window.open(urlWhatsApp, '_blank');
+            this.innerHTML = `
+                <div class="mensagem-sucesso">
+                    <h2>Pedido Iniciado!</h2>
+                    <p>Estamos muito felizes em saber que você tem interesse em participar de uma de nossas células. O WhatsApp foi aberto para você concluir o processo, por favor siga as instruções, e esteja atento quando um de nossos colaboradores entrar em contato.</p>
+                    <button type="button" onclick="location.reload()" class="btn-voltar">Voltar</button>
+                    <a href="precisadeajuda.html" target="_self">Se precisa de ajuda, clique aqui</a>
+                </div>
+            `;
+
+        } else {
+            alert('Por favor, preencha todos os campos obrigatórios.');
+        }
+    });
+}
