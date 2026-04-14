@@ -34,7 +34,7 @@ Acolhedora: Poppins (Títulos) + Lora (Corpo).
                 <li class="navlista"><a class="nava"  href="sobrenos.html" target="_self">Sobre Nós</a></li>
                 <li class="navlista"><a class="nava"  href="nosencontre.html">Nos Encontre</a></li>
                 <li class="navlista"><a class="nava"  href="eventos.html">Eventos</a></li>
-                <li class="active"><a class="activea"  href="precisadeajuda.html">Precisa de Ajuda?</a></li>
+                <li class="active"><a class="activea"  href="ajuda.html">Precisa de Ajuda?</a></li>
                 <li class="navlista"><a class="nava"  href="colabore.html">Colabore</a></li>
             </ul>
         </nav>
@@ -46,13 +46,13 @@ Acolhedora: Poppins (Títulos) + Lora (Corpo).
             <p class="apresentacao-espiritual">Se você está passando por um momento difícil, não precisa enfrentar isso sozinho(a).</p>
             <button class="apoio_espiritual-toggle">Solicitar Apoio</button>
             <div class="espiritual">
-                <form action="">
+                <form class="apoio-es" id="apoio-es">
                     <p class="txtapresentacao">Compartilhe conosco como podemos te ajudar, queremos orar e caminhar com você.</p>           
                     <div class="campo">
                         <label for="nomeespiritual">
                             Nome e Sobrenome:
                         </label>
-                        <input type="text" name="Nome" id="nomeespiritual">
+                        <input type="text" name="nome" id="nomeespiritual">
                     </div>
                     <div class="campo">
                         <label for="contatoespiritual">
@@ -66,7 +66,7 @@ Acolhedora: Poppins (Títulos) + Lora (Corpo).
                             <textarea
                                 class="mensagem"
                                 id="mensagemespiritual"
-                                name="mensagem-espiritual"
+                                name="mensagem"
                                 rows="5"
                                 cols="50"
                                 placeholder="Digite sua mensagem aqui... 
@@ -77,7 +77,7 @@ Aconselhamento,
 Acompanhamento e etc."
                                 required></textarea>
                     </div>
-                    <div><button type="submit">Enviar</button></div>
+                    <div><button class="btn-enviar-espiritual" type="submit">Enviar</button></div>
                 </form>
             </div>
         </section>
@@ -87,27 +87,27 @@ Acompanhamento e etc."
             <p class="apresentacao-social">Seu pedido será tratado com carinho (ou muita atenção) e total confidencialidade.</p>
             <button class="apoio_social-toggle">Solicitar Apoio</button>
             <div class="social">
-                <p>Descreva em que área você precisa de ajuda, e conte nos um pouco sobre sua situação.</p>
-                <form action=""> 
+                <form class="apoio-sc" id="apoio-sc"> 
+                    <p class="txtapresentacao">Descreva em que área você precisa de ajuda, e conte nos um pouco sobre sua situação.</p>
                     <div class="campo">
                         <label for="nomesocial">Nome e Sobrenome *</label>
-                        <input type="text" name="Nome completo" id="nomesocial" required>
+                        <input type="text" name="nome" id="nomesocial" required>
                     </div>
                     <div class="campo">
                         <label for="contatosocial">
                             Numero para Contato *
                         </label>
-                        <input type="text" name="Contato" id="contatosocial" required>
+                        <input type="text" name="contato" id="contatosocial" required>
                     </div>
                     <div class="campo">
                         <label for="emailsocial">Email: (opcional)</label>
-                        <input type="email" name="Email" id="emailsocial">
+                        <input type="email" name="email" id="emailsocial">
                     </div>
                     <div class="campo">
                         <label for="escrevasumensagem">Escreva sua Mensagem:</label>
                             <textarea class="mensagem"
                                 id="mensagemsocial"
-                                name="mensagem-social"
+                                name="mensagem"
                                 rows="5"
                                 cols="50"
                                 placeholder="Digite sua mensagem aqui...
@@ -117,7 +117,7 @@ Ajuda prática,
 Suprimento de necessidades,
 Suporte familiar e etc." required></textarea>
                     </div>
-                    <div><button type="submit">Enviar</button></div>
+                    <div><button class="btn-enviar-social" type="submit">Enviar</button></div>
                     
                 </form>
             </div>

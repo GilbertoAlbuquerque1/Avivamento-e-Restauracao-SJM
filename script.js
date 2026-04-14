@@ -1,3 +1,4 @@
+
 let botaomenu = document.querySelector('.menu-toggle')
 let menu = document.querySelector('.menu')
 
@@ -21,7 +22,6 @@ botaoespiritual.addEventListener('click', () => {
 })
 
 botaosocial.addEventListener('click', () => {
-    apoiosocial.classList.toggle('ativo')
 })
 
 botaooutros.addEventListener('click', () => {
