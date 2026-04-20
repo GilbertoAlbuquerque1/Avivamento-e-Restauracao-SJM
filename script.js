@@ -144,11 +144,11 @@ if (formularioencontro) {
     formularioencontro.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        const nome = this.querySelector('input[name="nome"]')?.value || '';
-        const email = this.querySelector('input[name="email"]')?.value || '';
-        const telefone = this.querySelector('input[name="telefone"]')?.value || '';
-        const endereco = this.querySelector('input[name="endereco"]')?.value || '';
-        const cidade = this.querySelector('input[name="cidade"]')?.value || '';
+        const nome = this.querySelector('input[name="nome-encontro"]')?.value || '';
+        const email = this.querySelector('input[name="email-encontro"]')?.value || '';
+        const telefone = this.querySelector('input[name="telefone-encontro"]')?.value || '';
+        const endereco = this.querySelector('input[name="endereco-encontro"]')?.value || '';
+        const cidade = this.querySelector('input[name="cidade-encontro"]')?.value || '';
 
         if (nome && email && telefone && endereco && cidade) {
             const texto = `*Inscrição - Encontro com Deus*\n*Nome:* ${nome}\n*Email:* ${email}\n*Telefone:* ${telefone}\n*Endereço:* ${endereco}\n*Cidade:* ${cidade}`;
@@ -160,7 +160,7 @@ if (formularioencontro) {
                     <h2>Inscrição iniciada com sucesso!</h2>
                     <p>Estamos muito felizes em saber que você tem interesse em participar deste evento extraordinário. O WhatsApp foi aberto para você concluir o processo de inscrição com um de nossos colaboradores, por favor siga as instruções, e esteja atento às condições que lhe serão apresentadas.</p>
                     <button type="button" onclick="location.reload()" class="btn-voltar">Voltar</button>
-                    <a href="precisadeajuda.html" target="_self">Se precisa de ajuda, clique aqui</a>
+                    <a href="ajuda.html" target="_self">Se precisa de ajuda, clique aqui</a>
                 </div>
             `;
 
@@ -174,13 +174,13 @@ if (formularioparticipe) {
     formularioparticipe.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        const nome = this.querySelector('input[name="nome"]')?.value || '';
-        const telefone = this.querySelector('input[name="telefone"]')?.value || '';
-        const endereco = this.querySelector('input[name="endereco"]')?.value || '';
-        const cidade = this.querySelector('input[name="cidade"]')?.value || '';
+        const nome = this.querySelector('input[name="nome-participe"]')?.value || '';
+        const telefone = this.querySelector('input[name="telefone-participe"]')?.value || '';
+        const endereco = this.querySelector('input[name="endereco-participe"]')?.value || '';
+        const cidade = this.querySelector('input[name="cidade-participe"]')?.value || '';
 
-        if (nome && email && telefone && endereco && cidade) {
-            const texto = `*Inscrição - Participar de uma Célula*\n*Nome:* ${nome}\n*Email:* ${email}\n*Telefone:* ${telefone}\n*Endereço:* ${endereco}\n*Cidade:* ${cidade}`;
+        if (nome && telefone && endereco && cidade) {
+            const texto = `*Inscrição - Participar de uma Célula*\n*Nome:* ${nome}\n*Telefone:* ${telefone}\n*Endereço:* ${endereco}\n*Cidade:* ${cidade}`;
             const urlWhatsApp = `https://wa.me/351969879724?text=${encodeURIComponent(texto)}`;
             
             window.open(urlWhatsApp, '_blank');
@@ -189,7 +189,7 @@ if (formularioparticipe) {
                     <h2>Pedido Iniciado!</h2>
                     <p>Estamos muito felizes em saber que você tem interesse em participar de uma de nossas células. O WhatsApp foi aberto para você concluir o processo, por favor siga as instruções, e esteja atento quando um de nossos colaboradores entrar em contato.</p>
                     <button type="button" onclick="location.reload()" class="btn-voltar">Voltar</button>
-                    <a href="precisadeajuda.html" target="_self">Se precisa de ajuda, clique aqui</a>
+                    <a href="ajuda.html" target="_self">Se precisa de ajuda, clique aqui</a>
                 </div>
             `;
 
@@ -197,4 +197,9 @@ if (formularioparticipe) {
             alert('Por favor, preencha todos os campos obrigatórios.');
         }
     });
+}
+
+function fecharFormulario() {
+    if (formularioencontro) formularioencontro.classList.remove('ativo');
+    if (formularioparticipe) formularioparticipe.classList.remove('ativo');
 }
