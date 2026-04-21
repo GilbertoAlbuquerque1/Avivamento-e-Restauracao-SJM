@@ -6,38 +6,29 @@ botaomenu.addEventListener('click', () => {
     menu.classList.toggle('ativo')
 })
 
-let botaoespiritual = document.querySelector('.apoio_espiritual-toggle')
+/* 
+   PADRONIZAÇÃO DE ACCORDIONS
+   Esta função recebe o botão clicado, o conteúdo a ser exibido e uma lista de outros 
+   conteúdos que devem ser fechados (removendo a classe 'ativo').
+*/
+function gerenciarAccordion(botao, alvo, outros) {
+    if (botao && alvo) {
+        botao.addEventListener('click', () => {
+            alvo.classList.toggle('ativo');
+            outros.forEach(item => {
+                if (item) item.classList.remove('ativo');
+            });
+        });
+    }
+}
+
 let apoioespiritual = document.querySelector('.espiritual')
-
-if (botaoespiritual && apoioespiritual) {
-    botaoespiritual.addEventListener('click', () => {
-        apoioespiritual.classList.toggle('ativo')
-        apoioessocial.classList.remove('ativo')
-        apoiooutros.classList.remove('ativo')
-    })
-}
-
-let botaoessocial = document.querySelector('.apoio_social-toggle')
 let apoioessocial = document.querySelector('.social')
-
-if (botaoessocial && apoioessocial) {
-    botaoessocial.addEventListener('click', () => {
-        apoioessocial.classList.toggle('ativo')
-        apoioespiritual.classList.remove('ativo')
-        apoiooutros.classList.remove('ativo')
-    })
-}
-
-let botaooutros = document.querySelector('.outros_assuntos-toggle') 
 let apoiooutros = document.querySelector('.outros')
 
-if (botaooutros && apoiooutros) {
-    botaooutros.addEventListener('click', () => {
-        apoiooutros.classList.toggle('ativo')
-        apoioespiritual.classList.remove('ativo')
-        apoioessocial.classList.remove('ativo')
-    })
-}
+gerenciarAccordion(document.querySelector('.apoio_espiritual-toggle'), apoioespiritual, [apoioessocial, apoiooutros]);
+gerenciarAccordion(document.querySelector('.apoio_social-toggle'), apoioessocial, [apoioespiritual, apoiooutros]);
+gerenciarAccordion(document.querySelector('.outros_assuntos-toggle'), apoiooutros, [apoioespiritual, apoioessocial]);
 
 let formularioencontro = document.querySelector('.formulario-encontro')
 let formularioparticipe = document.querySelector('.formulario-participe')
@@ -83,9 +74,9 @@ const pedidoapoioespiritual = document.getElementById('apoio-es')
 if (pedidoapoioespiritual) {
     pedidoapoioespiritual.addEventListener('submit', function(e) {
         e.preventDefault();
-        const nome = this.querySelector('input[name="nome"]')?.value || '';
-        const numerocontato = this.querySelector('input[name="contato"]')?.value || '';
-        const mensagemespiritual = this.querySelector('textarea[name="mensagem-spiritual"]')?.value || '';
+        const nome = this.querySelector('input[name="nome-espiritual"]')?.value || '';
+        const numerocontato = this.querySelector('input[name="contato-espiritual"]')?.value || '';
+        const mensagemespiritual = this.querySelector('textarea[name="mensagem-espiritual"]')?.value || '';
 
         if (nome && numerocontato && mensagemespiritual) {
             const texto = `*Pedido de Apoio Espiritual*\n*Nome:* ${nome}\n*Contato:* ${numerocontato}\n*Mensagem:* ${mensagemespiritual}`;
@@ -114,9 +105,9 @@ if (pedidoapoiosocial) {
     pedidoapoiosocial.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        const nome = this.querySelector('input[name="nome"]')?.value || '';
-        const numerocontato = this.querySelector('input[name="contato"]')?.value || '';
-        const email = this.querySelector('input[name="email"]')?.value || '';
+        const nome = this.querySelector('input[name="nome-social"]')?.value || '';
+        const numerocontato = this.querySelector('input[name="contato-social"]')?.value || '';
+        const email = this.querySelector('input[name="email-social"]')?.value || '';
         const mensagemsocial = this.querySelector('textarea[name="mensagem-social"]')?.value || '';
 
         if (nome && numerocontato && mensagemsocial) {
