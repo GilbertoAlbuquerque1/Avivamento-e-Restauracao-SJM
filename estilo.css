@@ -153,7 +153,7 @@ nav ul {
 
 /* Configuração Home page */
 .heroimg {
-    background-image: url('Imagens/hero01.png');
+    background-image: url('imagens/hero01.png');
     background-size: cover;
     background-position: center;
     width: 100%;
