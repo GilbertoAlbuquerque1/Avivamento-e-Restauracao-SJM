@@ -40,100 +40,103 @@ Acolhedora: Poppins (Títulos) + Lora (Corpo).
         </nav>
     </header> 
 
-    <main class="eventos">
-        <section class="encontro">
-            <div>
-                <picture>
-                    <source media="(max-width: 750px)" srcset="imagens/encontrop.png" type="image/png">
-                    <img class="imgeventos" src="imagens/encontrom.png" alt="eventos_iar_sjm" width="100%">
-                </picture>
-            </div>
-            <div class="interacao-evento">
-                <article>
-                    <p class="descricao">
-                        O Encontro com Deus é um tempo separado para que você se desconecte da rotina e tenha uma experiência real e transformadora com a presença de Deus. Durante esses dias, cada momento é cuidadosamente preparado para ministrar ao seu coração, trazendo cura interior, libertação, restauração e um novo direcionamento espiritual.
-                    </p>
-                </article>
-                <article>
-                    <input type="button" value="Inscreva-se" class="btn-inscricao-toggle">
-                </article>
-            </div>
-        </section>
-        <section class="celulas">
-            <div>
-                <picture>
-                    <source media="(max-width: 750px)" srcset="imagens/celulap.png" type="image/png">
-                    <img class="imgeventos" src="imagens/celulag.png" alt="eventos_iar_sjm" width="700">
-                </picture>
-            </div>
-            <div class="interacao-evento">
-                <article>
-                    <p class="descricao">
-                        As células são pequenos grupos que se reúnem durante a semana para compartilhar a Palavra, orar e crescer juntos. Um ambiente de comunhão, cuidado e crescimento espiritual. Aqui você não caminha sozinho, fazemos parte de uma família. As células são o coração da igreja. É onde vidas são alcançadas, discipuladas e fortalecidas.
-                    </p>
-                </article>
-                <article>
-                    <input data-target=".participe" type="button" value="Participe" class="btn-participe-toggle">
-                </article>
-            </div>
-        </section>
-        <section class="formulario-container" id="formulario-container">
-            <form class="formulario-encontro" id="formulario-encontro">
-                <h2 class="h2form-encontro">Inscrição - Encontro com Deus</h2>
-                <div class="form-group">
-                    <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome-encontro" name="nome-encontro" required>
+    <main>
+        <h1 class="temapagina">Eventos</h1>
+        <div class="eventos">
+            <section class="encontro">
+                <div>
+                    <picture>
+                        <source media="(max-width: 750px)" srcset="imagens/encontrop.png" type="image/png">
+                        <img class="imgeventos" src="imagens/encontrom.png" alt="eventos_iar_sjm" width="100%">
+                    </picture>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email-encontro" name="email-encontro" required>
+                <div class="interacao-evento">
+                    <article>
+                        <p class="descricao">
+                            O Encontro com Deus é um tempo separado para que você se desconecte da rotina e tenha uma experiência real e transformadora com a presença de Deus. Durante esses dias, cada momento é cuidadosamente preparado para ministrar ao seu coração, trazendo cura interior, libertação, restauração e um novo direcionamento espiritual.
+                        </p>
+                    </article>
+                    <article>
+                        <input type="button" value="Inscreva-se" class="btn-inscricao-toggle">
+                    </article>
                 </div>
-                <div class="form-group1">
-                    <label for="telefone">Telefone</label>
-                    <input type="tel" id="telefone-encontro" name="telefone-encontro" required>
+            </section>
+            <section class="celulas">
+                <div>
+                    <picture>
+                        <source media="(max-width: 750px)" srcset="imagens/celulap.png" type="image/png">
+                        <img class="imgeventos" src="imagens/celulag.png" alt="eventos_iar_sjm" width="700">
+                    </picture>
                 </div>
-                <div class="form-group1">
-                    <label for="data-nascimento">Data de Nascimento</label>
-                    <input type="date" id="data-nascimento" name="data-nascimento"
-                   required>
+                <div class="interacao-evento">
+                    <article>
+                        <p class="descricao">
+                            As células são pequenos grupos que se reúnem durante a semana para compartilhar a Palavra, orar e crescer juntos. Um ambiente de comunhão, cuidado e crescimento espiritual. Aqui você não caminha sozinho, fazemos parte de uma família. As células são o coração da igreja. É onde vidas são alcançadas, discipuladas e fortalecidas.
+                        </p>
+                    </article>
+                    <article>
+                        <input data-target=".participe" type="button" value="Participe" class="btn-participe-toggle">
+                    </article>
                 </div>
-                <div class="form-group">
-                    <label for="endereco">Endereço</label>
-                    <input type="text" id="endereco-encontro" name="endereco-encontro" required>
-                </div>
-                <div class="form-group">
-                    <label for="cidade">Cidade</label>
-                    <input type="text" id="cidade-encontro" name="cidade-encontro" required>
-                </div>
-                <div class="btn-formulariodiv">
-                    <button type="submit" class="btn-enviar">Confirmar</button>
-                    <button type="button" class="btn-fechar" onclick="fecharFormulario('formulario-encontro')">Cancelar</button>
-                </div>
-            </form>
-            <form class="formulario-participe" id="formulario-participe">
-                <h2 class="h2form-participe">Entre em Contato para Participar</h2>
-                <div class="form-group">
-                    <label for="nome">Nome e Sobrenome</label>
-                    <input type="text" id="nome-participe" name="nome-participe" required>
-                </div>
-                <div class="form-group">
-                    <label for="telefone">Telefone</label>
-                    <input type="tel" id="telefone-participe" name="telefone-participe" required>
-                </div>
-                <div class="form-group">
-                    <label for="endereco">Endereço</label>
-                    <input type="text" id="endereco-participe" name="endereco-participe" required>
-                </div>
-                <div class="form-group">
-                    <label for="cidade">Cidade</label>
-                    <input  type="text" id="cidade-participe" name="cidade-participe" required>
-                </div>
-                <div class="btn-formulariodiv">
-                    <button type="submit" class="btn-enviar">Confirmar</button>
-                    <button type="button" class="btn-fechar" onclick="fecharFormulario('formulario-participe')">Cancelar</button>
-                </div>
-            </form>
-        </section>
+            </section>
+            <section class="formulario-container" id="formulario-container">
+                <form class="formulario-encontro" id="formulario-encontro">
+                    <h2 class="h2form-encontro">Inscrição - Encontro com Deus</h2>
+                    <div class="form-group">
+                        <label for="nome-encontro">Nome Completo</label>
+                        <input type="text" id="nome-encontro" name="nome-encontro" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email-encontro">Email</label>
+                        <input type="email" id="email-encontro" name="email-encontro" required>
+                    </div>
+                    <div class="form-group1">
+                        <label for="telefone-encontro">Telefone</label>
+                        <input type="tel" id="telefone-encontro" name="telefone-encontro" required>
+                    </div>
+                    <div class="form-group1">
+                        <label for="data-nascimento">Data de Nascimento</label>
+                        <input type="date" id="data-nascimento" name="data-nascimento"
+                       required>
+                    </div>
+                    <div class="form-group">
+                        <label for="endereco-encontro">Endereço</label>
+                        <input type="text" id="endereco-encontro" name="endereco-encontro" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cidade-encontro">Cidade</label>
+                        <input type="text" id="cidade-encontro" name="cidade-encontro" required>
+                    </div>
+                    <div class="btn-formulariodiv">
+                        <button type="submit" class="btn-enviar">Confirmar</button>
+                        <button type="button" class="btn-fechar" onclick="fecharFormulario('formulario-encontro')">Cancelar</button>
+                    </div>
+                </form>
+                <form class="formulario-participe" id="formulario-participe">
+                    <h2 class="h2form-participe">Entre em Contato para Participar</h2>
+                    <div class="form-group">
+                        <label for="nome-participe">Nome e Sobrenome</label>
+                        <input type="text" id="nome-participe" name="nome-participe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone-participe">Telefone</label>
+                        <input type="tel" id="telefone-participe" name="telefone-participe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="endereco-participe">Endereço</label>
+                        <input type="text" id="endereco-participe" name="endereco-participe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cidade-participe">Cidade</label>
+                        <input  type="text" id="cidade-participe" name="cidade-participe" required>
+                    </div>
+                    <div class="btn-formulariodiv">
+                        <button type="submit" class="btn-enviar">Confirmar</button>
+                        <button type="button" class="btn-fechar" onclick="fecharFormulario('formulario-participe')">Cancelar</button>
+                    </div>
+                </form>
+            </section>
+        </div>
     </main>
 
     <footer><!--RODAPÉ--> 
