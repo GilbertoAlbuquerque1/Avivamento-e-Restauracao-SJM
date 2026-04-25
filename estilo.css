@@ -99,7 +99,7 @@ header {
     list-style: none;
     display: flex;
     gap: 30px;
-    margin: 0 15px;
+    margin: 0px;
 }
 
 .navlista:hover {
@@ -223,6 +223,7 @@ nav ul {
     grid-template-columns: 1fr;
 }
 
+.sobrenos1 h2,
 .cultos h2 {
     font-size: 7vh;
     margin-top: 30px;
@@ -232,6 +233,7 @@ nav ul {
 .cultos h2,
 .sobrenos1 a,
 .sobrenos1 h2,
+.eventoshome h2,
 .ministracao h2 {
     font-family: var(--txt3);
     font-size: 45px;
@@ -1107,12 +1109,18 @@ footer a {
     }
 
     .navlista {
-        padding: 10px 5px;
+        display: grid;
+        justify-items: left;
+        padding: 1px 5px;
         width: 100%;
         border-radius: 5px;
         text-align: center;
         border-bottom: 1px solid var(--cor6);
     }
+
+    .nava {
+        text-align: left;
+     width: 100%;}
 
     .active {
         padding: 10px 5px;
@@ -1147,6 +1155,7 @@ footer a {
         grid-template-columns: 1fr;
         align-items: center;
         text-align: center;
+        padding: 10px;
     }
 
     .cultos {
@@ -1160,10 +1169,12 @@ footer a {
     .domingo,
     .quinta {
         font-size: 24px;
+        text-align: center;
     }
 
     .container2 h2 {
         font-size: 3vh;
+        text-align: center;
     }
 
     .horariodoculto {
@@ -1172,7 +1183,9 @@ footer a {
 
     .avivamento,
     .restauracao {
+        text-align: center;
         font-size: 15px;
+        text-indent: 0;
     }
 
     .article_domingo,
@@ -1182,6 +1195,7 @@ footer a {
 
     .sobrenos1 h2,
     .container2 h2{
+        padding: 15px;
         font-size: 3vh;
         font-family: var(--txt1);
     }
@@ -1212,6 +1226,12 @@ footer a {
     .ministracao {
         align-items: center;
         grid-template-columns: 1fr;
+    }
+
+    .eventoshome {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
     }
 
     /* paginas */

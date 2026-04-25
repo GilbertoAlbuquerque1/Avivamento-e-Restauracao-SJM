@@ -2,8 +2,15 @@
 let botaomenu = document.querySelector('.menu-toggle')
 let menu = document.querySelector('.menu')
 
+/* 
+   ACESSIBILIDADE (ARIA):
+   O atributo 'aria-expanded' indica a tecnologias assistivas (como leitores de tela) 
+   se o conteúdo controlado pelo botão está visível (true) ou oculto (false).
+*/
 botaomenu.addEventListener('click', () => {
-    menu.classList.toggle('ativo')
+    const estaAtivo = menu.classList.toggle('ativo');
+    // Atualiza o estado de expansão para acessibilidade
+    botaomenu.setAttribute('aria-expanded', estaAtivo);
 })
 
 /* 
