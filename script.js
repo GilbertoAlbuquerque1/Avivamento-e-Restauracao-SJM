@@ -176,7 +176,7 @@ if (formularioencontro) {
                     <h2>Inscrição iniciada com sucesso!</h2>
                     <p>Estamos muito felizes em saber que você tem interesse em participar deste evento extraordinário. O WhatsApp foi aberto para você concluir o processo de inscrição com um de nossos colaboradores, por favor siga as instruções, e esteja atento às condições que lhe serão apresentadas.</p>
                     <button type="button" onclick="location.reload()" class="btn-voltar">Voltar</button>
-                    <a href="ajuda.html" target="_self">Se precisa de ajuda, clique aqui</a>
+                    <p>Se precisa de ajuda,<a href="ajuda.html" target="_self">clique aqui</a></p>
                 </div>
             `;
     } else {
