@@ -13,7 +13,9 @@ export default function Navbar() {
     <header className="cabecalho">
       <div className="container-nav">
         <a href="#/" className="logo">
-          <img src="/imagens/logo.png" alt="Logo Igreja Avivamento e Restauração" />
+          <img src="/imagens/logoheader.png" 
+          width="70"
+          alt="Logo Igreja Avivamento e Restauração" />
         </a>
 
         <button 

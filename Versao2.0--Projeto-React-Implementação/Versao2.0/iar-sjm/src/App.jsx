@@ -1,5 +1,6 @@
 import './App.css'
 import Navbar from './components/NavBar'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
       <main style={{ padding: '2rem', textAlign: 'center' }}>
         <h2>Conteúdo Principal (Em Construção)</h2>
       </main>
+      <Footer />
     </div>
   )
 }

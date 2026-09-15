@@ -999,7 +999,7 @@ input[type="email"] {
 /* Footer */
 footer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   background-image: linear-gradient(to top, var(--cor5) 10%, #0e0d0d 100%);
   text-align: center;
   gap: 20px;
@@ -1008,12 +1008,23 @@ footer {
   transition: 2.3s;
 }
 
+.rodape img {
+  width: 80px;
+  height: auto;
+}
+
 .rodape {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5px;
-  padding-top: 30px;
   margin: auto;
+}
+
+.coluna-footer {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  align-items: center;
 }
 
 footer a {
@@ -1029,10 +1040,11 @@ footer a {
 
 .txtfooter {
   font-size: small;
-  background-image: linear-gradient(to top, #0e0d0d 5%, var(--cor5) 100%);
+  align-items: center;
   text-align: center;
+  text-indent: 0px;
   color: var(--cor1);
-  padding-bottom: 20px;
+
 }
 
 /* Responsividade */
