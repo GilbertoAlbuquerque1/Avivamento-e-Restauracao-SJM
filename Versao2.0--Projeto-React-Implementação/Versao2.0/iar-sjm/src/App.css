@@ -14,9 +14,9 @@
   --cor1: #e6e3e3; /* fundo principal */
   --cor2: #f1f5f9; /* fundo secundário */
   --cor3: #0ea5e9; /* destaque (botões, links) */
-  --cor4: #1e3a5f; /* azul institucional */
-  --cor5: #1f2937; /* texto principal */
-  --cor6: #0f172a; /* header/footer */
+  --cor4: #4973aa; /* azul institucional */
+  --cor5: #2e4464; /* texto principal */
+  --cor6: #31394b; /* header/footer */
 
   --txt1:
     "Montserrat", "Inter", "Roboto Condensed", sans-serif; /* fonte principal */
@@ -79,6 +79,20 @@ main section a {
   width: 100%;
 }
 
+.footerinput{
+  padding: 5px;
+  border-radius: 20px;
+  border: 1px solid var(--cor5);
+}
+
+.footerbutton{
+  padding: 5px;
+  border-radius: 10px;
+  background-color: var(--cor3);
+  color: var(--cor1);
+  border: 1px solid var(--cor3);
+}
+
 /* Header e Navegação */
 
 header {
@@ -112,7 +126,9 @@ header {
   margin: 0px;
 }
 
-.navlista:hover {
+.cabecalho a:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
   background-color: var(--cor1);
   color: var(--cor6);
 }
@@ -150,7 +166,7 @@ nav ul {
   justify-content: start;
 }
 
-.nava {
+.cabecalho a {
   text-decoration: none;
   color: var(--cor1);
   padding: 10px;
@@ -1008,28 +1024,40 @@ footer {
   transition: 2.3s;
 }
 
+.coluna-footer h2 {
+  font-family: var(--txt3);
+  font-size: 20px;
+  color: var(--cor1);
+}
+
+.coluna-footer h3, h4 {
+  font-family: var(--txt2);
+  color: var(--cor1);
+}
+
 .rodape img {
-  width: 80px;
-  height: auto;
+  width: 100px;
+
 }
 
 .rodape {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  display: flex;
   gap: 5px;
   margin: auto;
 }
 
 .coluna-footer {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 10px;
   padding: 10px;
-  align-items: center;
 }
 
-footer a {
+footer a, p {
   align-items: center;
-  font-size: 15px;
+  font-size: 12px;
   text-decoration: none;
   color: var(--cor1);
 }
@@ -1044,8 +1072,22 @@ footer a {
   text-align: center;
   text-indent: 0px;
   color: var(--cor1);
-
 }
+
+.direitosReservados {
+  grid-column: 1/5;
+  text-align: left;
+  font-family: var(--txt3);
+  font-size: 12px;
+  color: var(--cor1);
+}
+
+.imgSociais {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
 
 /* Responsividade */
 @media (max-width: 768px) {

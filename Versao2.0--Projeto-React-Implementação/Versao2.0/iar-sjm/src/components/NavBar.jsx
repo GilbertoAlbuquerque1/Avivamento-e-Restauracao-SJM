@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+
 export default function Navbar() {
   // Menu mobile começa como false (fechado)
   const [menuAberto, setMenuAberto] = useState(false);
@@ -17,15 +18,12 @@ export default function Navbar() {
           width="70"
           alt="Logo Igreja Avivamento e Restauração" />
         </a>
-
+        </div>
         <button 
           className={`menu-toggle ${menuAberto ? 'active' : ''}`}
           onClick={alternarMenu}
           aria-label="Abrir menu"
         >
-          <span></span>
-          <span></span>
-          <span></span>
         </button>
 
         <nav className={`menu ${menuAberto ? 'active' : ''}`}>
@@ -36,7 +34,7 @@ export default function Navbar() {
           <a href="#/ajuda" onClick={() => setMenuAberto(false)}>Precisa de Ajuda?</a>
           <a href="#/colabore" className="btn-colabore" onClick={() => setMenuAberto(false)}>Colabore</a>
         </nav>
-      </div>
+      
     </header>
   );
 }
