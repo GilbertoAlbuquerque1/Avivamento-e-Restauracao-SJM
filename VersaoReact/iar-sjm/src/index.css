@@ -18,3 +18,71 @@ html, body {
   flex-direction: column;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;700;800&family=Roboto+Condensed:ital,wght@1,400&display=swap');
+
+:root {
+  /* Cores da Identidade Visual */
+  --cor1: #e6e3e3;
+  --cor2: #F1F5F9;
+  --cor3: #0EA5E9; /* Azul Vibrante (destaques, botões ativos) */
+  --cor4: #1E3A5F; /* Azul Médio */
+  --cor5: #1F2937;
+  --cor6: #0F172A; /* Azul Muito Escuro (Fundo do header, seções escuras) */
+  
+  --cor-branco: #FFFFFF;
+  --cor-texto-principal: #334155;
+  --cor-texto-claro: #94A3B8;
+
+  /* Espaçamentos Consistentes */
+  --sp-8: 8px;
+  --sp-16: 16px;
+  --sp-24: 24px;
+  --sp-32: 32px;
+  --sp-48: 48px;
+  --sp-64: 64px;
+  --sp-80: 80px;
+
+  /* Tipografia */
+  --font-principal: 'Inter', sans-serif;
+  --font-titulos: 'Montserrat', sans-serif;
+  --font-destaque: 'Roboto Condensed', sans-serif;
+  
+  /* Estrutura */
+  --max-width-container: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-principal);
+  background-color: var(--cor-branco);
+  color: var(--cor-texto-principal);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Container Global Reutilizável */
+.container {
+  width: 100%;
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+  padding: 0 var(--sp-24);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-principal);
+}
+

@@ -1,0 +1,152 @@
+.events {
+  padding: var(--sp-80) 0;
+  background-color: var(--cor2); /* Usando o fundo secundário clarinho (F1F5F9) */
+}
+
+/* --- CABEÇALHO DA SEÇÃO --- */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Alinha a parte de baixo do título com a parte de baixo do link */
+  margin-bottom: var(--sp-48);
+}
+
+.header-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.view-all-link {
+  color: var(--cor4);
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.view-all-link:hover {
+  color: var(--cor3);
+  text-decoration: underline;
+}
+
+/* --- GRID DOS CARDS --- */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-24);
+}
+
+/* --- ESTILO DO CARD (Fidelidade Visual) --- */
+.event-card {
+  background-color: var(--cor-branco);
+  border-radius: 8px;
+  overflow: hidden; /* Faz a imagem não vazar das bordas redondas do card */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra super discreta */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Microinteração de hover no Card */
+.event-card:hover {
+  transform: translateY(-5px); /* O card sobe um pouquinho */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.event-image {
+  width: 100%;
+  height: 180px; /* Altura fixa para todos os cards ficarem iguais */
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantém a proporção sem amassar a foto */
+}
+
+.event-body {
+  padding: var(--sp-24);
+  display: flex;
+  gap: var(--sp-16); /* Espaço entre o quadrado da data e os textos */
+  flex-grow: 1; /* Preenche o espaço restante caso um título seja longo */
+}
+
+/* --- BLOCO DA DATA (O quadrado azul) --- */
+.event-date {
+  background-color: var(--cor3);
+  color: var(--cor-branco);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 55px;
+  flex-shrink: 0; /* Impede que o quadradinho diminua */
+}
+
+.date-day {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.date-month {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* --- TEXTOS E LINKS DO CARD --- */
+.event-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.event-title {
+  color: var(--cor6);
+  font-size: 16px;
+  font-family: var(--font-titulos);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 4px;
+  text-align: left; /* Corrigindo herança global do App.css */
+}
+
+.event-time {
+  color: var(--cor-texto-claro);
+  font-size: 13px;
+  margin-bottom: var(--sp-16);
+  text-indent: 0; /* Corrigindo herança global do App.css */
+}
+
+.event-link {
+  color: var(--cor3);
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: auto; /* Empurra o link sempre para a base */
+}
+
+.event-link:hover {
+  text-decoration: underline;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 1023px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr); /* Tablet: 2 colunas */
+  }
+}
+
+@media (max-width: 767px) {
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--sp-16);
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr; /* Celular: 1 coluna */
+  }
+}

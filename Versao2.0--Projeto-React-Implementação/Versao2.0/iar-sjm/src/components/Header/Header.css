@@ -1,0 +1,172 @@
+:root {
+  --cor1: #e6e3e3;
+  --cor2: #F1F5F9;
+  --cor3: #0EA5E9;
+  --cor4: #1E3A5F; 
+  --cor5: #1F2937;
+  --cor6: #0F172A;
+  
+  --cor-branco: #FFFFFF;
+  --cor-texto-principal: #334155;
+  --cor-texto-claro: #94A3B8;
+
+  --sp-8: 8px;
+  --sp-16: 16px;
+  --sp-24: 24px;
+  --sp-32: 32px;
+  --sp-48: 48px;
+  --sp-64: 64px;
+  --sp-80: 80px;
+
+  --font-principal: 'Inter', sans-serif;
+  --font-titulos: 'Montserrat', sans-serif;
+  --font-destaque: 'Roboto Condensed', sans-serif;
+  
+  --max-width-container: 1200px;
+}
+
+.header {
+  background-color: var(--cor6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 100;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80px;
+}
+
+
+/* --- NAVEGAÇÃO DESKTOP --- */
+.nav-list {
+  display: flex;
+  gap: var(--sp-24);
+}
+
+.nav-list a {
+  color: var(--cor1);
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding-bottom: 28px;
+  /* Para empurrar a borda ativa para o limite do header */
+  position: relative;
+}
+
+.nav-list a:hover {
+  color: var(--cor3);
+}
+
+/* O item ativo recebe a cor azul e a borda inferior */
+.nav-list a.active {
+  color: var(--cor3);
+}
+
+.nav-list a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--cor3);
+}
+
+/* --- AÇÕES (Lupa e Ao Vivo) --- */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-16);
+}
+
+.search-btn {
+  background: transparent;
+  color: var(--cor-branco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.search-btn:hover {
+  color: var(--cor3);
+}
+
+.btn-ao-vivo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--cor-branco);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 8px 16px;
+  border-radius: 20px;
+  /* Borda arredondada */
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-ao-vivo:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--cor-branco);
+}
+
+.play-icon {
+  font-size: 10px;
+}
+
+/* --- MOBILE --- */
+.mobile-toggle {
+  display: none;
+  background: transparent;
+  color: var(--cor-branco);
+}
+
+@media (max-width: 1023px) {
+  .nav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor6);
+    padding: var(--sp-24);
+    display: none;
+    /* Escondido por padrão no mobile */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-open {
+    display: block;
+    /* Mostra quando o estado isMenuOpen for true */
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: var(--sp-16);
+  }
+
+  .nav-list a {
+    padding-bottom: 4px;
+    display: inline-block;
+  }
+
+  .nav-list a.active::after {
+    bottom: -4px;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+
+  /* No celular menor, talvez precisemos esconder o botão 'Ao vivo' ou ajustar */
+  .btn-ao-vivo {
+    display: none;
+  }
+}

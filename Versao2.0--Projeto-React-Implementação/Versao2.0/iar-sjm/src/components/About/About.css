@@ -1,0 +1,148 @@
+.about {
+  padding: var(--sp-80) 0;
+  background-color: var(--cor-branco);
+}
+
+.about-grid {
+  display: grid;
+  /* Proporção das colunas: A imagem do meio fica um pouco maior que os lados (1.5fr) */
+  grid-template-columns: 1fr 1.5fr 1fr;
+  gap: var(--sp-32);
+  align-items: center;
+}
+
+/* --- COLUNA 1: TEXTOS --- */
+.about-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.section-subtitle {
+  color: var(--cor3);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: var(--sp-8);
+}
+
+.section-title {
+  color: var(--cor6);
+  font-family: var(--font-titulos);
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: var(--sp-16);
+  text-indent: 0; /* Removendo o indent global do App.css */
+}
+
+.section-desc {
+  color: var(--cor-texto-principal);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: var(--sp-24);
+  text-indent: 0;
+  text-align: left;
+}
+
+/* --- COLUNA 2: IMAGEM --- */
+.about-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px; /* Cantos levemente arredondados como na referência */
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.img-fluid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem preencher o espaço sem deformar */
+  display: block;
+}
+
+/* --- COLUNA 3: CARD --- */
+.about-info-card {
+  background-color: var(--cor-branco);
+  padding: var(--sp-24);
+  /* Sombra leve e borda discreta para destacar o card no fundo claro */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+  border: 1px solid var(--cor1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-24);
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-16);
+}
+
+.info-icon {
+  color: var(--cor3);
+  background-color: var(--cor2);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Impede que o ícone esmague se o texto for longo */
+}
+
+.info-content h4 {
+  color: var(--cor6);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.info-content p {
+  color: var(--cor-texto-claro);
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0;
+  text-indent: 0;
+  text-align: left;
+}
+
+.info-link {
+  color: var(--cor4);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: var(--sp-8);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.info-link:hover {
+  color: var(--cor3);
+  text-decoration: underline;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 1023px) {
+  .about-grid {
+    /* No tablet, 2 colunas: imagem em cima ocupando tudo, textos e info embaixo */
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-image {
+    grid-column: 1 / -1; /* Força a imagem a ocupar todas as colunas disponíveis */
+    height: 300px; /* Altura fixa pra não ficar enorme */
+  }
+}
+
+@media (max-width: 767px) {
+  .about-grid {
+    grid-template-columns: 1fr; /* No celular, tudo vira 1 coluna empilhada */
+    gap: var(--sp-24);
+  }
+  
+  .section-title {
+    font-size: 32px;
+  }
+}

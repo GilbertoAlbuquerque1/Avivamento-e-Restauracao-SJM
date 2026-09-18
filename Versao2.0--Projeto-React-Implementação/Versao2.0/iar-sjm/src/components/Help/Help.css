@@ -1,0 +1,74 @@
+.help {
+  padding: var(--sp-80) 0;
+  background-color: var(--cor-branco);
+}
+
+.help-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; /* Esquerda menor, direita maior para caber os 3 cards */
+  gap: var(--sp-48);
+  align-items: center;
+}
+
+.help-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-24);
+}
+
+.help-card {
+  background-color: var(--cor2); /* Fundo cinza super clarinho */
+  padding: var(--sp-24);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.help-card:hover {
+  transform: translateY(-5px);
+  background-color: #e2e8f0; /* Um pouco mais escuro no hover */
+}
+
+.help-icon {
+  color: var(--cor3);
+  margin-bottom: var(--sp-16);
+}
+
+.help-card-title {
+  color: var(--cor6);
+  font-family: var(--font-titulos);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: var(--sp-8);
+}
+
+.help-card-desc {
+  color: var(--cor-texto-principal);
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: var(--sp-16);
+  flex-grow: 1;
+}
+
+.help-link {
+  color: var(--cor3);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media (max-width: 1023px) {
+  .help-grid {
+    grid-template-columns: 1fr; /* Empilha textos em cima, cards embaixo */
+  }
+  .help-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .help-cards-grid {
+    grid-template-columns: 1fr; /* Empilha os cards no celular */
+  }
+}

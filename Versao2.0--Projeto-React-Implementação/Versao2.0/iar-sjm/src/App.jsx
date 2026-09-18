@@ -1,16 +1,26 @@
 import './App.css'
-import Navbar from './components/NavBar'
-import Footer from './components/Footer'
+import Header from './components/Header/Header';
+import Hero from './components/Hero/Hero';
+
+import About from './components/About/About';
+import Events from './components/Events/Events';
+import Sermons from './components/Sermons/Sermos';
+import Help from './components/Help/Help';
+import News from './components/News/News';
+import Footer from './components/Footer/Footer';
 
 export default function App() {
   return (
     <div className="App">
-      <Navbar />
-          <h1>Bem-vindo à Igreja Avivamento e Restauração</h1>
-      <main style={{ padding: '2rem', textAlign: 'center' }}>
-        <h2>Conteúdo Principal (Em Construção)</h2>
-      </main>
-      <Footer />
+      <Header />
+      <Hero />
+      <About/>
+      <Events/>
+      <Sermons/>
+      <Help/>
+      <News/>
+      <Footer/>
+
     </div>
   )
 }
