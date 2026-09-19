@@ -1,0 +1,229 @@
+.sobre-historia,
+.sobre-visao {
+  padding: var(--sp-80) 0;
+  background-color: var(--cor-branco);
+}
+
+.sobre-missao,
+.sobre-igreja {
+  padding: var(--sp-80) 0;
+  background-color: var(--cor2);
+}
+
+.sobre-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-48);
+  align-items: center;
+}
+
+.sobre-block--right .sobre-block-text {
+  order: 1;
+}
+.sobre-block--right .sobre-block-image {
+  order: 2;
+}
+
+.sobre-block--left .sobre-block-image {
+  order: 1;
+}
+.sobre-block--left .sobre-block-text {
+  order: 2;
+}
+
+.sobre-block-image {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  height: 380px;
+}
+
+.sobre-block-image .img-fluid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.sobre-valores {
+  padding: var(--sp-80) 0;
+  background-color: var(--cor6);
+}
+
+.sobre-valores-header {
+  text-align: center;
+  margin-bottom: var(--sp-48);
+}
+
+.sobre-valores-header .section-title {
+  color: var(--cor-branco);
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--sp-24);
+}
+
+.valor-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: var(--sp-32) var(--sp-24);
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.valor-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.valor-icon {
+  color: var(--cor3);
+  margin-bottom: var(--sp-16);
+  display: flex;
+  justify-content: center;
+}
+
+.valor-title {
+  color: var(--cor-branco);
+  font-family: var(--font-titulos);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: var(--sp-8);
+}
+
+.valor-desc {
+  color: var(--cor-texto-claro);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.sobre-pastores {
+  padding: var(--sp-80) 0;
+  background-color: var(--cor-branco);
+}
+
+.sobre-pastores-header {
+  text-align: center;
+  margin-bottom: var(--sp-48);
+}
+
+.sobre-pastores-intro {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sobre-pastores-bottom-text {
+  margin-top: var(--sp-48);
+  text-align: left;
+  color: var(--cor-texto-principal);
+  font-size: 16px;
+}
+
+.pastores-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-32);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pastor-card {
+  background-color: var(--cor2);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pastor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.pastor-foto {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.pastor-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.pastor-info {
+  padding: var(--sp-24);
+}
+
+.pastor-nome {
+  color: var(--cor6);
+  font-family: var(--font-titulos);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: var(--sp-4);
+}
+
+.pastor-funcao {
+  color: var(--cor3);
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: var(--sp-12);
+}
+
+.pastor-bio {
+  color: var(--cor-texto-principal);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.sobre-presidentes {
+  padding: var(--sp-80) 0;
+  background-color: var(--cor2);
+  color: var(--cor-branco);
+}
+
+.presidentes-image {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  height: 700px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 1023px) {
+  .sobre-block {
+    grid-template-columns: 1fr;
+    gap: var(--sp-32);
+  }
+
+  .sobre-block--right .sobre-block-text,
+  .sobre-block--right .sobre-block-image,
+  .sobre-block--left .sobre-block-image,
+  .sobre-block--left .sobre-block-text {
+    order: unset;
+  }
+
+  .valores-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .valores-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pastores-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre-block-image {
+    height: 260px;
+  }
+}

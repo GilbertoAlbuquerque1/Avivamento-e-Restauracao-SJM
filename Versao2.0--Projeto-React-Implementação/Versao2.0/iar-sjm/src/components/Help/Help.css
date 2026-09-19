@@ -5,7 +5,7 @@
 
 .help-grid {
   display: grid;
-  grid-template-columns: 1fr 1.5fr; /* Esquerda menor, direita maior para caber os 3 cards */
+  grid-template-columns: 1fr 1.5fr;
   gap: var(--sp-48);
   align-items: center;
 }
@@ -17,7 +17,7 @@
 }
 
 .help-card {
-  background-color: var(--cor2); /* Fundo cinza super clarinho */
+  background-color: var(--cor2);
   padding: var(--sp-24);
   border-radius: 8px;
   display: flex;
@@ -28,7 +28,7 @@
 
 .help-card:hover {
   transform: translateY(-5px);
-  background-color: #e2e8f0; /* Um pouco mais escuro no hover */
+  background-color: #e2e8f0;
 }
 
 .help-icon {
@@ -60,7 +60,7 @@
 
 @media (max-width: 1023px) {
   .help-grid {
-    grid-template-columns: 1fr; /* Empilha textos em cima, cards embaixo */
+    grid-template-columns: 1fr;
   }
   .help-cards-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -69,6 +69,6 @@
 
 @media (max-width: 767px) {
   .help-cards-grid {
-    grid-template-columns: 1fr; /* Empilha os cards no celular */
-  }
+    grid-template-columns: 1fr; 
+}
 }

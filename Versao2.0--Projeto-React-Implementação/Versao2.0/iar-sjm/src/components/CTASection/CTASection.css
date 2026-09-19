@@ -1,0 +1,35 @@
+.cta-section {
+  background-color: var(--cor6);
+  padding: var(--sp-80) 0;
+  text-align: center;
+}
+
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-32);
+}
+
+.cta-title {
+  color: var(--cor-branco);
+  font-family: var(--font-titulos);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.cta-btn {
+  padding: 14px 32px;
+  font-size: 15px;
+}
+
+/* Variante acolhedora para a página de ajuda */
+.cta-warm {
+  background: linear-gradient(135deg, var(--cor6) 0%, var(--cor4) 100%);
+}
+
+.cta-warm .cta-title {
+  font-weight: 700;
+  font-size: clamp(24px, 3.5vw, 36px);
+}

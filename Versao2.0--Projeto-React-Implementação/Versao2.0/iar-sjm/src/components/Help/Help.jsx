@@ -1,4 +1,3 @@
-import React from 'react';
 import './Help.css';
 
 const helpData = [
@@ -27,8 +26,6 @@ const Help = () => {
     <section className="help">
       <div className="container">
         <div className="help-grid">
-          
-          {/* Lado Esquerdo: Textos */}
           <div className="help-text">
             <span className="section-subtitle">PRECISA DE AJUDA?</span>
             <h2 className="section-title">Estamos aqui por você</h2>
@@ -42,7 +39,6 @@ const Help = () => {
             </button>
           </div>
 
-          {/* Lado Direito: Cards */}
           <div className="help-cards-grid">
             {helpData.map((item) => (
               <div className="help-card" key={item.id}>

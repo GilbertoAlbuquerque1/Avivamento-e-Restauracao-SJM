@@ -1,26 +1,28 @@
-import './App.css'
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
-
-import About from './components/About/About';
-import Events from './components/Events/Events';
-import Sermons from './components/Sermons/Sermos';
-import Help from './components/Help/Help';
-import News from './components/News/News';
 import Footer from './components/Footer/Footer';
+import Home from './pages/Home/Home';
+import SobreNos from './pages/SobreNos/SobreNos';
+import NosEncontre from './pages/NosEncontre/NosEncontre';
+import Eventos from './pages/Eventos/Eventos';
+import Help from './pages/Help/Help';
+import Colabore from './pages/Colabore/Colabore';
 
-export default function App() {
+function App() {
   return (
-    <div className="App">
+    <>
       <Header />
-      <Hero />
-      <About/>
-      <Events/>
-      <Sermons/>
-      <Help/>
-      <News/>
-      <Footer/>
-
-    </div>
-  )
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="Sobre" element={<SobreNos />} />
+        <Route path="Encontre" element={<NosEncontre />} />
+        <Route path="Eventos" element={<Eventos />} />
+        <Route path="Help" element={<Help />} />
+        <Route path="Colabore" element={<Colabore />} />
+      </Routes>
+      <Footer />
+    </>
+  );
 }
+
+export default App;

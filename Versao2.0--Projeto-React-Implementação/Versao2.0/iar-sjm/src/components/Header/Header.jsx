@@ -1,33 +1,42 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  const isActive = (path) => location.pathname === path;
+
   return (
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <img src="./imagens/logoheader.png"
-          alt="Logo da Igreja" 
-          className="logo-footer" 
-          width={"70px"}
-          height={"auto"}/>
+          <Link to="/" onClick={closeMenu}>
+            <img src="./imagens/logoheader.png"
+              alt="Logo da Igreja"
+              className="logo-footer"
+              width={"70px"}
+              height={"auto"} />
+          </Link>
         </div>
 
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
           <ul className="nav-list">
-            <li><a href="#inicio" className="active">Início</a></li>
-            <li><a href="#sobre">Sobre Nós</a></li>
-            <li><a href="#encontre">Nos Encontre</a></li>
-            <li><a href="#eventos">Eventos</a></li>
-            <li><a href="#ajuda">Precisa de Ajuda?</a></li>
-            <li><a href="#colabore">Colabore</a></li>
-
+            <li><Link to="/" className={isActive('/') ? 'active' : ''} onClick={closeMenu}>Início</Link></li>
+            <li><Link to="/sobre" className={isActive('/sobre') ? 'active' : ''} onClick={closeMenu}>Sobre Nós</Link></li>
+            <li><Link to="/encontre" className={isActive('/encontre') ? 'active' : ''} onClick={closeMenu}>Nos Encontre</Link></li>
+            <li><Link to="/eventos" className={isActive('/eventos') ? 'active' : ''} onClick={closeMenu}>Eventos</Link></li>
+            <li><Link to="/help" className={isActive('/Help') ? 'active' : ''} onClick={closeMenu}>Precisa de Ajuda?</Link></li>
+            <li><Link to="/colabore" className={isActive('/colabore') ? 'active' : ''} onClick={closeMenu}>Colabore</Link></li>
           </ul>
         </nav>
 

@@ -1,10 +1,10 @@
 .sermons {
-  background-color: var(--cor6); /* O azul bem escuro do tema */
+  background-color: var(--cor6);
   padding: var(--sp-80) 0;
   color: var(--cor-branco);
 }
 
-/* --- CABEÇALHO --- */
+
 .sermons-header {
   display: flex;
   justify-content: space-between;
@@ -45,51 +45,47 @@
   text-decoration: underline;
 }
 
-/* --- GRID DE VÍDEOS --- */
 .sermons-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--sp-24);
 }
 
-/* --- ESTILO DO CARD --- */
 .sermon-card {
-  /* No fundo escuro, os cards recebem um azul médio levemente transparente */
   background-color: rgba(255, 255, 255, 0.03); 
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.05); /* Bordinha super elegante */
+  border: 1px solid rgba(255, 255, 255, 0.05);
   transition: transform 0.3s ease, background-color 0.3s ease;
   display: flex;
   flex-direction: column;
-  cursor: pointer; /* Indica ao usuário que é clicável (um vídeo) */
+  cursor: pointer; 
 }
 
 .sermon-card:hover {
   transform: translateY(-5px);
-  background-color: rgba(255, 255, 255, 0.08); /* Fica mais claro ao passar o mouse */
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
-/* A grande sacada do Posicionamento! */
+
 .sermon-thumbnail {
   width: 100%;
   height: 160px;
-  position: relative; /* "Eu sou a âncora para coisas absolutas dentro de mim!" */
+  position: relative;
 }
 
 .sermon-thumbnail img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.8; /* Levemente escurecida */
+  opacity: 0.8;
   transition: opacity 0.3s ease;
 }
 
 .sermon-card:hover .sermon-thumbnail img {
-  opacity: 1; /* Ilumina a imagem quando passa o mouse no card */
+  opacity: 1;
 }
 
-/* O Botão Play Flutuante */
 .sermon-play-btn {
   position: absolute; /* Flutua em relação ao .sermon-thumbnail */
   bottom: 12px; /* 12px do fundo da imagem */
@@ -111,10 +107,9 @@
 .sermon-card:hover .sermon-play-btn {
   background-color: var(--cor3);
   border-color: var(--cor3);
-  transform: scale(1.1); /* Dá um leve zoom no botão de play */
+  transform: scale(1.1);
 }
 
-/* Textos da Ministração */
 .sermon-info {
   padding: var(--sp-16);
   text-align: left;

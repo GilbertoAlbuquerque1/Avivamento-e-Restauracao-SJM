@@ -5,13 +5,11 @@
 
 .about-grid {
   display: grid;
-  /* Proporção das colunas: A imagem do meio fica um pouco maior que os lados (1.5fr) */
   grid-template-columns: 1fr 1.5fr 1fr;
   gap: var(--sp-32);
   align-items: center;
 }
 
-/* --- COLUNA 1: TEXTOS --- */
 .about-text {
   display: flex;
   flex-direction: column;
@@ -33,7 +31,7 @@
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: var(--sp-16);
-  text-indent: 0; /* Removendo o indent global do App.css */
+  text-indent: 0; 
 }
 
 .section-desc {
@@ -45,27 +43,24 @@
   text-align: left;
 }
 
-/* --- COLUNA 2: IMAGEM --- */
 .about-image {
   width: 100%;
   height: 100%;
-  border-radius: 8px; /* Cantos levemente arredondados como na referência */
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .img-fluid {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Faz a imagem preencher o espaço sem deformar */
+  object-fit: cover;
   display: block;
 }
 
-/* --- COLUNA 3: CARD --- */
 .about-info-card {
   background-color: var(--cor-branco);
   padding: var(--sp-24);
-  /* Sombra leve e borda discreta para destacar o card no fundo claro */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
   border: 1px solid var(--cor1);
   border-radius: 8px;

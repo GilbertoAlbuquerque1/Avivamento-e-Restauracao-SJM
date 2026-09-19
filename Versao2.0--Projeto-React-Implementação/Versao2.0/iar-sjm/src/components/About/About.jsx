@@ -1,16 +1,24 @@
 import './About.css';
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, EffectFade } from 'swiper/modules';
+
+import 'swiper/css'
+import 'swiper/css/effect-fade'
+
 
 const About = () => {
+  const imagensHero = ['./imagens/comunhao04.jpg', './imagens/comunhao09.jpg', './imagens/comunhao06.jpg', './imagens/comunhao10.jpg', './imagens/comunhao11.jpg', './imagens/comunhao07.jpg', './imagens/comunhao01.jpg', './imagens/comunhao12.jpg', './imagens/comunhao02.jpg', './imagens/comunhao14.jpg', './imagens/comunhao03.jpg', './imagens/comunhao08.jpg', './imagens/comunhao13.jpg', './imagens/comunhao05.jpg'];
+
   return (
     <section className="about">
       <div className="container">
-        
+
         <div className="about-grid">
           <div className="about-text">
             <span className="section-subtitle">SOBRE NÓS</span>
-            <h2 className="section-title">Uma igreja que<br/>ama vidas</h2>
+            <h2 className="section-title">Uma igreja que<br />ama vidas</h2>
             <p className="section-desc">
-              Avivamento & Restauração - SJM existe para transmitir  a Palavra de Deus, 
+              Avivamento & Restauração - SJM existe para transmitir  a Palavra de Deus,
               promover avivamento e restauração em nossa comunidade e além.
             </p>
             <button className="btn btn-primary">
@@ -19,15 +27,33 @@ const About = () => {
           </div>
 
           <div className="about-image">
-            <img 
-              src="./imagens/hero01.png" 
-              alt="Membros da igreja adorando" 
-              className="img-fluid"
-            />
+            <Swiper
+              modules={[Autoplay, EffectFade]}
+              effect="fade"
+              spaceBetween={0}
+              slidesPerView={1}
+              loop={true}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              style={{ width: '100%', height: '100%', borderRadius: '8px', overflow: 'hidden' }}
+            >
+              {imagensHero.map((url, index) => (
+                <SwiperSlide key={index}>
+                  <img
+                    src={url}
+                    alt={`Membros da igreja adorando - Foto ${index + 1}`}
+                    className="img-fluid"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
 
           <div className="about-info-card">
-            
+
             <div className="info-item">
               <div className="info-icon">
                 <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
@@ -54,7 +80,7 @@ const About = () => {
               </div>
               <div className="info-content">
                 <h4>Nosso Endereço</h4>
-                <p>R. Dr. Sá Carneiro 235<br/>3700-255 São João da Madeira</p>
+                <p>R. Dr. Sá Carneiro 235<br />3700-255 São João da Madeira</p>
               </div>
             </div>
 
