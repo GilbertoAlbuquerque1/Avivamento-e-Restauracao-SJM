@@ -32,15 +32,15 @@
   z-index: 100;
 }
 
+
 .header-container {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr  2fr;
   align-items: center;
   height: 80px;
 }
 
 
-/* --- NAVEGAÇÃO DESKTOP --- */
 .nav-list {
   display: flex;
   gap: var(--sp-24);
@@ -52,7 +52,6 @@
   font-weight: 500;
   transition: color 0.3s ease;
   padding-bottom: 28px;
-  /* Para empurrar a borda ativa para o limite do header */
   position: relative;
 }
 
@@ -60,7 +59,6 @@
   color: var(--cor3);
 }
 
-/* O item ativo recebe a cor azul e a borda inferior */
 .nav-list a.active {
   color: var(--cor3);
 }
@@ -75,7 +73,6 @@
   background-color: var(--cor3);
 }
 
-/* --- AÇÕES (Lupa e Ao Vivo) --- */
 .header-actions {
   display: flex;
   align-items: center;
@@ -104,7 +101,7 @@
   border: 1px solid rgba(255, 255, 255, 0.4);
   padding: 8px 16px;
   border-radius: 20px;
-  /* Borda arredondada */
+
   font-size: 12px;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -139,6 +136,12 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
+  .header-container {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  height: 80px;
+}
+
   .nav-open {
     display: block;
     /* Mostra quando o estado isMenuOpen for true */
@@ -160,6 +163,7 @@
 
   .mobile-toggle {
     display: block;
+    padding-left: 32px;
   }
 }
 

@@ -3,6 +3,7 @@ import PageHero from '../../components/PageHero/PageHero';
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
 import CTASection from '../../components/CTASection/CTASection';
 import './NosEncontre.css';
+import { HashLink  as Link} from 'react-router-hash-link';
 
 const NosEncontre = () => {
   const [formData, setFormData] = useState({
@@ -53,7 +54,7 @@ const NosEncontre = () => {
                 rel="noopener noreferrer"
                 className="btn btn-primary info-block-btn"
               >
-                Abrir rota no mapa <span>→</span>
+                Abrir rota no mapa
               </a>
             </div>
 
@@ -93,6 +94,9 @@ const NosEncontre = () => {
                 Tem alguma dúvida? Quer saber mais?<br />
                 Entre em contacto!
               </p>
+              <Link to="/encontre#contato" className="btn btn-primary">
+                Contato
+              </Link>
             </div>
 
           </div>
@@ -107,16 +111,15 @@ const NosEncontre = () => {
           </div>
         </div>
       </section>
-
-      <section className="encontre-contato">
+      <section id="contato" className="encontre-contato">
         <div className="container">
           <div className="contato-grid">
             <div className="contato-text">
               <span className="section-subtitle">ENTRE EM CONTATO</span>
               <h2 className="section-title">Envie-nos uma mensagem</h2>
               <p className="section-desc">
-                Seja para tirar dúvidas, pedir oração ou simplesmente dizer olá — 
-                estamos aqui para ouvir. Preencha o formulário e responderemos o mais 
+                Seja para tirar dúvidas, pedir oração ou simplesmente dizer olá,
+                estamos aqui para te ouvir e te ajudar no que for preciso. Preencha o formulário e responderemos o mais 
                 breve possível.
               </p>
             </div>
@@ -175,7 +178,6 @@ const NosEncontre = () => {
           </div>
         </div>
       </section>
-
       <CTASection
         title="Esperamos por você."
         buttonText="Voltar ao início"

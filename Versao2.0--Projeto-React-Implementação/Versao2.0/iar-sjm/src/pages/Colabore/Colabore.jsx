@@ -32,13 +32,13 @@ const Colabore = () => {
               <p className="card-info">Utilize os dados abaixo através do seu banco ou homebanking:</p>
               <div className="dados-copiar-box">
                 <div className="dado-linha">
-                  <strong>Banco:</strong> <span>Banco Exemplo Portugal</span>
+                  <strong>Banco:</strong> <span>	Caixa Central de Crédito Agrícola Mútuo, CRL</span>
                 </div>
                 <div className="dado-linha">
-                  <strong>IBAN:</strong> <span className="iban-text">PT50 0000 0000 0000 0000 0000 0</span>
+                  <strong>IBAN:</strong> <span className="iban-text">PT50 0045 3092 4039 2601 3474 6</span>
                 </div>
                 <div className="dado-linha">
-                  <strong>Titular:</strong> <span>Igreja Avivamento & Restauração</span>
+                  <strong>Titular:</strong> <span>Gilberto Gian Gripino de Albuquerque</span>
                 </div>
               </div>
               <p className="dados-nota">* Envie o comprovativo para o e-mail da igreja caso necessite de recibo de donativo para fins fiscais.</p>
@@ -49,7 +49,7 @@ const Colabore = () => {
                 <h3>MB WAY</h3>
                 <p>Pode contribuir de forma rápida inserindo o número oficial da igreja:</p>
                 <div className="mbway-box">
-                  <strong>Telemóvel:</strong> <span>+351 969 879 724</span>
+                  <strong>Telemóvel:</strong> <span>+351 915 873 005</span>
                 </div>
               </div>
               

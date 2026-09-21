@@ -14,7 +14,6 @@ const Help = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Placeholder para futura integração de envio
     alert(`Obrigado ${formData.nome}. O seu pedido de apoio foi recebido. Entraremos em contacto em breve.`);
     setFormData({ nome: '', contacto: '', tipoAjuda: 'espiritual', mensagem: '' });
   };
@@ -38,7 +37,6 @@ const Help = () => {
         </div>
       </section>
 
-      {/* --- ÁREAS DE APOIO --- */}
       <section className="help-areas bg-light">
         <div className="container">
           <div className="help-grid">
@@ -61,7 +59,6 @@ const Help = () => {
         </div>
       </section>
 
-      {/* --- WHATSAPP DIRETO --- */}
       <section className="help-whatsapp">
         <div className="container text-center">
           <h3>Prefere falar diretamente connosco agora?</h3>
@@ -73,8 +70,8 @@ const Help = () => {
         </div>
       </section>
 
-      {/* --- FORMULÁRIO DE PEDIDO DE APOIO --- */}
-      <section className="help-form-section">
+
+      <section id="contatoAjuda"  className="help-form-section">
         <div className="container">
           <div className="form-wrapper">
             <h3 className="text-center">Envie uma mensagem confidencial</h3>

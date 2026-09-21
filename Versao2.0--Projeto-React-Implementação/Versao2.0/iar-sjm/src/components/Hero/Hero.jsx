@@ -25,12 +25,10 @@ const Hero = () => {
           </p>
 
           <div className="hero-buttons">
-            <button className="btn btn-primary">
+            <a className="btn btn-primary" href="/encontre">
               Visite-nos <span>→</span>
-            </button>
-            <button className="btn btn-secondary">
-              <span className="play-icon-circle">▶</span> Assista ao vídeo
-            </button>
+            </a>
+            <a className="btn btn-secondary" href="https://www.instagram.com/reel/DdOyd2uoEC1/" target="_blank"><span className="play-icon-circle">▶</span> Assista ao vídeo</a>
           </div>
         </div>
       </div>

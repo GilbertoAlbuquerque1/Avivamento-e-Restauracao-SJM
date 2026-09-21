@@ -46,7 +46,6 @@ const SobreNos = () => {
       />
       <Breadcrumb items={[{ label: 'Sobre Nós' }]} />
 
-      {/* --- HISTÓRIA --- */}
       <section className="sobre-historia">
         <div className="container">
           <div className="sobre-block sobre-block--right">
@@ -73,7 +72,6 @@ const SobreNos = () => {
         </div>
       </section>
 
-      {/* --- MISSÃO --- */}
       <section className="sobre-missao">
         <div className="container">
           <div className="sobre-block sobre-block--left">
@@ -98,7 +96,6 @@ const SobreNos = () => {
         </div>
       </section>
 
-      {/* --- VISÃO --- */}
       <section className="sobre-visao">
         <div className="container">
           <div className="sobre-block sobre-block--right">
@@ -122,7 +119,6 @@ const SobreNos = () => {
         </div>
       </section>
 
-      {/* --- VALORES --- */}
       <section className="sobre-valores">
         <div className="container">
           <div className="sobre-valores-header">
@@ -141,7 +137,6 @@ const SobreNos = () => {
         </div>
       </section>
 
-      {/* --- NOSSA IGREJA --- */}
       <section className="sobre-igreja">
         <div className="container">
           <div className="sobre-block sobre-block--left">
@@ -167,7 +162,6 @@ const SobreNos = () => {
         </div>
       </section>
 
-      {/* --- PASTORES --- */}
       <section className="sobre-pastores">
         <div className="container">
           <div className="sobre-pastores-header">
@@ -228,7 +222,7 @@ const SobreNos = () => {
             <div className="sobre-block-text">
               <span className="section-subtitle">NOSSA COBERTURA ESPIRITUAL</span>
               <h2 className="section-title">PASTORES PRESIDENTES</h2>
-              <p>
+              <p className="section-desc">
                 O ministério é presidido pelo Apóstolo <strong>Nivaldo Silva</strong> e pela Pastora <strong>Sheila Costa</strong>, um casal que tem dedicado a vida ao serviço de Deus e à expansão do Seu Reino.
               </p>
               <p className="section-desc">

@@ -21,9 +21,9 @@ const About = () => {
               Avivamento & Restauração - SJM existe para transmitir  a Palavra de Deus,
               promover avivamento e restauração em nossa comunidade e além.
             </p>
-            <button className="btn btn-primary">
+            <a className="btn btn-primary" href="/sobre">
               Conheça nossa história <span>→</span>
-            </button>
+            </a>
           </div>
 
           <div className="about-image">
@@ -84,7 +84,7 @@ const About = () => {
               </div>
             </div>
 
-            <a href="#sobre-nos" className="info-link">Saiba mais sobre nós <span>→</span></a>
+            <a href="/sobre" className="info-link">Saiba mais sobre nós <span>→</span></a>
           </div>
 
         </div>

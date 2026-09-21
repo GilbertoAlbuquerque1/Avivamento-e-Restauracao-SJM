@@ -19,6 +19,19 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-container">
+        
+        <div className="header-actions">
+          <button className="mobile-toggle" onClick={toggleMenu} aria-label="Abrir menu">
+            <svg width="50" height="24" fill="none" stroke="currentColor" viewBox="0 0 30 20">
+              {isMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
+
         <div className="logo">
           <Link to="/" onClick={closeMenu}>
             <img src="./imagens/logoheader.png"
@@ -40,10 +53,9 @@ const Header = () => {
           </ul>
         </nav>
 
-        {/* Bloco 3: Ações e Menu Mobile */}
-        <div className="header-actions">
+    
+        {/* <div className="header-actions">
           <button className="search-btn" aria-label="Pesquisar">
-            {/* Ícone SVG simples de lupa */}
             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
             </svg>
@@ -52,18 +64,7 @@ const Header = () => {
           <button className="btn-ao-vivo">
             <span className="play-icon">▶</span> AO VIVO
           </button>
-
-          {/* Botão Hambúrguer para Mobile */}
-          <button className="mobile-toggle" onClick={toggleMenu} aria-label="Abrir menu">
-            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-        </div>
+        </div> */}
 
       </div>
     </header>
