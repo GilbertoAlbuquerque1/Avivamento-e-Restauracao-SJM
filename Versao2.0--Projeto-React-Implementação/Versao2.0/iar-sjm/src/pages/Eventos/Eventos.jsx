@@ -27,7 +27,7 @@ const Eventos = () => {
   const featuredEvent = eventsData.find(e => e.featured);
 
   return (
-    <main className="eventos-page">
+    <main id='pageeventos' className="eventos-page">
       <PageHero
         title="Nossa Agenda"
         subtitle="Fique por dentro de todos os cultos, eventos e conferências."

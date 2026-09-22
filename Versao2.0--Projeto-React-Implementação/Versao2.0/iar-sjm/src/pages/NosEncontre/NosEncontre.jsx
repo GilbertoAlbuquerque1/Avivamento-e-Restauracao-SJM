@@ -25,7 +25,7 @@ const NosEncontre = () => {
   };
 
   return (
-    <main className="encontre-page">
+    <main id='pageencontre' className="encontre-page">
       <PageHero
         title="Nos Encontre"
         subtitle="Estamos aqui para ouvir e receber você."

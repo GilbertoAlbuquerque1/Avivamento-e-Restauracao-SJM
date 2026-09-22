@@ -19,7 +19,7 @@ const Help = () => {
   };
 
   return (
-    <main className="help-page">
+    <main id='pagehelp' className="help-page">
       <PageHero
         title="Precisa de Ajuda?"
         subtitle="Não caminhe sozinho. Estamos aqui para o apoiar e ouvir."

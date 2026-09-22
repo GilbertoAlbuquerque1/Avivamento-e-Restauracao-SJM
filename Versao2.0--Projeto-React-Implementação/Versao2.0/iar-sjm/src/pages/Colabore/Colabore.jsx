@@ -5,7 +5,7 @@ import './Colabore.css';
 
 const Colabore = () => {
   return (
-    <main className="colabore-page">
+    <main id="pagecolabore"  className="colabore-page">
       <PageHero
         title="Colabore"
         subtitle="Contribua para a expansão do Reino e causas sociais."

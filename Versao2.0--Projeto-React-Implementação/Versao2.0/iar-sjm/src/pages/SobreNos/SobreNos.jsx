@@ -38,7 +38,7 @@ const valoresData = [
 
 const SobreNos = () => {
   return (
-    <main className="sobre-nos-page">
+    <main id="pagesobre" className="sobre-nos-page">
       <PageHero
         title="Sobre Nós"
         subtitle="Conheça nossa história, propósito e família."

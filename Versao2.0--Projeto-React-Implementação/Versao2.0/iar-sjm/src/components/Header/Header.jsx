@@ -17,7 +17,7 @@ const Header = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <header className="header">
+    <header id='home' className="header">
       <div className="header-container">
         
         <div className="header-actions">
