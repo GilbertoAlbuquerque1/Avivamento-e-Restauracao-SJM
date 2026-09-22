@@ -11,24 +11,15 @@
   padding: 5rem 0;
 }
 
+.img_card {
+  margin-left: 50px;
+}
+
 .dados-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 2.5rem;
-}
-
-@media (max-width: 767px) {
-  .dados-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.dados-card {
-  background: #ffffff;
-  padding: 3rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  border-top: 4px solid var(--cor3);
+  align-items: center;
 }
 
 .dados-card h3 {
@@ -59,11 +50,6 @@
   border-bottom: none;
 }
 
-.iban-text {
-  font-family: monospace;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
-}
 
 .dados-nota {
   font-size: 0.85rem;
@@ -118,6 +104,27 @@
   padding-bottom: 0.5rem;
 }
 
+  .dados-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  }
+
+
+
+@media (max-width: 767px) {
+  .dados-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .iban-text {
+  font-family: monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+
 .pilar-item h4::after {
   content: '';
   position: absolute;
@@ -126,4 +133,21 @@
   width: 40px;
   height: 2px;
   background-color: var(--cor3);
+}
+ .dados-copiar-box {
+  padding: 1rem;
+  width: 100%;
+ }  
+
+ .dados-card {
+   width: 100%;
+  }
+
+  .dado-linha {
+    width: 100%;
+    font-size: 12px;
+    flex-direction: column;
+  }
+
+
 }

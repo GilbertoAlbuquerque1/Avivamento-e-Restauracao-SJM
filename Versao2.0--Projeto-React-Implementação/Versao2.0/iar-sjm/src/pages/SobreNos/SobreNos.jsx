@@ -42,7 +42,7 @@ const SobreNos = () => {
       <PageHero
         title="Sobre Nós"
         subtitle="Conheça nossa história, propósito e família."
-        backgroundImage="./imagens/hero01.png"
+        backgroundImage="./imagens/adoracao7.jpeg"
       />
       <Breadcrumb items={[{ label: 'Sobre Nós' }]} />
 

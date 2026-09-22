@@ -31,11 +31,11 @@ const Eventos = () => {
       <PageHero
         title="Nossa Agenda"
         subtitle="Fique por dentro de todos os cultos, eventos e conferências."
-        backgroundImage="./imagens/comunhao01.jpg"
+        backgroundImage="./imagens/nave01.jpeg"
       />
       <Breadcrumb items={[{ label: 'Eventos' }]} />
 
-      {/* --- EVENTO EM DESTAQUE --- */}
+      {/* --- DESTAQUE --- */}
       {activeFilter === 'todos' && featuredEvent && (
         <section className="evento-destaque-section">
           <div className="container">
@@ -110,7 +110,7 @@ const Eventos = () => {
       </section>
 
       <CTASection
-        title="Quer trazer a sua caravana ou grupo?"
+        title="Quer participar?"
         buttonText="Contacte-nos"
         buttonLink="/ajuda"
       />

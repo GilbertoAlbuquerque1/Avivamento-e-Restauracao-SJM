@@ -29,7 +29,7 @@ const NosEncontre = () => {
       <PageHero
         title="Nos Encontre"
         subtitle="Estamos aqui para ouvir e receber você."
-        backgroundImage="./imagens/nave.jpeg"
+        backgroundImage="./imagens/adoracao1.jpg"
       />
       <Breadcrumb items={[{ label: 'Nos Encontre' }]} />
       <section className="encontre-info">

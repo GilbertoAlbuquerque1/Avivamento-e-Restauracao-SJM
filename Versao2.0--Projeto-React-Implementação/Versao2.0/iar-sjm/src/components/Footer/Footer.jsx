@@ -19,11 +19,11 @@ const Footer = () => {
           <div className="footer-col">
             <h4 className="footer-title">Links rápidos</h4>
             <ul className="footer-links">
-              <li><a href="./">Início</a></li>
-              <li><a href="./sobre">Sobre Nós</a></li>
-              <li><a href="./eventos">Eventos</a></li>
-              <li><a href="./help">Precisa de Ajuda?</a></li>
-              <li><a href="./colabore">Colabore</a></li>
+              <li><a href="/">Início</a></li>
+              <li><a href="/sobre">Sobre Nós</a></li>
+              <li><a href="/eventos">Eventos</a></li>
+              <li><a href="/help">Precisa de Ajuda?</a></li>
+              <li><a href="/colabore">Colabore</a></li>
             </ul>
           </div>
 

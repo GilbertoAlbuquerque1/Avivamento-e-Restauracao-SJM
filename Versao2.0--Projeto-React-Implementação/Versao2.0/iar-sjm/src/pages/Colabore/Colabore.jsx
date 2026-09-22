@@ -9,7 +9,7 @@ const Colabore = () => {
       <PageHero
         title="Colabore"
         subtitle="Contribua para a expansão do Reino e causas sociais."
-        backgroundImage="./imagens/comunhao02.jpg"
+        backgroundImage="./imagens/colabore.png"
       />
       <Breadcrumb items={[{ label: 'Colabore' }]} />
 
@@ -28,7 +28,7 @@ const Colabore = () => {
           <div className="dados-grid">
 
             <div className="dados-card">
-              <h3>Transferência Bancária</h3>
+              <img className="img-card" src="/imagens/banco1.png" alt="banco1" />
               <p className="card-info">Utilize os dados abaixo através do seu banco ou homebanking:</p>
               <div className="dados-copiar-box">
                 <div className="dado-linha">
@@ -44,13 +44,14 @@ const Colabore = () => {
               <p className="dados-nota">* Envie o comprovativo para o e-mail da igreja caso necessite de recibo de donativo para fins fiscais.</p>
             </div>
 
-            <div className="dados-card inline-cards">
+            <div className="inline-cards">
               <div className="sub-card">
-                <h3>MB WAY</h3>
+                <img className="img-card" src="/imagens/mbwaynovo.png" alt="MB WAY" />
                 <p>Pode contribuir de forma rápida inserindo o número oficial da igreja:</p>
                 <div className="mbway-box">
                   <strong>Telemóvel:</strong> <span>+351 915 873 005</span>
                 </div>
+                
               </div>
               
               <div className="sub-card top-border">
