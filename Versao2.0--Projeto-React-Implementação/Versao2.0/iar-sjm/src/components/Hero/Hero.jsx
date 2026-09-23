@@ -1,5 +1,6 @@
 import React from 'react';
 import './Hero.css';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Hero = () => {
   return (
@@ -25,10 +26,10 @@ const Hero = () => {
           </p>
 
           <div className="hero-buttons">
-            <a className="btn btn-primary" href="/encontre">
+            <Link className="btn btn-primary" to="/encontre">
               Visite-nos <span>→</span>
-            </a>
-            <a className="btn btn-secondary" href="https://www.instagram.com/reel/DdOyd2uoEC1/" target="_blank"><span className="play-icon-circle">▶</span> Assista ao vídeo</a>
+            </Link>
+            <Link className="btn btn-secondary" to="https://www.instagram.com/reel/DdOyd2uoEC1/" target="_blank"><span className="play-icon-circle">▶</span> Assista ao vídeo</Link>
           </div>
         </div>
       </div>

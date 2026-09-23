@@ -15,9 +15,12 @@ const Help = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    {/* Será implementado posteriormente 
     
     alert(`Obrigado ${formData.nome}. O seu pedido de apoio foi recebido. Entraremos em contacto em breve.`);
+    
     setFormData({ nome: '', contacto: '', tipoAjuda: 'espiritual', mensagem: '' });
+    */}
   };
 
   return (

@@ -1,40 +1,6 @@
 import React from 'react';
 import './Events.css';
 
-const eventsData = [
-  {
-    id: 1,
-    day: '05',
-    month: 'JUN',
-    title: 'Encontro com Deus',
-    time: '19h - Sábado',
-    image: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=400&q=80',
-  },
-  { 
-    id: 2,
-    day: '12',
-    month: 'JUN',
-    title: 'Células',
-    time: '19h - Quinta-feira',
-    image: 'https://images.unsplash.com/photo-1494172961521-337990f9ceaa?auto=format&fit=crop&w=400&q=80',
-  },
-  {
-    id: 3,
-    day: '22',
-    month: 'JUN',
-    title: 'Culto de Jovens',
-    time: '19h - Domingo',
-    image: 'https://images.unsplash.com/photo-1525683110294-0610f44bc19a?auto=format&fit=crop&w=400&q=80',
-  },
-  {
-    id: 4,
-    day: '28',
-    month: 'JUN',
-    title: 'Conferência de Avivamento',
-    time: '19h - Sábado',
-    image: 'https://images.unsplash.com/photo-1470229722913-7c090be5c520?auto=format&fit=crop&w=400&q=80',
-  }
-];
 
 const Events = () => {
   return (

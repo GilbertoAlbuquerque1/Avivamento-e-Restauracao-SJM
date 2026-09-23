@@ -110,8 +110,8 @@ const Eventos = () => {
 
       <CTASection
         title="Quer participar?"
-        buttonText="Contacte-nos"
-        buttonLink="/ajuda"
+        buttonText="Contato"
+        buttonLink="/encontre"
       />
     </main>
   );

@@ -20,9 +20,12 @@ const NosEncontre = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Futuro: integração com backend
+    {/* Será implementado posteriormente 
+    
     alert('Mensagem enviada com sucesso! Em breve entraremos em contato.');
+    
     setFormData({ nome: '', email: '', telefone: '', mensagem: '' });
+    */}
   };
 
   return (

@@ -84,7 +84,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0; /* Impede que o ícone esmague se o texto for longo */
+  flex-shrink: 0;
 }
 
 .info-content h4 {
@@ -104,7 +104,7 @@
 }
 
 .info-link {
-  color: var(--cor4);
+  color: var(--cor3);
   font-size: 13px;
   font-weight: 700;
   text-decoration: none;
@@ -119,21 +119,19 @@
   text-decoration: underline;
 }
 
-/* --- RESPONSIVIDADE --- */
 @media (max-width: 1023px) {
   .about-grid {
-    /* No tablet, 2 colunas: imagem em cima ocupando tudo, textos e info embaixo */
     grid-template-columns: 1fr 1fr;
   }
   .about-image {
-    grid-column: 1 / -1; /* Força a imagem a ocupar todas as colunas disponíveis */
-    height: 300px; /* Altura fixa pra não ficar enorme */
+    grid-column: 1 / -1; 
+    height: 300px;
   }
 }
 
 @media (max-width: 767px) {
   .about-grid {
-    grid-template-columns: 1fr; /* No celular, tudo vira 1 coluna empilhada */
+    grid-template-columns: 1fr;
     gap: var(--sp-24);
   }
   
