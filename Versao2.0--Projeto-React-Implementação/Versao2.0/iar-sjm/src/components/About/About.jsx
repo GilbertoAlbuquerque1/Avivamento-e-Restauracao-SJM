@@ -7,7 +7,7 @@ import 'swiper/css/effect-fade'
 
 
 const About = () => {
-  const imagensHero = ['./imagens/comunhao04.jpg', './imagens/comunhao09.jpg', './imagens/comunhao06.jpg', './imagens/comunhao10.jpg', './imagens/comunhao11.jpg', './imagens/comunhao07.jpg', './imagens/comunhao01.jpg', './imagens/comunhao12.jpg', './imagens/comunhao02.jpg', './imagens/comunhao14.jpg', './imagens/comunhao03.jpg', './imagens/comunhao08.jpg', './imagens/comunhao13.jpg', './imagens/comunhao05.jpg'];
+  const imagensHero = ['/imagens/comunhao04.jpg', '/imagens/comunhao09.jpg', '/imagens/comunhao06.jpg', '/imagens/comunhao10.jpg', '/imagens/comunhao11.jpg', '/imagens/comunhao07.jpg', '/imagens/comunhao01.jpg', '/imagens/comunhao12.jpg', '/imagens/comunhao02.jpg', '/imagens/comunhao14.jpg', '/imagens/comunhao03.jpg', '/imagens/comunhao08.jpg', '/imagens/comunhao13.jpg', '/imagens/comunhao05.jpg'];
 
   return (
     <section className="about">

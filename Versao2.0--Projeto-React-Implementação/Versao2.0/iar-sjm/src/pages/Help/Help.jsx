@@ -3,6 +3,7 @@ import PageHero from '../../components/PageHero/PageHero';
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
 import CTASection from '../../components/CTASection/CTASection';
 import './Help.css';
+import heroImg from '../../assets/comunhao07.jpg';
 
 const Help = () => {
   const [formData, setFormData] = useState({
@@ -12,8 +13,9 @@ const Help = () => {
     mensagem: ''
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    
     alert(`Obrigado ${formData.nome}. O seu pedido de apoio foi recebido. Entraremos em contacto em breve.`);
     setFormData({ nome: '', contacto: '', tipoAjuda: 'espiritual', mensagem: '' });
   };
@@ -23,7 +25,7 @@ const Help = () => {
       <PageHero
         title="Precisa de Ajuda?"
         subtitle="Não caminhe sozinho. Estamos aqui para o apoiar e ouvir."
-        backgroundImage="./imagens/comunhao07.jpg"
+        backgroundImage={heroImg}
       />
       <Breadcrumb items={[{ label: 'Precisa de Ajuda?' }]} />
 
@@ -63,7 +65,7 @@ const Help = () => {
         <div className="container text-center">
           <h3>Prefere falar diretamente connosco agora?</h3>
           <p>Clique no botão abaixo para iniciar uma conversa privada e segura com a nossa equipa de apoio no WhatsApp.</p>
-          <a href="https://wa.me" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
+          <a href="https://wa.me/351969879724" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" style={{marginRight: '8px'}}><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.451 5.414 1.452 5.383 0 9.763-4.378 9.766-9.76.002-2.607-1.01-5.057-2.85-6.898-1.84-1.84-4.291-2.854-6.899-2.855-5.39 0-9.77 4.38-9.774 9.762-.001 1.996.522 3.946 1.516 5.66l-.991 3.616 3.708-.973zm10.367-3.924c-.287-.143-1.696-.838-1.959-.933-.262-.096-.452-.143-.642.143-.19.286-.737.933-.903 1.123-.167.19-.333.214-.62.071-.286-.143-1.21-.446-2.305-1.424-.853-.76-1.428-1.7-1.595-1.986-.167-.286-.018-.44.125-.581.129-.127.287-.333.43-.5.143-.167.19-.286.286-.476.096-.19.048-.357-.024-.5-.071-.143-.642-1.548-.88-2.119-.232-.559-.467-.483-.642-.492-.166-.008-.357-.01-.548-.01-.19 0-.5.071-.762.357-.262.286-1 .976-1 2.381 0 1.405 1.023 2.762 1.166 2.952.143.19 2.013 3.074 4.877 4.31.682.294 1.214.47 1.63.601.685.218 1.31.187 1.803.114.549-.081 1.696-.693 1.935-1.363.238-.67.238-1.24.167-1.362-.071-.121-.262-.19-.549-.333z"/></svg>
             Falar pelo WhatsApp
           </a>

@@ -4,11 +4,12 @@ import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
 import CTASection from '../../components/CTASection/CTASection';
 import { eventsData } from '../../data/eventsData';
 import './Eventos.css';
+import heroImg from '../../assets/nave01.jpeg'
 
 const Eventos = () => {
   const [activeFilter, setActiveFilter] = useState('todos');
 
-  // Categorias para os botões de filtro
+
   const categories = [
     { label: 'Todos', key: 'todos' },
     { label: 'Conferências', key: 'conferencias' },
@@ -18,12 +19,12 @@ const Eventos = () => {
     { label: 'Cultos', key: 'cultos' },
   ];
 
-  // Filtra os eventos com base no estado ativo
+
   const filteredEvents = activeFilter === 'todos'
-    ? eventsData.filter(e => !e.featured) // Mostra normais na grid
+    ? eventsData.filter(e => !e.featured) 
     : eventsData.filter(e => e.categoryKey === activeFilter);
 
-  // Encontra o evento de destaque fixo para o topo (apenas quando em "Todos")
+
   const featuredEvent = eventsData.find(e => e.featured);
 
   return (
@@ -31,11 +32,11 @@ const Eventos = () => {
       <PageHero
         title="Nossa Agenda"
         subtitle="Fique por dentro de todos os cultos, eventos e conferências."
-        backgroundImage="./imagens/nave01.jpeg"
+        backgroundImage={heroImg}
       />
       <Breadcrumb items={[{ label: 'Eventos' }]} />
 
-      {/* --- DESTAQUE --- */}
+
       {activeFilter === 'todos' && featuredEvent && (
         <section className="evento-destaque-section">
           <div className="container">
@@ -62,7 +63,6 @@ const Eventos = () => {
         </section>
       )}
 
-      {/* --- FILTROS DE CATEGORIA --- */}
       <section className="eventos-lista-section bg-light">
         <div className="container">
           <div className="filtros-wrapper">
@@ -77,7 +77,6 @@ const Eventos = () => {
             ))}
           </div>
 
-          {/* --- GRID DE EVENTOS --- */}
           {filteredEvents.length > 0 ? (
             <div className="eventos-grid">
               {filteredEvents.map((evento) => (

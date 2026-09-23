@@ -2,6 +2,14 @@ import PageHero from '../../components/PageHero/PageHero';
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
 import CTASection from '../../components/CTASection/CTASection';
 import './SobreNos.css';
+import heroImg from "../../assets/adoracao7.jpeg";
+import sobreImg1 from "../../assets/primeiroCulto.jpeg";
+import sobreImg2 from "../../assets/comunhao04.jpg";
+import sobreImg3 from "../../assets/membros.jpeg";
+import sobreImg4 from "../../assets/igreja.jpeg";
+import pastorImg from "../../assets/pastor.jpeg";
+import pastoraImg from "../../assets/pastora.jpg";
+import presidenteImg from "../../assets/presidentes.png";
 
 const valoresData = [
   {
@@ -42,7 +50,7 @@ const SobreNos = () => {
       <PageHero
         title="Sobre Nós"
         subtitle="Conheça nossa história, propósito e família."
-        backgroundImage="./imagens/adoracao7.jpeg"
+        backgroundImage={heroImg}
       />
       <Breadcrumb items={[{ label: 'Sobre Nós' }]} />
 
@@ -66,7 +74,7 @@ const SobreNos = () => {
               </p>
             </div>
             <div className="sobre-block-image">
-              <img src="./imagens/primeiroCulto.jpeg" alt="Comunidade da igreja reunida" className="img-fluid" />
+              <img src={sobreImg1} alt="Comunidade da igreja reunida" className="img-fluid" />
             </div>
           </div>
         </div>
@@ -76,7 +84,7 @@ const SobreNos = () => {
         <div className="container">
           <div className="sobre-block sobre-block--left">
             <div className="sobre-block-image">
-              <img src="./imagens/comunhao04.jpg" alt="Momento de adoração na igreja" className="img-fluid" />
+              <img src={sobreImg2} alt="Momento de adoração na igreja" className="img-fluid" />
             </div>
             <div className="sobre-block-text">
               <span className="section-subtitle">NOSSA MISSÃO</span>
@@ -113,7 +121,7 @@ const SobreNos = () => {
               </p>
             </div>
             <div className="sobre-block-image">
-              <img src="./imagens/membros.jpeg" alt="Comunidade em momento de oração" className="img-fluid" />
+              <img src={sobreImg3} alt="Comunidade em momento de oração" className="img-fluid" />
             </div>
           </div>
         </div>
@@ -141,7 +149,7 @@ const SobreNos = () => {
         <div className="container">
           <div className="sobre-block sobre-block--left">
             <div className="sobre-block-image">
-              <img src="./imagens/igreja.jpeg" alt="Momento de comunhão da igreja" className="img-fluid" />
+              <img src={sobreImg4} alt="Momento de comunhão da igreja" className="img-fluid" />
             </div>
             <div className="sobre-block-text">
               <span className="section-subtitle">NOSSA IGREJA</span>
@@ -175,7 +183,7 @@ const SobreNos = () => {
           <div className="pastores-grid">
             <div className="pastor-card">
               <div className="pastor-foto">
-                <img src="./imagens/pastor.jpeg" alt="Pastor Gilberto Albuquerque e Pastora Graziela Mendonça" />
+                <img src={pastorImg} alt="Pastor Gilberto Albuquerque e Pastora Graziela Mendonça" />
               </div>
               <div className="pastor-info">
                 <h3 className="pastor-nome">Pr. Gilberto Albuquerque</h3>
@@ -190,7 +198,7 @@ const SobreNos = () => {
             </div>
             <div className="pastor-card">
               <div className="pastor-foto">
-                <img src="./imagens/pastora.jpg" alt="Pastora Graziela Mendonça" />
+                <img src={pastoraImg} alt="Pastora Graziela Mendonça" />
               </div>
               <div className="pastor-info">
                 <h3 className="pastor-nome">Pra. Graziela Mendonça</h3>
@@ -236,7 +244,7 @@ const SobreNos = () => {
               </p>
             </div>
             <div className="presidentes-image">
-              <img src="./imagens/presidentes.png" alt="Comunidade em momento de oração" className="img-fluid" />
+              <img src={presidenteImg} alt="Comunidade em momento de oração" className="img-fluid" />
             </div>
             
           </div>

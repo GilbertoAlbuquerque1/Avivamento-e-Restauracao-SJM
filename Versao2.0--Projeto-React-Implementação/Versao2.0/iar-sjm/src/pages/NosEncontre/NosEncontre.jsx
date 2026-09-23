@@ -4,6 +4,7 @@ import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
 import CTASection from '../../components/CTASection/CTASection';
 import './NosEncontre.css';
 import { HashLink  as Link} from 'react-router-hash-link';
+import heroImg from "../../assets/adoracao1.jpg";
 
 const NosEncontre = () => {
   const [formData, setFormData] = useState({
@@ -29,7 +30,7 @@ const NosEncontre = () => {
       <PageHero
         title="Nos Encontre"
         subtitle="Estamos aqui para ouvir e receber você."
-        backgroundImage="./imagens/adoracao1.jpg"
+        backgroundImage={heroImg}
       />
       <Breadcrumb items={[{ label: 'Nos Encontre' }]} />
       <section className="encontre-info">

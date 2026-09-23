@@ -1,14 +1,13 @@
 import React from 'react';
 import './QuickLinks.css';
 
-// Aqui definimos nossos dados. Em um projeto avançado, isso poderia vir de uma API/Banco de Dados!
+
 const linksData = [
   {
     id: 1,
     title: 'PROGRAMAÇÃO DE EVENTOS',
     description: 'Encontros que fortalecem nossa fé e comunhão.',
     linkText: 'Ver eventos →',
-    // Usaremos SVGs simples (inline) para os ícones
     icon: <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
   },
   {
@@ -47,14 +46,12 @@ const QuickLinks = () => {
       <div className="container">
         <div className="ql-grid">
           
-          {/* Aqui usamos o map() para gerar os 5 blocos automaticamente! */}
           {linksData.map((item) => (
             <div key={item.id} className="ql-item">
               <div className="ql-icon">
                 {item.icon}
               </div>
               <h3 className="ql-title">{item.title}</h3>
-              {/* O white-space: pre-line no CSS vai fazer o \n pular linha */}
               <p className="ql-desc">{item.description}</p>
               <a href="#" className="ql-link">{item.linkText}</a>
             </div>

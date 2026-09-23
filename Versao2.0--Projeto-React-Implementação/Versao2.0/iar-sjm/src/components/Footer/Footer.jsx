@@ -1,6 +1,7 @@
 import React from 'react';
-import {HashLink as Link} from 'react-router-hash-link';
+import { HashLink as Link } from 'react-router-hash-link';
 import './Footer.css';
+import logoHeader from '../../assets/logoheader.png';
 
 const Footer = () => {
   return (
@@ -9,11 +10,13 @@ const Footer = () => {
         <div className="footer-grid">
           <div className="footer-col">
             <div className="logo">
-              <img src="./imagens/logoheader.png"
-                alt="Logo da Igreja"
-                className="logo-footer"
-                width={"100px"}
-                height={"auto"} />
+              <Link to="/#home">
+                <img src={logoHeader}
+                  alt="Logo da Igreja"
+                  className="logo-footer"
+                  width={"100px"}
+                  height={"auto"} />
+              </Link>
             </div>
           </div>
 

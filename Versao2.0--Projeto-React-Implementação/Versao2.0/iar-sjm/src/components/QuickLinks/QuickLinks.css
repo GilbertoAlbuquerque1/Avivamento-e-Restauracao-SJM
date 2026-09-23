@@ -1,13 +1,12 @@
 .quick-links {
-  background-color: var(--cor4); /* Usando o Azul Médio da paleta */
-  padding: var(--sp-48) 0; /* Espaçamento interno em cima e embaixo */
+  background-color: var(--cor4);
+  padding: var(--sp-48) 0;
   color: var(--cor-branco);
 }
 
 .ql-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  /* Não usaremos 'gap' grande aqui porque queremos usar bordas nas divisões */
 }
 
 .ql-item {
@@ -15,18 +14,17 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 0 var(--sp-24);
-  border-right: 1px solid rgba(255, 255, 255, 0.15); /* A linha vertical divisória */
+  border-right: 1px solid rgba(255, 255, 255, 0.15); /
 }
 
-/* O último item não deve ter linha divisória à direita */
+
 .ql-item:last-child {
   border-right: none;
 }
 
 .ql-icon {
-  color: var(--cor3); /* O ícone recebe a cor azul vibrante */
+  color: var(--cor3);
   margin-bottom: var(--sp-16);
-  /* Para deixar o traço do ícone mais leve/bonito */
   opacity: 0.9; 
 }
 
@@ -43,8 +41,8 @@
   color: var(--cor1);
   margin-bottom: var(--sp-16);
   line-height: 1.5;
-  white-space: pre-line; /* Isso faz com que o \n no texto "Nos Encontre" quebre a linha */
-  flex-grow: 1; /* Faz a descrição esticar, empurrando o link sempre pro final */
+  white-space: pre-line;
+  flex-grow: 1;
 }
 
 .ql-link {
@@ -60,14 +58,12 @@
 }
 
 
-/* --- RESPONSIVIDADE --- */
 @media (max-width: 1023px) {
   .ql-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--sp-32) 0;
   }
   
-  /* Removemos a borda de itens específicos quando quebra a linha */
   .ql-item:nth-child(3) {
     border-right: none;
   }
@@ -89,7 +85,7 @@
   .ql-item {
     border-right: none;
     padding: 0;
-    align-items: center; /* Centraliza tudo no celular, fica mais bonito */
+    align-items: center;
     text-align: center;
   }
 }

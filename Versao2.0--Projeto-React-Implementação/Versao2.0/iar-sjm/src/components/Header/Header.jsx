@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
+import logoHeader from '../../assets/logoheader.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,7 +35,7 @@ const Header = () => {
 
         <div className="logo">
           <Link to="/" onClick={closeMenu}>
-            <img src="./imagens/logoheader.png"
+            <img src={logoHeader}
               alt="Logo da Igreja"
               className="logo-footer"
               width={"70px"}
@@ -48,7 +49,7 @@ const Header = () => {
             <li><Link to="/sobre" className={isActive('/sobre') ? 'active' : ''} onClick={closeMenu}>Sobre Nós</Link></li>
             <li><Link to="/encontre" className={isActive('/encontre') ? 'active' : ''} onClick={closeMenu}>Nos Encontre</Link></li>
             <li><Link to="/eventos" className={isActive('/eventos') ? 'active' : ''} onClick={closeMenu}>Eventos</Link></li>
-            <li><Link to="/help" className={isActive('/Help') ? 'active' : ''} onClick={closeMenu}>Precisa de Ajuda?</Link></li>
+            <li><Link to="/help" className={isActive('/help') ? 'active' : ''} onClick={closeMenu}>Precisa de Ajuda?</Link></li>
             <li><Link to="/colabore" className={isActive('/colabore') ? 'active' : ''} onClick={closeMenu}>Colabore</Link></li>
           </ul>
         </nav>

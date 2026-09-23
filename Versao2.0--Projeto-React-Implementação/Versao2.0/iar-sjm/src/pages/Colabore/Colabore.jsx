@@ -2,6 +2,9 @@ import PageHero from '../../components/PageHero/PageHero';
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
 import CTASection from '../../components/CTASection/CTASection';
 import './Colabore.css';
+import heroImg from '../../assets/colabore.png';
+import banco1Img from '../../assets/banco1.png';
+import mbwayImg from '../../assets/mbwaynovo.png';
 
 const Colabore = () => {
   return (
@@ -9,7 +12,7 @@ const Colabore = () => {
       <PageHero
         title="Colabore"
         subtitle="Contribua para a expansão do Reino e causas sociais."
-        backgroundImage="./imagens/colabore.png"
+        backgroundImage={heroImg}
       />
       <Breadcrumb items={[{ label: 'Colabore' }]} />
 
@@ -28,7 +31,7 @@ const Colabore = () => {
           <div className="dados-grid">
 
             <div className="dados-card">
-              <img className="img-card" src="/imagens/banco1.png" alt="banco1" />
+              <img className="img-card" src={banco1Img} alt="banco1" />
               <p className="card-info">Utilize os dados abaixo através do seu banco ou homebanking:</p>
               <div className="dados-copiar-box">
                 <div className="dado-linha">
@@ -46,7 +49,7 @@ const Colabore = () => {
 
             <div className="inline-cards">
               <div className="sub-card">
-                <img className="img-card" src="/imagens/mbwaynovo.png" alt="MB WAY" />
+                <img className="img-card" src={mbwayImg} alt="MB WAY" />
                 <p>Pode contribuir de forma rápida inserindo o número oficial da igreja:</p>
                 <div className="mbway-box">
                   <strong>Telemóvel:</strong> <span>+351 915 873 005</span>
