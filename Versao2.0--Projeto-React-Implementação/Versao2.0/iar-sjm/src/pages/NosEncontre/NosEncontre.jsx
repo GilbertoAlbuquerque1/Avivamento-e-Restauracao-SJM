@@ -23,7 +23,7 @@ const NosEncontre = () => {
     {/* Será implementado posteriormente 
     
     alert('Mensagem enviada com sucesso! Em breve entraremos em contato.');
-    
+
     setFormData({ nome: '', email: '', telefone: '', mensagem: '' });
     */}
   };
@@ -111,9 +111,9 @@ const NosEncontre = () => {
       <section className="encontre-mapa">
         <div className="container">
           <div className="mapa-placeholder">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d753.9097556635767!2d-8.4896162!3d40.901732599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2381657f28ac0b%3A0xbe4db8615e603273!2sAvivamento%20e%20Restaura%C3%A7%C3%A3o%20Igreja%20-%20SJM!5e0!3m2!1spt-PT!2spt!4v1789838353707!5m2!1spt-PT!2spt" width="100%" height="400px" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <iframe title="Localização da Igreja Avivamento e Restauração SJM" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d753.9097556635767!2d-8.4896162!3d40.901732599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2381657f28ac0b%3A0xbe4db8615e603273!2sAvivamento%20e%20Restaura%C3%A7%C3%A3o%20Igreja%20-%20SJM!5e0!3m2!1spt-PT!2spt!4v1789838353707!5m2!1spt-PT!2spt" width="100%" height="400px" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="strict-origin-when-cross-origin"></iframe>
           </div>
-        </div>
+        </div>\
       </section>
       <section id="contato" className="encontre-contato">
         <div className="container">

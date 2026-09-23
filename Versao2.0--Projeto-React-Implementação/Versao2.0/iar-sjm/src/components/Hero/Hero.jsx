@@ -29,7 +29,7 @@ const Hero = () => {
             <Link className="btn btn-primary" to="/encontre">
               Visite-nos <span>→</span>
             </Link>
-            <Link className="btn btn-secondary" to="https://www.instagram.com/reel/DdOyd2uoEC1/" target="_blank"><span className="play-icon-circle">▶</span> Assista ao vídeo</Link>
+            <a className="btn btn-secondary" href="https://www.instagram.com/reel/DdOyd2uoEC1/" target="_blank" rel="noopener noreferrer" ><span className="play-icon-circle">▶</span> Assista ao vídeo</a>
           </div>
         </div>
       </div>

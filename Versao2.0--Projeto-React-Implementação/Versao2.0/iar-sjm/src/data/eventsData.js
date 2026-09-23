@@ -8,8 +8,8 @@ export const eventsData = [
   {
     id: 1,
     title: "Reencontro com Deus 2026",
-    category: "Conferências",
-    categoryKey: "Encontros",
+    category: "Encontro",
+    categoryKey: "Encontro",
     date: "27 28 29",
     month: "NOV",
     time: "19:30",

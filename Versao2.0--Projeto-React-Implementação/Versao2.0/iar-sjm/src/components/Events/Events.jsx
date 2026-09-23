@@ -1,5 +1,7 @@
 import React from 'react';
 import './Events.css';
+import { eventsData } from '../../data/eventsData';
+
 
 
 const Events = () => {
