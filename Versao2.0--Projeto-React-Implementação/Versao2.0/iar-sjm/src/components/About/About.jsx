@@ -1,13 +1,26 @@
 import './About.css';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, EffectFade } from 'swiper/modules';
-
+import comunhao01 from '../../assets/comunhao01.jpg';
+import comunhao02 from '../../assets/comunhao02.jpg';
+import comunhao03 from '../../assets/comunhao03.jpg';
+import comunhao04 from '../../assets/comunhao04.jpg';
+import comunhao05 from '../../assets/comunhao05.jpg';
+import comunhao06 from '../../assets/comunhao06.jpg';
+import comunhao07 from '../../assets/comunhao07.jpg';
+import comunhao08 from '../../assets/comunhao08.jpg';
+import comunhao09 from '../../assets/comunhao09.jpg';
+import comunhao10 from '../../assets/comunhao10.jpg';
+import comunhao11 from '../../assets/comunhao11.jpg';
+import comunhao12 from '../../assets/comunhao12.jpg';
+import comunhao13 from '../../assets/comunhao13.jpg';
+import comunhao14 from '../../assets/comunhao14.jpg';
 import 'swiper/css'
 import 'swiper/css/effect-fade'
 
 
 const About = () => {
-  const imagensHero = ['/imagens/comunhao04.jpg', '/imagens/comunhao09.jpg', '/imagens/comunhao06.jpg', '/imagens/comunhao10.jpg', '/imagens/comunhao11.jpg', '/imagens/comunhao07.jpg', '/imagens/comunhao01.jpg', '/imagens/comunhao12.jpg', '/imagens/comunhao02.jpg', '/imagens/comunhao14.jpg', '/imagens/comunhao03.jpg', '/imagens/comunhao08.jpg', '/imagens/comunhao13.jpg', '/imagens/comunhao05.jpg'];
+  const imagensHero = [comunhao01, comunhao02, comunhao03, comunhao04, comunhao05, comunhao06, comunhao07, comunhao08, comunhao09, comunhao10, comunhao11, comunhao12, comunhao13, comunhao14];
 
   return (
     <section className="about">

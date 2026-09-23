@@ -1,5 +1,10 @@
 import React from 'react';
 import './Sermons.css';
+import imgMinistracao01 from '../../assets/ministracao1.png';
+import imgMinistracao02 from '../../assets/ministracao05.png';
+import imgMinistracao03 from '../../assets/ministracao3.png';
+import imgMinistracao04 from '../../assets/ministracao03.png';
+
 
 const sermonsData = [
   {
@@ -7,7 +12,7 @@ const sermonsData = [
     title: 'Qual a Necessidade de Conhecer o Mal?',
     preacher: 'Pr. Gilberto Albuquerque',
     date: '12 de Maio de 2026',
-    image: './imagens/ministracao1.png',
+    image: imgMinistracao01,
     videoLink: "https://youtu.be/afW7lem1Nhk"
   },
   {
@@ -15,7 +20,7 @@ const sermonsData = [
     title: 'Exercite a Sua Fé',
     preacher: 'Pr. Alex Alexandre',
     date: '06 de Setembro de 2026',
-    image: './imagens/ministracao05.png',
+    image: imgMinistracao02,
     videoLink: "https://www.youtube.com/watch?v=x2uolOCSIYg&t=1s"
   },
   {
@@ -23,7 +28,7 @@ const sermonsData = [
     title: 'Valor',
     preacher: 'Sup. Edmilson Guilherme',
     date: '10 de Maio de 2026',
-    image: './imagens/ministracao3.png',
+    image: imgMinistracao03,
     videoLink: "https://youtu.be/oE2p4-bbed0"
   },
   {
@@ -31,7 +36,7 @@ const sermonsData = [
     title: 'A Visão que Jesus Veio Nos Trazer',
     preacher: 'Sup. David Benner',
     date: '16 de Agosto de 2026',
-    image: './imagens/ministracao03.png',
+    image: imgMinistracao04,
     videoLink: "https://www.youtube.com/watch?v=ieibf5CKZxM"
   }
 ];

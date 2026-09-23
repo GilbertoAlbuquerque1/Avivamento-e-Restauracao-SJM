@@ -47,7 +47,7 @@ const Help = () => {
                 <div className="help-icon">{item.icon}</div>
                 <h3 className="help-card-title">{item.title}</h3>
                 <p className="help-card-desc">{item.desc}</p>
-                <a href="/help" className="help-link">Saiba mais <span>→</span></a>
+                <Link to="/help" className="help-link">Saiba mais <span>→</span></Link>
               </div>
             ))}
           </div>

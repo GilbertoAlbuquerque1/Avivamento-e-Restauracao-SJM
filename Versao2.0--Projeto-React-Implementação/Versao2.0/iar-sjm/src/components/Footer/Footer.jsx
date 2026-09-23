@@ -60,7 +60,7 @@ const Footer = () => {
             <h4 className="footer-title mt-24">Horários dos cultos</h4>
             <div className="footer-info-item">
               <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-              <p>Quinta-feira: 19h e 20h<br />Domingo: 9h, 17h e 19h</p>
+              <p>Quinta-feira: 10h e 20h<br />Domingo: 9h e 18h</p>
             </div>
           </div>
 

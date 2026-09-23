@@ -1,3 +1,8 @@
+import reencontroImg from "../assets/reencontro1.png";
+import encontroImg from "../assets/encontro.png";
+import casaisImg from "../assets/cultodecasais.png";
+import celulasImg from "../assets/celulas.png";
+import ceiaImg from "../assets/cultodeceia.png";
 
 export const eventsData = [
   {
@@ -10,7 +15,7 @@ export const eventsData = [
     time: "19:30",
     location: "LISBOA",
     desc: "Três dias marcantes de adoração intensa, palavra profunda e renovo espiritual para toda a família.",
-    image: "./imagens/reencontro1.png",
+    image: reencontroImg,
     featured: true
   },
   {
@@ -24,7 +29,7 @@ export const eventsData = [
     time: "19:00",
     location: "Casa de Retiros",
     desc: "Um fim de semana reservado para desligar do mundo e alinhar o coração com o propósito do Pai.",
-    image: "./imagens/encontro.png",
+    image: encontroImg, 
     featured: false
   },
   {
@@ -37,7 +42,7 @@ export const eventsData = [
     time: "20:00",
     location: "Templo Principal",
     desc: "O nosso encontro de casais será um marco em sua família e um momento de grande acrescimo para seu relacionamento.",
-    image: "./imagens/cultodecasais.png",
+    image: casaisImg, 
     featured: false
   },
   {
@@ -50,10 +55,9 @@ export const eventsData = [
     time: "09:30 e 20:00",
     location: "Casas / Setores",
     desc: "Comunhão nos lares, partilha da palavra e crescimento mútuo em pequenos grupos espalhados pela cidade.",
-    image: "./imagens/celulas.png",
+    image: celulasImg, 
     featured: false
   },
-
   {
     id: 5,
     title: "Culto de Ceia",
@@ -64,9 +68,7 @@ export const eventsData = [
     time: "09:30 e 20:00",
     location: "Templo Principal",
     desc: "Culto em memória do sacrifício de Jesus Cristo na cruz do calvário.",
-    image: "./imagens/cultodeceia.png",
+    image: ceiaImg, 
     featured: false
-  },
-
-
+  }
 ];
