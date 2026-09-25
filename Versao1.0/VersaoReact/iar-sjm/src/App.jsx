@@ -25,7 +25,6 @@ function App() {
         <Route path="/eventos" element={<Eventos />} />
         <Route path="/ajuda" element={<Ajuda />} />
         <Route path="/colabore" element={<Colabore />} />
-        {/* Redirecionamento padrão para rotas não encontradas */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />
