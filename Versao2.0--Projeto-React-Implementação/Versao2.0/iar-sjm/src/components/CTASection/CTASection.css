@@ -24,7 +24,6 @@
   font-size: 15px;
 }
 
-/* Variante acolhedora para a página de ajuda */
 .cta-warm {
   background: linear-gradient(135deg, var(--cor6) 0%, var(--cor4) 100%);
 }

@@ -1,9 +1,7 @@
 .news {
   padding: var(--sp-80) 0;
-  background-color: var(--cor2); /* Mesma cor de fundo da seção de Eventos */
+  background-color: var(--cor2); 
 }
-
-/* Reutilizando estrutura do header de seções (já usamos em Eventos) */
 .news-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -16,7 +14,7 @@
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   display: flex;
-  align-items: center; /* No design as notícias costumam ser horizontais ou verticais? A imagem de referência mostra os cards em formato horizontal (foto na esquerda, texto na direita) */
+  align-items: center; 
   gap: var(--sp-16);
   padding: var(--sp-16);
   transition: transform 0.3s ease;
@@ -27,7 +25,7 @@
 }
 
 .news-image {
-  width: 120px; /* Imagem menor na lateral */
+  width: 120px; 
   height: 90px;
   border-radius: 6px;
   flex-shrink: 0;
@@ -76,12 +74,12 @@
 
 @media (max-width: 1023px) {
   .news-grid {
-    grid-template-columns: 1fr; /* Em tablets, empilhamos uma notícia embaixo da outra */
+    grid-template-columns: 1fr; 
   }
 }
 @media (max-width: 767px) {
   .news-card {
-    flex-direction: column; /* Em celulares menores, a foto vai pra cima do texto */
+    flex-direction: column; 
   }
   .news-image {
     width: 100%;
