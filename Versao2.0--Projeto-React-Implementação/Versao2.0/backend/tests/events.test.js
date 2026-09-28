@@ -1,12 +1,47 @@
 const request = require('supertest');
 const app = require('../src/app');
+const db = require('../src/config/database');
 
-describe('GET /api/events', ()=>{
-    test('deve retornar a lista de eventos', async () => {
+jest.setTimeout(15000);
+
+describe('API de Eventos', () => {
+afterAll(async () => {
+    await db.end();
+});
+
+    test('GET /api/events - deve retornar a lista de eventos', async () => {
         const response = await request(app).get('/api/events');
-
         expect(response.statusCode).toBe(200);
-        expect(response.body).toHaveLength(2);
-        expect(response.body[0].title).toBe('Encontro com Deus');       
+        expect(Array.isArray(response.body)).toBe(true);
+    });
+
+    test('POST /api/events - deve criar um novo evento com sucesso', async () => {
+        const newEventData = {
+            title: 'Conferência de Jovens',
+            description: 'Uma conferência de capacitação e louvor.',
+            event_date: '2026-10-15 19:30:00',
+            location: 'Templo Principal'
+        };
+
+        const response = await request(app)
+            .post('/api/events')
+            .send(newEventData);
+
+        expect(response.statusCode).toBe(201);
+        expect(response.body).toHaveProperty('id');
+        expect(response.body.title).toBe('Conferência de Jovens');
+    });
+
+    test('POST /api/events - deve retornar 400 se faltar campo obrigatório', async () => {
+        const invalidData = {
+            description: 'Sem título e sem data'
+        };
+
+        const response = await request(app)
+            .post('/api/events')
+            .send(invalidData);
+
+        expect(response.statusCode).toBe(400);
+        expect(response.body).toHaveProperty('error');
     });
 });

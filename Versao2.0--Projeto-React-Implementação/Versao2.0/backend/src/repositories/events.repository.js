@@ -1,24 +1,23 @@
+const db = require('../config/database');
+
 const eventsRepository = {
-    getEvents: () => {
-        return [
-            {
-            id: 1,
-            title: 'Encontro com Deus',
-            date: '2025-12-31',
-            time: '19:00',
-            location: 'Auditório da SJM',
-            description: 'Um encontro com Deus para renovar as forças e a fé.',
-            },
-            {
-            id: 2,
-            title: 'Culto de Celebração',
-            date: '2026-01-01',
-            time: '19:00',
-            location: 'Igreja',
-            description: 'Um culto de celebração para começar o ano com Deus.',
-            }
-        ];
+    getEvents: async () => {
+        const query = 'SELECT * FROM events ORDER BY event_date ASC';
+        const result = await db.query(query);
+        return result.rows;
+    },
+
+    createEvent: async (eventData) => {
+        const { title, description, event_date, location } = eventData;
+        const query = `
+            INSERT INTO events (title, description, event_date, location)
+            VALUES ($1, $2, $3, $4)
+            RETURNING *;
+        `;
+        const values = [title, description, event_date, location];
+        const result = await db.query(query, values);
+        return result.rows[0];
     }
-}; 
+};
 
 module.exports = eventsRepository;
