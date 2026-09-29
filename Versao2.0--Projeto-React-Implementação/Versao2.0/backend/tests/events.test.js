@@ -44,4 +44,52 @@ afterAll(async () => {
         expect(response.statusCode).toBe(400);
         expect(response.body).toHaveProperty('error');
     });
+
+    test('POST /api/events - deve rejeitar campos vazios', async () =>{
+        const invalidData = {
+            title: ' ',
+            description: 'Evento inválido',
+            event_date: ' ',
+            location: ' ',
+        };
+    
+        const response = await request(app)
+        .post('/api/events')
+        .send(invalidData)
+
+        expect(response.statusCode).toBe(400);
+        expect(response.body).toHaveProperty('error')
+    });
+
+    test('POST /api/events - deve rejeitar título muito longo', async () => {
+        const invalidData = {
+            title: 'A'.repeat(151),
+            description: 'Evento inválido',
+            event_date: '2026-10-15 19:30:00',
+            location: 'Templo Principal'
+        };
+
+        const response = await request(app)
+            .post('/api/events')
+            .send(invalidData);
+
+        expect(response.statusCode).toBe(400);
+        expect(response.body).toHaveProperty('error')
+    });
+
+    test('POST /api/events - deve rejeitar data inválida', async () => {
+    const invalidData = {
+        title: 'Evento com data inválida',
+        description: 'Teste de validação',
+        event_date: 'data-invalida',
+        location: 'Templo Principal'
+    };
+
+    const response = await request(app)
+        .post('/api/events')
+        .send(invalidData);
+
+    expect(response.statusCode).toBe(400);
+    expect(response.body).toHaveProperty('error');
+});
 });

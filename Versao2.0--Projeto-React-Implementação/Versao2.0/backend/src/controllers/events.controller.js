@@ -1,4 +1,5 @@
 const eventsService = require('../services/events.service');
+const ValidationError = require('../errors/ValidationError');
 
 const eventsController = {
     getEvents: async (req, res) => {
@@ -16,8 +17,18 @@ const eventsController = {
             const newEvent = await eventsService.createEvent(req.body);
             res.status(201).json(newEvent);
         } catch (error) {
-            res.status(400).json({ error: error.message });
-        }
+    if (error instanceof ValidationError) {
+        return res.status(400).json({
+            error: error.message
+        });
+    }
+
+    console.error('Erro no createEvent:', error);
+
+    return res.status(500).json({
+        error: 'Erro interno do servidor.'
+    });
+}
     }
 };
 
