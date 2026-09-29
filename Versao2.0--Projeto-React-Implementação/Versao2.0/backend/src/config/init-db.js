@@ -15,7 +15,6 @@ async function initDb() {
         updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
       );
     `);
-    await db.query('TRUNCATE TABLE events;');
 
     await db.query(`
       INSERT INTO events (title, description, event_date, location) VALUES 
