@@ -25,4 +25,16 @@ export default defineConfig([
       globals: globals.jest,
     },
   },
+
+  {
+    files: ["src/**/*.js"],
+    rules: {
+      "no-unused-vars": [
+        "error",
+        {
+          argsIgnorePattern: "^_",
+        },
+      ],
+    },
+  },
 ]);

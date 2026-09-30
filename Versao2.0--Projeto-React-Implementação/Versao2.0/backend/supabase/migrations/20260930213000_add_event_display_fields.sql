@@ -1,0 +1,3 @@
+ALTER TABLE events
+ADD COLUMN date_label VARCHAR(100),
+ADD COLUMN time_label VARCHAR(100);

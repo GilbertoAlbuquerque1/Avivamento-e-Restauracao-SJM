@@ -1,13 +1,35 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PageHero from '../../components/PageHero/PageHero';
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
 import CTASection from '../../components/CTASection/CTASection';
-import { eventsData } from '../../data/eventsData';
+import { getEvents } from '../../services/api';
+import { mapEvent } from '../../utils/eventMapper';
 import './Eventos.css';
 import heroImg from '../../assets/nave01.jpeg'
 
 const Eventos = () => {
   const [activeFilter, setActiveFilter] = useState('todos');
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const loadEvents = async () => {
+      try {
+        const data = await getEvents();
+        const mappedEvents = data.map(mapEvent);
+
+        setEvents(mappedEvents);  
+      } catch (error) {
+        console.error('Erro ao carregar eventos:', error);
+        setError('Não foi possível carregar os eventos.');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadEvents();
+  }, []);
 
 
   const categories = [
@@ -20,12 +42,11 @@ const Eventos = () => {
   ];
 
 
-  const filteredEvents = activeFilter === 'todos'
-    ? eventsData.filter(e => !e.featured) 
-    : eventsData.filter(e => e.categoryKey === activeFilter);
+ const filteredEvents = activeFilter === 'todos'
+  ? events.filter(event => !event.featured)
+  : events.filter(event => event.categoryKey === activeFilter);
 
-
-  const featuredEvent = eventsData.find(e => e.featured);
+const featuredEvent = events.find(event => event.featured);
 
   return (
     <main id='pageeventos' className="eventos-page">
@@ -36,6 +57,17 @@ const Eventos = () => {
       />
       <Breadcrumb items={[{ label: 'Eventos' }]} />
 
+    {loading && (
+      <div className="sem-eventos text-center">
+        <p>Carregando eventos...</p>
+      </div>
+    )}
+
+    {error && (
+      <div className="sem-eventos text-center">
+        <p>{error}</p>
+      </div>
+    )}
 
       {activeFilter === 'todos' && featuredEvent && (
         <section className="evento-destaque-section">
