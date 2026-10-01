@@ -83,7 +83,7 @@ const featuredEvent = events.find(event => event.featured);
                 <p className="destaque-desc">{featuredEvent.desc}</p>
                 <div className="destaque-meta">
                   <span className="meta-item">
-                    <strong>Quando:</strong> {featuredEvent.date} de {featuredEvent.month} às {featuredEvent.time}
+                    <strong>Quando:</strong> {featuredEvent.date_label} às {featuredEvent.time_label}
                   </span>
                   <span className="meta-item">
                     <strong>Onde:</strong> {featuredEvent.location}
@@ -116,8 +116,7 @@ const featuredEvent = events.find(event => event.featured);
                   <div className="evento-card-img">
                     <img src={evento.image} alt={evento.title} />
                     <div className="evento-data-badge">
-                      <span className="dia">{evento.date}</span>
-                      <span className="mes">{evento.month}</span>
+                      <span className="dia">{evento.date_label}</span>
                     </div>
                   </div>
                   <div className="evento-card-body">
@@ -125,7 +124,7 @@ const featuredEvent = events.find(event => event.featured);
                     <h4 className="card-title">{evento.title}</h4>
                     <p className="card-text">{evento.desc}</p>
                     <div className="card-footer-meta">
-                      <span>⏱ {evento.time}</span>
+                      <span>⏱ {evento.time_label}</span>
                       <span>📍 {evento.location}</span>
                     </div>
                   </div>

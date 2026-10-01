@@ -10,6 +10,9 @@ export const mapEvent = (event) => {
     return {
         ...event,
         image: eventImages[event.image],
-        categoryKey: event.category.toLowerCase(),
+        categoryKey: event.category
+            .toLowerCase()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, ''),
     };
 };
