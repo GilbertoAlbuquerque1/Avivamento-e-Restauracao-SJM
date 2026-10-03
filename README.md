@@ -201,10 +201,19 @@ Entre as medidas implementadas:
 
 O backend possui testes automatizados utilizando Jest e Supertest.
 
+Os testes da API exercitam Express, controllers e services com um mock do
+repository, configurado em `backend/tests/setup.js`. Não precisam de `.env`
+nem de `DATABASE_URL`. Os mocks são reiniciados entre os testes.
+
+`backend/src/config/database.js` bloqueia a conexão real quando detecta
+`NODE_ENV=test` ou `JEST_WORKER_ID`, evitando gravações acidentais no Supabase.
+Esses testes não verificam o SQL nem a conexão PostgreSQL; testes de integração
+futuros devem usar um banco separado e uma configuração explícita.
+
 No estado atual:
 
-* 7 testes passando
-* 2 suites passando
+* 9 testes passando
+* 3 suites passando
 * ESLint sem erros
 * `npm audit` sem vulnerabilidades reportadas
 

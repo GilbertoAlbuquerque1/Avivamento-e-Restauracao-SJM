@@ -1,18 +1,17 @@
 const request = require('supertest');
 const app = require('../src/app');
-const db = require('../src/config/database');
-
-jest.setTimeout(15000);
+const eventsRepository = require('../src/repositories/events.repository');
 
 describe('API de Eventos', () => {
-afterAll(async () => {
-    await db.end();
-});
-
     test('GET /api/events - deve retornar a lista de eventos', async () => {
+        const events = [{ id: 1, title: 'Culto de Celebração' }];
+        eventsRepository.getEvents.mockResolvedValue(events);
+
         const response = await request(app).get('/api/events');
         expect(response.statusCode).toBe(200);
         expect(Array.isArray(response.body)).toBe(true);
+        expect(response.body).toEqual(events);
+        expect(eventsRepository.getEvents).toHaveBeenCalledTimes(1);
     });
 
     test('POST /api/events - deve criar um novo evento com sucesso', async () => {
@@ -23,6 +22,8 @@ afterAll(async () => {
             location: 'Templo Principal'
         };
 
+        eventsRepository.createEvent.mockResolvedValue({ id: 1, ...newEventData });
+
         const response = await request(app)
             .post('/api/events')
             .send(newEventData);
@@ -30,6 +31,8 @@ afterAll(async () => {
         expect(response.statusCode).toBe(201);
         expect(response.body).toHaveProperty('id');
         expect(response.body.title).toBe('Conferência de Jovens');
+        expect(eventsRepository.createEvent).toHaveBeenCalledTimes(1);
+        expect(eventsRepository.createEvent).toHaveBeenCalledWith(newEventData);
     });
 
     test('POST /api/events - deve retornar 400 se faltar campo obrigatório', async () => {
@@ -42,6 +45,7 @@ afterAll(async () => {
             .send(invalidData);
 
         expect(response.statusCode).toBe(400);
+        expect(eventsRepository.createEvent).not.toHaveBeenCalled();
         expect(response.body).toHaveProperty('error');
     });
 
@@ -58,6 +62,7 @@ afterAll(async () => {
         .send(invalidData)
 
         expect(response.statusCode).toBe(400);
+        expect(eventsRepository.createEvent).not.toHaveBeenCalled();
         expect(response.body).toHaveProperty('error')
     });
 
@@ -74,6 +79,7 @@ afterAll(async () => {
             .send(invalidData);
 
         expect(response.statusCode).toBe(400);
+        expect(eventsRepository.createEvent).not.toHaveBeenCalled();
         expect(response.body).toHaveProperty('error')
     });
 
@@ -90,6 +96,7 @@ afterAll(async () => {
         .send(invalidData);
 
     expect(response.statusCode).toBe(400);
+    expect(eventsRepository.createEvent).not.toHaveBeenCalled();
     expect(response.body).toHaveProperty('error');
 });
 });
