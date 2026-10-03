@@ -8,13 +8,23 @@ const eventsRepository = {
     },
 
     createEvent: async (eventData) => {
-        const { title, description, event_date, location } = eventData;
+        const { title, description, event_date, location, category, image, featured, date_label, time_label } = eventData;
         const query = `
-            INSERT INTO events (title, description, event_date, location)
-            VALUES ($1, $2, $3, $4)
+            INSERT INTO events (
+                title,
+                description,
+                event_date,
+                location,
+                category,
+                image,
+                featured
+                date_label,
+                time_label
+            )
+            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
             RETURNING *;
         `;
-        const values = [title, description, event_date, location];
+        const values = [title, description, event_date, location, category, image, featured, date_label, time_label];
         const result = await db.query(query, values);
         return result.rows[0];
     }

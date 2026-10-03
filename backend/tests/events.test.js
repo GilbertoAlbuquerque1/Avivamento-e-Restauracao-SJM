@@ -19,7 +19,12 @@ describe('API de Eventos', () => {
             title: 'Conferência de Jovens',
             description: 'Uma conferência de capacitação e louvor.',
             event_date: '2026-10-15 19:30:00',
-            location: 'Templo Principal'
+            location: 'Templo Principal',
+            category: 'Jovens',
+            image:'reencontro',
+            featured: true,
+            date_label: '15 OUT',
+            time_label: '19:30'
         };
 
         eventsRepository.createEvent.mockResolvedValue({ id: 1, ...newEventData });
