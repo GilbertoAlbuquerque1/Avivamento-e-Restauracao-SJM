@@ -80,7 +80,7 @@ const featuredEvent = events.find(event => event.featured);
               <div className="destaque-content">
                 <span className="badge-categoria">{featuredEvent.category}</span>
                 <h3 className="destaque-title">{featuredEvent.title}</h3>
-                <p className="destaque-desc">{featuredEvent.desc}</p>
+                <p className="destaque-desc">{featuredEvent.description}</p>
                 <div className="destaque-meta">
                   <span className="meta-item">
                     <strong>Quando:</strong> {featuredEvent.date_label} às {featuredEvent.time_label}
@@ -122,7 +122,7 @@ const featuredEvent = events.find(event => event.featured);
                   <div className="evento-card-body">
                     <span className="card-tag">{evento.category}</span>
                     <h4 className="card-title">{evento.title}</h4>
-                    <p className="card-text">{evento.desc}</p>
+                    <p className="card-text">{evento.description}</p>
                     <div className="card-footer-meta">
                       <span>⏱ {evento.time_label}</span>
                       <span>📍 {evento.location}</span>

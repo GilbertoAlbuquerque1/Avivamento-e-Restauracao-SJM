@@ -11,8 +11,10 @@ export const mapEvent = (event) => {
         ...event,
         image: eventImages[event.image],
         categoryKey: event.category
-            .toLowerCase()
-            .normalize('NFD')
-            .replace(/[\u0300-\u036f]/g, ''),
+            ? event.category
+                .toLowerCase()
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '')
+            : 'sem-categoria',
     };
 };
