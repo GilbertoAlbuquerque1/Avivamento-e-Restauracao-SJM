@@ -16,13 +16,7 @@ async function initDb() {
       );
     `);
 
-    await db.query(`
-      INSERT INTO events (title, description, event_date, location) VALUES 
-      ('Encontro com Deus', 'Um encontro com Deus para renovar as forças e a fé.', '2025-12-31 19:00:00', 'Auditório da SJM'),
-      ('Culto de Celebração', 'Um culto de celebração para começar o ano com Deus.', '2026-01-01 19:00:00', 'Igreja');
-    `);
-
-    console.log('✅ Tabela events criada e populada com sucesso!');
+    console.log('✅ Tabela events criada com sucesso, sem inserir eventos de exemplo!');
     process.exit(0);
   } catch (error) {
     console.error('❌ Erro ao inicializar o banco de dados:', error);
