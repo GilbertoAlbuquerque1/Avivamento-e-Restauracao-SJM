@@ -17,7 +17,7 @@ const eventsRepository = {
                 location,
                 category,
                 image,
-                featured
+                featured,
                 date_label,
                 time_label
             )

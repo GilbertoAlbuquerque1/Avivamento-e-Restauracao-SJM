@@ -14,8 +14,8 @@ const eventsController = {
 
     createEvent: async (req, res) => {
         try {
-            const newEvent = await eventsService.createEvent(req.body);
-            res.status(201).json(newEvent);
+            const result = await eventsService.createEvent(req.body);
+            return res.status(201).json(result);
         } catch (error) {
     if (error instanceof ValidationError) {
         return res.status(400).json({

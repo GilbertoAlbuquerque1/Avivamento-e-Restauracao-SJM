@@ -4,8 +4,10 @@ const eventsRoutes = require('./routes/events.routes');
 const helmet = require('helmet');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
+const authRoutes = require('./routes/auth.routes');
 
 const app = express();
+
 
 app.set('trust proxy', 1)
 app.use(helmet());
@@ -28,7 +30,7 @@ const apiLimiter = rateLimit({
 
 app.use('/api', apiLimiter);
 app.use(express.json({ limit: '100kb'}));
-
+app.use('/api', authRoutes);
 app.use('/api', healthRoutes);
 app.use('/api', eventsRoutes);
 
