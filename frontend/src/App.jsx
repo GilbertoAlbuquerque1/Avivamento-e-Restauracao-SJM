@@ -25,11 +25,12 @@ function App() {
         <Route path="/eventos" element={<Eventos />} />
         <Route path="/help" element={<Help />} />
         <Route path="/colabore" element={<Colabore />} />
-        <Route path="/painel" element={<AdminLayout />}/>
-        <Route index element={<Dashboard />} />
-        <Route path="eventos" element={<EventosAdmin />} />
-        <Route path="ministracoes" element={<MinistracoesAdmin />} />
-        <Route path="usuarios" element={<UsuariosAdmin />} />
+        <Route path="/painel" element={<AdminLayout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="eventos" element={<EventosAdmin />} />
+          <Route path="ministracoes" element={<MinistracoesAdmin />} />
+          <Route path="usuarios" element={<UsuariosAdmin />} />
+        </Route>
       </Routes>
       <Footer />
     </>

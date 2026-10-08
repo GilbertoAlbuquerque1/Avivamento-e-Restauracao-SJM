@@ -131,11 +131,11 @@ const featuredEvent = events.find(event => event.featured);
                 </div>
               ))}
             </div>
-          ) : (
+          ) : !loading && !error && !(activeFilter === 'todos' && featuredEvent) ? (
             <div className="sem-eventos text-center">
               <p>Não existem eventos agendados para esta categoria de momento.</p>
             </div>
-          )}
+          ) : null}
         </div>
       </section>
 
